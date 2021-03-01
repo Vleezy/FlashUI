@@ -1,0 +1,60 @@
+<!--<div [bringToTop] [draggable] dragHandle=".card-header" class="card nitro-catalog-confirm-vip-subscription-component">
+    <div class="card-header">
+        {{ ('catalog.club.buy.confirm') | translate }}
+        <button type="button" class="close" (click)="hide()">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="d-flex card-body flex-row">
+        <i class="icon icon-catalogue-hc_big"></i>
+        <div class="ml-3">
+            <h6>{{ getSubscriptionHeader() }}</h6>
+            <p>{{ getSubscriptionText() }}</p>
+            <div class="d-flex align-items-center justify-content-center bg-secondary rounded p-1">
+                <p class="mb-0" *ngIf="subscription.priceCredits">{{ subscription.priceCredits }} <img class="px-1" [src]="getCurrencyUrl(-1)"></p>
+                <p class="mb-0" *ngIf="subscription.priceActivityPoints"> + {{ subscription.priceActivityPoints }} <img class="pl-1" [src]="getCurrencyUrl(subscription.priceActivityPointsType)"></p>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="d-flex justify-space-between button-container btn-group">
+            <button type="button" class="btn btn-primary" (click)="hide()">{{ ('catalog.purchase_confirmation.cancel') | translate }}</button>
+            <button type="button" class="btn btn-success" (click)="purchase()">{{ ('catalog.club.buy.subscribe') | translate }}</button>
+        </div>
+    </div>
+</div>
+-->
+
+<div [bringToTop] [draggable] dragHandle="#mobibuy-basarilidrag" id="mobibuy-basarili">
+    <div id="mobibuy-basarilidrag">
+        <p class="mbb-baslik">{{ ('catalog.club.buy.confirm') | translate }}</p>
+        <div class="old-kapat" (click)="hide()"></div>
+    </div>
+    <div class="mobibuy-basarili-box">
+        <div class="mbb-mobi_onizleme" style="display: flex;flex-direction: column;justify-content: center;align-items: center;"><i class="icon icon-catalogue-hc_big"></i></div>
+        <p class="mbb-mobi_adi" style="padding-top: 30px;">{{ getSubscriptionHeader() }}</p>
+        <p class="mbb-mobi_adi" style="padding-top: 0px;">{{ getSubscriptionText() }}</p>
+        <p class="mbb-fiyat-text">Ücret:</p>
+        <div class="mbb-fiyat-box">
+            <div class="mdb-fbox" *ngIf="subscription.priceCredits">
+                <p class="hc-fiyat-text">{{ subscription.priceCredits }}</p>
+                <div class="mobi-fiyat-birimico"><i class="icon icon-currencybig-cc"></i></div>
+            </div>
+            <div class="mdb-fbox">
+                <p class="plusprice">+</p>
+                <p *ngIf="subscription.priceActivityPoints" class="hc-fiyat-text">{{ subscription.priceActivityPoints }} </p>
+                <div class="mobi-fiyat-birimico"><i class="icon icon-currencybig-5"></i></div>
+            </div>
+        </div>
+        <div class="mobi-buy-iptal-et" (click)="hide()">
+            <div class="mbb-islem-iptal-box">
+                <p class="mbb-iptal-text">{{ ('catalog.purchase_confirmation.cancel') | translate }}</p>
+            </div>
+        </div>
+        <div class="mobi-buy-onayla" (click)="purchase()">
+            <div class="mbb-islem-onayla-box">
+                <p class="mbb-tamam-text">{{ ('catalog.club.buy.subscribe') | translate }}</p>
+            </div>
+        </div>
+    </div>
+</div>

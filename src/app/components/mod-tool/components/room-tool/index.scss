@@ -1,0 +1,265 @@
+div#modt-roominfo {
+    width: 240px;
+    height: auto;
+    left: 430px;
+    top: 100px;
+    position: absolute;
+    background: #e9e9e1;
+    border-bottom: solid 2px #000;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    border: solid 1px #000;
+    border-radius: 6px;
+    overflow: hidden;
+    box-sizing: content-box;
+    font-family: system-ui;
+    padding-bottom: 5px;
+}
+
+#modt-roominfodrag {
+    width: 100%;
+    height: 33px;
+    background-color: #367897;
+    border-top: solid 2px #408caf;
+    border-left: solid 2px #408caf;
+    border-right: solid 2px #408caf;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-bottom: solid 1px #000;
+}
+
+.mtri-baslik {
+    margin: 0px;
+    width: 98%;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.modt-ribox {
+    margin: 4px;
+    width: 232px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.ri-roomnamebox {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    box-sizing: border-box;
+    border: solid 1px #5d5d5a;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+p.rirntxt {
+    color: #000;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 5px 2px 5px;
+}
+
+p.rirdtxt {
+    color: #000;
+    font-size: 11px;
+    line-height: 11px;
+    padding-right: 1px;
+    font-family: 'Ubuntu';
+    padding: 0px 5px 5px 5px;
+}
+
+.ri-roominfobox {
+    width: 100%;
+    height: 74px;
+    background: #fff;
+    box-sizing: border-box;
+    border: solid 1px #5d5d5a;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.ribleft {
+    width: 152px;
+    height: 72px;
+    float: left;
+}
+
+.ribright {
+    width: 74px;
+    height: 69px;
+    float: left;
+    padding-left: 4px;
+    padding-top: 3px;
+}
+
+p.rib-hood {
+    width: 100px;
+    color: #000;
+    font-size: 11px;
+    font-weight: bold;
+    float: left;
+    padding-left: 5px;
+}
+
+.rib-infobox {
+    width: 152px;
+    height: 15px;
+    line-height: 15px;
+}
+
+p.rib-reply {
+    width: 52px;
+    color: #000;
+    font-size: 11px;
+    font-weight: 500;
+    float: left;
+}
+
+.rib-button {
+    width: 70px;
+    height: 21px;
+    float: left;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    border: solid 1px #000;
+    box-sizing: border-box;
+    box-shadow: inset -1px -1px 0px 0px #cccccc;
+    background: #fff;
+    margin-bottom: 1px;
+    position: relative;
+}
+
+
+.rib-button:active {
+    box-shadow: inset 1px 1px 0px 0px #535353;
+    background: #989898;
+}
+
+p.ribbutton-txt {font-family: 'Ubuntu';color: #000;padding: 1px 3px;}
+
+.rib-apply_action_to_room {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    box-sizing: border-box;
+    border: solid 1px #5d5d5a;
+    border-radius: 5px;
+    padding-top: 2px;
+    position: relative;
+    padding-bottom: 4px;
+    box-sizing: border-box;
+}
+
+.mt-select_container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 18px;
+    margin-top: 4px;
+    margin-left: 4px;
+    width: 90%;
+}
+
+.mt-select_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmarkmt {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-image: url(/assets/images/roomsettings/rssc2.png);
+}
+
+.checkmarkmt:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.mt-select_container input:checked ~ .checkmarkmt:after {
+  display: block;
+}
+
+.mt-select_container .checkmarkmt:after {
+  width: 15px;
+  height: 15px;
+  background-image: url(/assets/images/roomsettings/rssc2-act.png);
+}
+
+p.mt-sctxt {
+    color: #000;
+    font-size: 11px;
+    line-height: 11px;
+    padding-right: 1px;
+    font-family: 'Ubuntu';
+    padding-top: 3px;
+    width: 205px;
+}
+
+#modt-select {
+    width: 232px;
+    height: 20px;
+    background: #fff0;
+    border: solid 0px #0000;
+    border-radius: 4px;
+    font-size: 11px;
+    outline: 0;
+    cursor: pointer;
+    background-image: url(/assets/images/modtools/mtselect.png);
+    font-family: 'Ubuntu';
+    margin-bottom: 5px;
+}
+
+.mt-room_warning_message {
+    width: 100%;
+    height: 46px;
+    border: solid 1px #000;
+    outline: 0;
+    resize: none;
+    font-family: 'Ubuntu';
+    font-size: 12px;
+}
+
+.rib-button2 {
+    width: 97px;
+    height: 21px;
+    float: left;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    border: solid 1px #000;
+    box-sizing: border-box;
+    box-shadow: inset -1px -1px 0px 0px #cccccc;
+    background: #fff;
+    margin-bottom: 1px;
+}
+
+.rib-button2:hover {
+    box-shadow: inset 0px 0px 0px 1px #000;
+}
+
+.rib-button2:active {
+    box-shadow: inset 1px 1px 0px 0px #535353;
+    background: #989898;
+}
+
+.rib-button:hover {
+    box-shadow: inset 0px 0px 0px 1px #000;
+}

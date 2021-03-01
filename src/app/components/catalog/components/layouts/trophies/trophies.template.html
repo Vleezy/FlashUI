@@ -1,0 +1,36 @@
+
+
+<div class="trophiespage">
+    <div class="trophies-descbox">
+        <p class="trophiesdesctxt" *ngFor="let text of textPages;" [innerHtml]="text"></p>
+    </div>
+    <div class="trophies-mobiview">
+        <div class="trophies-sol" (click)="handleButton('previous')"><</div>
+        <div class="tmobiview">
+            <img class="align-self-center" [src]="imageUrl" />
+        </div>
+        <div class="trophies-sag" (click)="handleButton('next')">></div>
+        <div class="mobi-fiyat-box trophiesmfb">
+            <div class="mdb-fbox mobi-fiyat-dia">
+                <p class="mobi-mapfbox-fiyat-text" *ngIf="currentTrophyOffer.priceCredits">5</p>
+                <div class="mobi-fiyat-birimico">
+                    <i class="icon icon-currencybig-cc"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="catalog-trophies-mobibox nitro-catalog-layout-trophies-types">
+        <div class="trophies-renk-select" style="background: #c19d31;" [ngClass]="'color-gold' + getActiveClass('g')" (click)="handleTrophyColor('g')"></div>
+        <div class="trophies-renk-select" style="background: #a5a4a2;" [ngClass]="'color-silver' + getActiveClass('s')" (click)="handleTrophyColor('s')"></div>
+        <div class="trophies-renk-select" style="background: #865600;" [ngClass]="'color-bronze' + getActiveClass('b')" (click)="handleTrophyColor('b')"></div>
+    </div>
+    <textarea autofocus name="trophie" class="trophies-mobinamebox" maxlength="300" [(ngModel)]="enteredText">{{ enteredText }}</textarea>
+    <div class="mobi-purchase-box">
+        <div class="mobi-hediye-box">
+            <p class="mobigift-text">Hediye Et</p>
+        </div>
+        <div class="mobi-buy-box" (click)="buyCurrentItem()">
+            <p class="mobibuy-text">{{'buy' | translate}}</p>
+        </div>
+    </div>
+</div>

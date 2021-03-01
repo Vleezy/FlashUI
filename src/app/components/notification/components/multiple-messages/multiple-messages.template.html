@@ -1,0 +1,35 @@
+<!--<div [bringToTop] [draggable] class="nitro-alert multiple-messages d-flex flex-column bg-primary border shadow rounded" noMemory="true">
+    <div class="drag-handler d-flex justify-content-center align-items-center px-3 pt-3">
+        <h6 class="m-0">{{ title }}</h6>
+    </div>
+    <div class="d-flex flex-column p-3">
+        <perfect-scrollbar class="position-relative w-100" style="min-height:275px;max-height:275px;height:275px;">
+            <ng-container *ngFor="let message of messages">
+                <div class="d-flex flex-column" [innerHTML]="message"></div>
+            </ng-container>
+        </perfect-scrollbar>
+        <div class="d-flex flex-column align-items-center justify-content-center mt-3">
+            <button type="button" class="btn btn-secondary" (click)="close()">{{ ('generic.close') | translate }}</button>
+        </div>
+    </div>
+</div>-->
+
+
+
+<div [bringToTop] [draggable] dragHandle="#corelocmnd-drag" id="corelo-cmnd" noMemory="true">
+    <div id="corelocmnd-drag">
+        <p class="ccmnd-baslik">{{ title }}</p>
+        <div class="old-kapat" (click)="close()"></div>
+    </div>
+    <div class="ccmndbox">
+        <div class="ccmnd-commandslist">
+            <div class="ccmnd-commandsbg">
+                <p class="ccmnd-desc">Ayrıca bakınız: <u style="color:#fd6305;">Habbo Hotel'de sohbet etmek</u></p>
+                <p class="ccmnd-hood">Komut listesi</p>
+                <ng-container *ngFor="let message of messages">
+                    <p class="ccmnd-commands" [innerHTML]="message | keepHtml"></p>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

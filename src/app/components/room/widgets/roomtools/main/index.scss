@@ -1,0 +1,891 @@
+$room-tools-handle-width: 20px;
+
+#nitro-room-tools {
+    position: absolute;
+    right: 0;
+    bottom: 90px;
+    min-height: 90px;
+    height: auto;
+
+    #nitro-room-tools-handle {
+        //position: relative;
+        width: $room-tools-handle-width;
+        min-height: inherit;
+        height: inherit;
+        padding: 0 5px;
+        //padding-left: 5px;
+        //line-height: inherit;
+        //background-color: red;
+        background: rgba(29, 30, 33, 0.9);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+    }
+
+    #nitro-room-tools-menu {
+        //position: relative;
+        //right: $room-tools-handle-width;
+        //display: none;
+        position: absolute;
+        right: 0;
+        color: white;
+
+        #nitro-room-tools-menu-container {
+            background-color: rgba(29, 30, 33, 0.9);
+            width: 0;
+            transition: width 1s ease-out;
+
+            &.open {
+                width: 100px;
+            }
+        }
+
+        #nitro-room-tools-room-info {
+            border-radius: 5px;
+            background-color: rgba(29, 30, 33, 0.9);
+            padding: 8px;
+            margin-right: $room-tools-handle-width;
+        }
+    }
+
+    //.container {
+    //    position: absolute;
+    //    min-width: 200px;
+    //    height: inherit;
+    //    background: rgba(29, 30, 33, 0.9);
+    //    border-right: 1px solid rgba(0, 0, 0, .3);
+    //    border-top-right-radius: 5px;
+    //    border-bottom-right-radius: 5px;
+    //    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    //    padding: 5px 10px;
+    //
+    //    margin-right: -200px;
+    //    transition: margin-right .2s ease-out;
+    //
+    //    .room-owner {
+    //        font-size: 13px;
+    //    }
+    //}
+    //
+    //&.open {
+    //    .room-tools-handle {
+    //        box-shadow: 0px 2px rgba(0, 0, 0, 0.2);
+    //        border-top-right-radius: 0px;
+    //        border-bottom-right-radius: 0px;
+    //    }
+    //
+    //    .container {
+    //        margin-left: 20px;
+    //    }
+    //}
+}
+
+.nitro-room-tools-room-info-component {
+    position: absolute;
+    max-width: 400px;
+}
+
+
+/**/
+
+#bottom-bar {
+    width: 100%;
+    background: #2e2e2cf0;
+    bottom: -1px;
+    position: absolute;
+    margin: 0 auto;
+    box-shadow: inset 0 2px 0 0 #53524ff7;
+    border-top: 1px solid #000000f0;
+    border-bottom: 1px solid #53524ff0;
+}
+
+.bottom-left-ufalt {
+    top: 4px;
+    float: left;
+    cursor: pointer;
+    position: relative;
+}
+
+.bar-left {
+    float: left;
+    width: 395px;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.habbo-icon {
+    margin: 10px 0px 10px 13px;
+}
+
+.navigator-icon {
+    margin: 10px 0px 10px 17px;
+}
+
+.magaza-icon {
+    margin: 6px 0px 10px 13px;
+}
+
+.envanter-icon {
+    margin: 4px 0px 10px 15px;
+}
+
+.kamera-icon {
+    margin: 3px 0px 10px 13px;
+}
+
+.barico-left {
+    filter: drop-shadow(1.5px 1px 0px);
+    color: #00000070;
+    float: left;
+    cursor: pointer;
+}
+
+.barico-left:hover {
+    filter: drop-shadow(2.5px 2px 0px);
+    color: #00000082;
+}
+
+.barico-left:active {
+    opacity: 0.7;
+}
+
+.bar-avatar {
+    width: 50px;
+    height: 47px;
+    overflow: hidden;
+}
+
+.bar_habbo-avatar {
+    float: left;
+    margin: -32px -15px 0px -14px;
+}
+
+.bottom-bar-ayirici {
+    width: 1px;
+    height: 41px;
+    float: left;
+    margin: 5px 5px 5px 13px;
+    background: #454442;
+}
+
+#bottom_chat-input-box {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 6px;
+}
+
+.chat-box {
+    outline: 0;
+    color: #000000;
+    border: solid 0px #00000000;
+    margin: 2px 2px 2px 60px;
+    width: 385px;
+    height: 34px;
+    background: #fff0;
+    font-size: 16px;
+    padding-top: 1px;
+}
+
+.bubble-select-box {
+    width: 57px;
+    height: 38px;
+    cursor: pointer;
+    z-index: 6;
+}
+
+.bottom-bar-chat {
+    background: url(../images/bottombar/chat-box.png);
+    width: 451px;
+    height: 38px;
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    z-index: 5;
+}
+
+@media only screen and (max-width: 1700px) {
+    #bottom_chat-input-box {
+        bottom: 56px;
+    }
+}
+
+.bar-right {
+    float: right;
+    height: 64px;
+    position: absolute;
+    right: 0px;
+    z-index: 2;
+}
+
+.bottom-right-ufalt {
+    top: 4px;
+    float: right;
+    cursor: pointer;
+    position: relative;
+    width: 13px;
+    height: 43px;
+}
+
+.barico-right {
+    filter: drop-shadow(1.5px 1px 0px);
+    color: #00000070;
+    float: right;
+    cursor: pointer;
+}
+
+.barico-right:hover {
+    filter: drop-shadow(2.5px 2px 0px);
+    color: #00000082;
+}
+
+.barico-right:active {
+    opacity: 0.7;
+}
+
+.sohbet-icon {
+    margin: 9px 10px 9px 0px;
+}
+
+.arkadas-ara-icon {
+    margin: 8px 10px 9px 0px;
+}
+
+.barico-right.arkadas-liste-icon {
+    margin: 8px 11px 9px 0px;
+}
+
+#avatar_menu {
+    width: auto;
+    height: 50px;
+    position: absolute;
+    background: #2a2823;
+    z-index: 10;
+    bottom: 45px;
+    left: 145px;
+    box-sizing: border-box;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    border-radius: 6px;
+    box-shadow: inset 0px 0px 0px 2px #3a3832;
+    padding-right: 10px;
+    z-index: 111;
+}
+
+.amenu-ico {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    top: -2px;
+    position: relative;
+    margin: 0px 0px 0px 10px;
+    cursor: pointer;
+    filter: grayscale(5);
+}
+
+.amenu-text {
+    float: left;
+    font-size: 9.9px;
+    bottom: -9px;
+    position: absolute;
+    height: 14px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.amenu-ico:hover {
+    filter: grayscale(0);
+    color: #20cef3;
+}
+
+.use-speech-bubble {
+    filter: drop-shadow(3px 3px 0 #0006);
+    background: rgba(27,27,23,.9019607843137255);
+    width: 180px;
+    height: auto;
+    bottom: 30px;
+    position: relative;
+    padding: 6px;
+    border-radius: 7px;
+    box-shadow: inset 0 0 0 2.5px hsla(0,0%,100%,.0196078431372549);
+    z-index: 1;
+    right: 135px;
+}
+
+
+@media only screen and (max-width: 1700px) {
+    .use-speech-bubble {
+        bottom: 90px;
+    }
+}
+
+
+.bubble-selection {
+    width: 55px;
+    height: 34px;
+    float: left;
+    border-radius: 5px;
+    margin-left: 1px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.bubble-selection:active {
+    background-color: #fff;
+}
+
+.bottombar-friends-list-box {
+    width: auto;
+    height: 64px;
+    float: right;
+    top: 7px;
+    bottom: 0px;
+    position: relative;
+}
+
+.friends-left-box {
+    background-image: url(../images/bottombar/friends-left.png);
+    width: 29px;
+    height: 31px;
+    float: left;
+    top: 2.5px;
+    position: relative;
+    cursor: pointer;
+    left: 3px;
+}
+
+.friends-right-box {
+    background-image: url(../images/bottombar/friends-right.png);
+    width: 29px;
+    height: 31px;
+    float: right;
+    top: 2.5px;
+    position: relative;
+    cursor: pointer;
+    right: 1px;
+}
+
+.online-friends-box {
+    width: 127px;
+    height: 36px;
+    float: left;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 0px 2px #9cbe59;
+    box-sizing: border-box;
+    background: #72893f;
+    cursor: pointer;
+    position: relative;
+    margin-left: 3px;
+}
+
+.online-friends-box:hover {
+    box-shadow: inset 0px 0px 0px 2px #d2f693;
+    background: #99b168;
+}
+
+.friends-left-box:hover {
+    filter: contrast(0.8);
+}
+
+.friends-right-box:hover {
+    filter: contrast(0.8);
+}
+
+.onfriends-avatar-head {
+    position: relative;
+    top: -20px;
+    left: -10px;
+    float: left;
+}
+
+.onfriends-username {
+    position: absolute;
+    float: left;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 7px 3px 9px 35px;
+    width: auto;
+    overflow: hidden;
+    font-family: system-ui;
+}
+
+.bri-slide-box-kapali{
+    height: 108px !important;
+    margin-top: 64px !important;
+    background-image: url(/assets/images/bottombar/bri-open.png) !important; 
+}
+
+.bri-slide-box-acik{
+    height: 172px !important;
+    top: 0px !important;
+    background-image: url(/assets/images/bottombar/bri-close.png) !important;
+}
+
+.bri-slide-box {
+    width: 14px;
+    height: 108px;
+    background: #3a3832;
+    box-sizing: border-box;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+    z-index: 1;
+    position: relative;
+}
+
+.bri-slide-box:active {
+    height: 172px;
+    background-image: url(../images/bottombar/bri-close.png);
+}
+
+.bottom-room-information {
+    float: left;
+    position: absolute;
+    bottom: 56px;
+    left: 0px;
+    z-index: 1;
+}
+
+.bri-room-name_and_owner-box {
+    width: auto;
+    float: left;
+    height: 77px;
+    margin-top: 95px;
+    background: #3a3832d6;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 12px;
+    animation: fadeInLeft 0.5s;
+}
+
+.bri-room_name {
+    font-family: 'Ubuntu';
+    padding-top: 6px;
+    font-size: 16px;
+    padding: 5px 10px 0;
+}
+
+.bri-room_owner {
+    height: 15px;
+    float: left;
+    font-family: 'Ubuntu';
+    padding-top: 6px;
+    font-size: 16px;
+    padding: 0px 10px 0;
+    color: #ffffff9e;
+}
+
+.bri-room-options {
+    width: 151px;
+    float: left;
+    height: 172px;
+    background: #3a3832d6;
+    border-radius: 0px 5px 5px 0px;
+    overflow: hidden;
+    margin-left: -4px;
+    animation: fadeInLeft 0.5s;
+}
+
+.bri-ro-settings-box {
+    float: left;
+    width: 135px;
+    height: 21px;
+    margin-left: 15px;
+    margin-top: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.bri-ro-settings-box:hover > .settingsico {
+    background-image: url(../images/bottombar/settings-on.png);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+}
+
+.bri-ro-settings-box:active > .settingsico {
+    background-image: url(../images/bottombar/settings-act.png);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+    margin-top: -1px;
+}
+
+.bri-ro-zoom-box:hover > .zoomico {
+    background-image: url(../images/bottombar/zoom-on.png);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+}
+
+.bri-ro-zoom-box:active > .zoomico {
+    background-image: url(../images/bottombar/zoom-act.png);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+    margin-top: -1.5px;
+}
+
+p.room-options-desc_text {
+    font-size: 12px;
+    text-decoration: underline;
+    color: #c1c1c1;
+    font-family: Ubuntu;
+    padding: 1px 7px;
+    position: relative;
+    float: left;
+}
+
+.settingsico {
+    width: 21px;
+    height: 21px;
+    float: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../images/bottombar/settings.png);
+    filter: drop-shadow(0px 1px 0px #00000040);
+}
+
+.bri-ro-zoom-box {
+    float: left;
+    width: 135px;
+    height: 21px;
+    margin-left: 15px;
+    margin-top: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+.zoomico {
+    width: 21px;
+    height: 22px;
+    float: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../images/bottombar/zoom.png);
+    filter: drop-shadow(0px 2px 0px #00000040);
+}
+
+.bri-ro-roomchat-box {
+    float: left;
+    width: 135px;
+    height: 21px;
+    margin-left: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.roomchatico {
+    width: 21px;
+    height: 22px;
+    float: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../images/bottombar/chat.png);
+    filter: drop-shadow(0px 2px 0px #00000040);
+}
+
+.bri-ro-roomchat-box:hover > .roomchatico {
+    background-image: url(../images/bottombar/chat-on.png);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+}
+
+.bri-ro-roomchat-box:active > .roomchatico {
+    background-image: url(../images/bottombar/chat-act.png);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+    margin-top: -1px;
+}
+
+.bri-ro-roomlike-box {
+    float: left;
+    width: 135px;
+    height: 21px;
+    margin-left: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.bri-ro-roomurl-box {
+    float: left;
+    width: 135px;
+    height: 21px;
+    margin-left: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.roomlikeico {
+    width: 21px;
+    height: 22px;
+    float: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../images/bottombar/like.png);
+    filter: drop-shadow(0px 2px 0px #00000040);
+}
+
+.bri-ro-roomlike-box:hover > .roomlikeico {
+    background-image: url(../images/bottombar/like-on.png);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+}
+
+.bri-ro-roomlike-box:active > .roomlikeico {
+    background-image: url(../images/bottombar/like-act.png);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+    margin-top: -1px;
+}
+
+.roomurlico {
+    width: 21px;
+    height: 22px;
+    float: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../images/bottombar/roomurl.png);
+    filter: drop-shadow(0px 2px 0px #00000040);
+}
+
+.bri-ro-roomurl-box:hover > .roomurlico {
+    background-image: url(../images/bottombar/roomurl-on.png);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+}
+
+.bri-ro-roomurl-box:active > .roomurlico {
+    background-image: url(../images/bottombar/roomurl-act.png);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+    margin-top: -1px;
+}
+
+.rooms-Ã„Â±ve-been-to-before {
+    float: left;
+    position: relative;
+    background-image: url(../images/bottombar/gecmis-oda-list.png);
+    width: 33px;
+    height: 35px;
+    margin-left: 4px;
+    cursor: pointer;
+    top: 3px;
+}
+
+.rooms-Ã„Â±ve-been-to-before:hover {
+    background-image: url(../images/bottombar/gecmis-oda-list-on.png);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+}
+
+.rooms-Ã„Â±ve-been-to-before:active {
+    background-image: url(../images/bottombar/gecmis-oda-list-act.png);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+    margin-top: -1px;
+}
+
+.enter-previous-room {
+    float: left;
+    position: relative;
+    background-image: url(../images/bottombar/onceki-oda.png?00);
+    width: 34px;
+    height: 31px;
+    margin-left: 15px;
+    cursor: pointer;
+    margin-top: 4px;
+    top: 3px;
+}
+
+.enter-previous-room:hover {
+    background-image: url(../images/bottombar/onceki-oda-on.png?00);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+}
+
+.enter-previous-room:active {
+    background-image: url(../images/bottombar/onceki-oda-act.png?00);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+    margin-top: 3px;
+}
+
+.enter-next-room {
+    float: left;
+    position: relative;
+    background-image: url(../images/bottombar/sonraki-oda.png);
+    width: 34px;
+    height: 31px;
+    margin-left: 2px;
+    cursor: pointer;
+    margin-top: 4px;
+    top: 3px;
+}
+
+.enter-next-room:hover {
+    background-image: url(../images/bottombar/sonraki-oda-on.png);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+}
+
+.enter-next-room:active {
+    background-image: url(../images/bottombar/sonraki-oda-act.png);
+    filter: drop-shadow(0px 1px 0px #ffffff40);
+    margin-top: 3px;
+}
+
+.bottombar-friends-list {
+    float: left;
+    width: auto;
+    height: 169px;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top: -11px;
+    bottom: 28px;
+    position: relative;
+    z-index: 10;
+    max-width: 520px;
+}
+
+.bottom-fl-content {
+    width: max-content;
+    height: 75px;
+    position: relative;
+    bottom: -40px;
+}
+
+
+.add-avatar-head {
+    position: relative;
+    left: 2px;
+    float: left;
+    top: -5px;
+}
+
+.add-friends-box {
+    width: 127px;
+    height: 36px;
+    float: left;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 0px 2px #7ec7dd;
+    box-sizing: border-box;
+    background: #5c8f9c;
+    cursor: pointer;
+    position: relative;
+    margin-left: 3px;
+}
+
+.add-friends-box:hover {
+    background: #549daf;
+    box-shadow: inset 0px 0px 0px 2px #73daf9;
+}
+
+.bottombar-user-options {
+    float: left;
+    position: relative;
+    width: 125px;
+    height: 30px;
+    margin-top: -21px;
+}
+
+.buopt-chatico {
+    background: url(../images/bottombar/c.gif);
+    width: 20px;
+    height: 21px;
+    float: left;
+    margin-left: 21px;
+    filter: drop-shadow(1px 1px 0px);
+    color: #00000054;
+}
+
+.buopt-goroomico {
+    background: url(../images/bottombar/g.gif);
+    width: 21px;
+    height: 21px;
+    float: left;
+    margin-left: 10px;
+    filter: drop-shadow(1px 1px 0px);
+    color: #00000054;
+}
+
+.buopt-profileico {
+    background: url(../images/bottombar/p.gif);
+    width: 21px;
+    height: 21px;
+    float: left;
+    margin-left: 10px;
+    filter: drop-shadow(1px 1px 0px);
+    color: #00000054;
+}
+
+.buopt-chatico:hover {
+    filter: drop-shadow(2px 2px 0px);
+    color: #00000054;
+}
+
+.buopt-goroomico:hover {
+    filter: drop-shadow(2px 2px 0px);
+    color: #00000054;
+}
+
+.buopt-profileico:hover {
+    filter: drop-shadow(2px 2px 0px);
+    color: #00000054;
+}
+
+.rooms-ıve-been-to-before {
+    float: left;
+    position: relative;
+    background-image: url(../images/bottombar/gecmis-oda-list.png);
+    width: 33px;
+    height: 35px;
+    margin-left: 2px;
+    cursor: pointer;
+    margin-top: 0px;
+    top: 3px;
+}
+
+.rooms-ıve-been-to-before:hover {
+    background-image: url(../images/bottombar/gecmis-oda-list-on.png);
+}
+
+
+.rooms-ıve-been-to-before:active {
+    background-image: url(../images/bottombar/gecmis-oda-list-act.png);
+    margin-top: -1px;
+}
+
+.mobicountbox {
+    position: absolute;
+    width: auto;
+    height: 17px;
+    background: #ac1d19;
+    top: 0px;
+    right: -3px;
+    padding-left: 3px;
+    padding-right: 4px;
+    box-shadow: inset 0px 0px 0px 1px #ed2823;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    border-radius: 5px;
+}
+
+.count-txt {
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Ubuntu';
+    margin-top: -2px;
+}
+
+.ev-icon {
+    margin: 10px 0 10px 17px;
+}
+
+
+.rt-mainbutton {
+    position: absolute;
+    bottom: 7px;
+}

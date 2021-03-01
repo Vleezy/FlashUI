@@ -1,0 +1,185 @@
+.kiyafeti-kullan {
+    width: 388px;
+    height: 220px;
+    background-color: #ebe9df;
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid;
+    border-bottom: 2px solid #000;
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #000;
+    z-index: 11;
+    box-sizing: initial;
+    top: calc(50vh - 81.5px);
+    left: calc(50vw - 150px);
+}
+
+.kkhead {
+    width: 99%;
+    height: 31px;
+    background-color: #367897;
+    border-top: 2px solid #408caf;
+    border-left: 2px solid #408caf;
+    border-right: 2px solid #408caf;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    box-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 38%);
+    box-sizing: initial;
+}
+
+p.kk-baslik {
+    margin: 0;
+    width: 96.5%;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    font-family: system-ui;
+    box-sizing: initial;
+}
+
+.kkbox {
+    width: 100%;
+    height: auto;
+    min-height: 117px;
+    float: left;
+}
+
+.kiyafetkullan {
+    position: absolute;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: initial;
+    font-family: system-ui;
+    float: right;
+    bottom: 15px;
+    right: 0;
+    background: red;
+}
+
+.useclothing {
+    width: 388px;
+    height: auto;
+    background-color: #ebe9df;
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid;
+    border-bottom: 2px solid #000;
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #000;
+    z-index: 11;
+    box-sizing: initial;
+    top: calc(50vh - 81.5px);
+    left: calc(50vw - 150px);
+}
+
+.uchead {
+    width: 99%;
+    height: 31px;
+    background-color: #367897;
+    border-top: 2px solid #408caf;
+    border-left: 2px solid #408caf;
+    border-right: 2px solid #408caf;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    box-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 38%);
+    box-sizing: initial;
+}
+
+.ucbox {
+    width: 100%;
+    height: auto;
+    min-height: 117px;
+    float: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.avatar-view-ucbox {
+    width: 83px;
+    height: 130px;
+    background-image: url(bg.png);
+    margin-left: 20px;
+    float: left;
+}
+
+p.uc-desc {
+    float: left;
+    width: 285px;
+    font-family: system-ui;
+    font-size: 13px;
+    padding-left: 20px;
+    padding-right: 15px;
+    line-height: 15px;
+}
+
+p.uc-desc_not {
+    float: left;
+    width: 285px;
+    font-family: system-ui;
+    font-size: 13px;
+    padding-left: 20px;
+    padding-right: 15px;
+    line-height: 15px;
+    padding-top: 5px;
+    font-weight: 500;
+}
+
+.uc-rightbox {
+    float: right;
+    width: 285px;
+    position: relative;
+    height: 130px;
+}
+
+.uc-buy {
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: initial;
+    font-family: system-ui;
+    right: 0;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+}
+
+.ucbuy-button {
+    width: auto;
+    height: 23px;
+    float: left;
+    bottom: -5px;
+    cursor: pointer;
+    box-sizing: initial;
+    font-family: system-ui;
+    background: linear-gradient(#00a100 50%,#009000 0);
+    box-shadow: inset 0 0 0 2px #009000;
+    border-radius: 4px;
+    border: solid #000;
+    border-width: 2px 2px 3px;
+    color: white;
+}
+
+.ucbuy-button:hover {
+    background: linear-gradient(#00a900 50%, #009c00 50%);
+    box-shadow: inset 0px 0px 0px 2px #009c00;
+}
+
+.ucbuy-button:active {
+    background: linear-gradient(#009500 50%, #006c00 50%);
+    box-shadow: inset 0px 0px 0px 2px #006c00;
+}
+
+.uc-uyari {
+    padding-bottom: 3px;
+    float: left;
+    width: 100%;
+    color: #015001;
+}

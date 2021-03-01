@@ -1,0 +1,15 @@
+<nitro-wired-action-base-component [(delay)]="delay">
+	<div class="wired-options-box">
+		<p class="wired-subheader">{{ ('wiredfurni.params.bot.name') | translate }}</p>
+		<input type="text" maxlength="32" class="wpanel-input" [(ngModel)]="botName">
+	</div>
+
+	<div class="wired-options-box">
+		<div class="wiredavatar">
+			<div nitro-avatar-image [figure]="figure" [direction]="2"></div>
+		</div>
+		<div class="wiredavatar-buton">
+			<button type="button" class="wabuttonbox" (click)="copyLook()">{{ ('wiredfurni.params.capture.figure') | translate }}</button>
+		</div>
+	</div>
+</nitro-wired-action-base-component>

@@ -1,0 +1,178 @@
+
+.nitro-furniture-dimmer {
+    position: absolute;
+    width: 350px;
+    max-width: 350px;
+
+    .dimmer-inner {
+        border-radius: $border-radius;
+
+        .dimmer-colour-list {
+
+            .dimmer-colour {
+                width: 100%;
+
+                &:not(:last-child) {
+                    margin-right: 5px;
+                }
+
+                &.color-selected {
+                    color: black;
+                    border: 2px solid $white;
+                 }
+            }
+        }
+    }
+
+}
+
+.backgroundtoner {
+    width: 292px;
+    height: 255px;
+    position: absolute;
+    background-color: #ebe9df;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.bthead {
+    width: 98.7%;
+    height: 31px;
+    background-color: #367897;
+    border-top: solid 2px #408caf;
+    border-left: solid 2px #408caf;
+    border-right: solid 2px #408caf;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+p.bthood {
+    margin: 0px;
+    width: 96%;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.bt-bodybox {
+    width: 274px;
+    height: 170px;
+    box-sizing: border-box;
+    background: white;
+    border: solid 1px #999999;
+    border-radius: 3px;
+    margin: 8px;
+    color: black;
+    float: left;
+    position: relative;
+}
+
+.btdescbox {
+    width: 272px;
+    height: 34px;
+}
+
+.bg-color-info {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    box-shadow: -1px -1px 0px 0px #999;
+}
+
+p.btdesc-txt {
+    font-size: 11px;
+    font-family: 'Ubuntu';
+    padding: 2px 4px;
+    width: 235px;
+    float: left;
+    height: 34px;
+    overflow: hidden;
+}
+
+.bt-control {
+    margin: 13px 7px;
+}
+
+p.bt-selecttxt {
+    font-size: 10px;
+    font-family: system-ui;
+    font-weight: bold;
+    float: left;
+    position: absolute;
+    margin-top: -10px;
+}
+
+.bgedit-slider{
+    margin-bottom: 14px;
+
+    .ngx-slider{
+        height: 20px !important;
+        width: 100% !important;
+        margin: 0 !important;
+
+            .ngx-slider-pointer{
+                width: 11px !important;
+                height: 16px !important;
+                background-image: url(rdsbb.png) !important;
+                outline: none !important;
+                top: 2px !important;
+                border-radius: 0px !important;
+                background-color: #0db9f000 !important;
+
+                &::after{
+                    display: none !important;
+                }
+            }
+
+            .ngx-slider-bar{
+                background-image: url(rdsrange.png) !important;
+                width: 201px !important;
+                height: 20px !important;
+                outline: none !important;
+                background-color: #b39f9f00!important;
+            }
+
+            .ngx-slider-bar-wrapper {
+                width: 201px !important;
+            }
+}
+}
+
+.bt-buton {
+    width: auto;
+    height: 24px;
+    background: white;
+    float: left;
+    border: solid 1px black;
+    box-shadow: inset -1px -1px 0px 0px #ccc;
+    border-radius: 4px;
+    font-size: 11px;
+    font-family: 'Ubuntu';
+    padding: 2px 7px;
+    cursor: pointer;
+}
+
+.btbuttonbox {
+    width: 274px;
+    height: auto;
+    margin: 10px -8px;
+    color: black;
+    float: left;
+    position: relative;
+}
+
+.bt-buton:hover {
+    border: solid 2px black;
+    padding: 1px 6px;
+}

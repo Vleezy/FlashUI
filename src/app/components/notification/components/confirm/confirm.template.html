@@ -1,0 +1,34 @@
+<!--<div [bringToTop] [draggable] class="nitro-alert d-flex flex-column bg-primary border shadow rounded" noMemory="true">
+    <div class="drag-handler d-flex justify-content-center align-items-center px-3 pt-3">
+        <h6 class="m-0">{{ title }}</h6>
+    </div>
+    <div class="d-flex flex-column p-3">
+        <div class="d-flex flex-column" [innerHTML]="message"></div>
+        <div class="d-flex align-items-center justify-content-center mt-3">
+            <button type="button" class="btn btn-link mr-1" (click)="close()">{{ ('generic.cancel') | translate }}</button>
+            <button type="button" class="btn btn-success" (click)="confirm()">{{ ('generic.ok') | translate }}</button>
+        </div>
+    </div>
+</div>-->
+
+<div [bringToTop] [draggable] dragHandle="#coreloha-drag" id="corelo-ha" noMemory="true">
+    <div id="coreloha-drag">
+        <p class="cha-baslik">{{ title }}</p>
+        <div class="old-kapat" (click)="close()"></div>
+    </div>
+    <div class="chabox">
+        <div class="cha-text-box">
+            <p class="cha-text" [innerHTML]="message | keepHtml"></p>
+        </div>
+
+        <div class="w50cha-iptal" (click)="close()">
+            <u>{{ ('generic.close') | translate }}</u>
+        </div>
+        <div class="w50cha-onay">
+            <div class="cha-ok-box" (click)="confirm()">
+                <p class="ch50-tamam-text">{{ ('generic.confirm') | translate }}</p>
+            </div>
+        </div>
+
+    </div>
+</div>

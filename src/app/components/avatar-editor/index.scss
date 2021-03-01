@@ -1,0 +1,904 @@
+.nitro-avatar-editor-component {
+    position: absolute;
+    width: 600px;
+    max-width: 600px;
+
+    .avatar-grid-container {
+
+        &.palette-grid {
+
+            .grid-items {
+
+                .item-detail {
+                    height: 25px !important;
+                    max-height: 25px !important;
+
+                    .detail-info {
+
+                        &:hover,
+                        &.active {
+                            border-color: rgba($white, 1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .grid-items {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: flex-start;
+            width: 100%;
+            margin-top: -3px;
+            overflow: hidden;
+    
+            &.grid-6 {
+    
+                .item-detail {
+                    width: calc(1 / 6 * 100% - (1 - 1 / 6) * 3px);
+    
+                    &:nth-child(6n) {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            &.grid-12 {
+    
+                .item-detail {
+                    width: calc(1 / 12 * 100% - (1 - 1 / 12) * 3px);
+    
+                    &:nth-child(12n) {
+                        margin-right: 0;
+                    }
+                }
+            }
+    
+            .item-detail {
+                height: 50px;
+                max-height: 50px;
+                margin: 3px 3px 0 0;
+                overflow: hidden;
+    
+                .detail-info {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+
+                    &.has-image {
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-image: url('../../../assets/images/icons/loading-icon.png');
+                    }
+                }
+            }
+    
+            &::after {
+                content: "";
+                flex: auto;
+            }
+        }
+    }
+
+    .avatar-spotlight {
+        top: -16px;
+        width: 130px;
+        height: 305px;
+        background: transparent url('../../../assets/images/avatareditor/spotlight.png') no-repeat center;
+        opacity: 0.3;
+    }
+
+    .avatar-shadow {
+        width: 80px;
+        height: 45.5px;
+        margin-top: 192px;
+        border-radius: 100%;
+        background-color: rgba(0, 0, 0, 0.48);
+    }
+
+    .avatar-container {
+        margin-top: 50px;
+        pointer-events: none;
+
+        .avatar-image {
+            position: absolute;
+        }
+    }
+
+    .arrow-container {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 25px;
+
+        .icon {
+            cursor: pointer;
+        }
+
+        .arrow-left-icon {
+            margin-right: 10px;
+        }
+    }
+}
+
+.search-result-item {
+    cursor: pointer;
+}
+
+/* */
+
+#avatareditor {
+    width: 662px;
+    height: 522px;
+    background-color: #ebe9df;
+    left: 250px;
+    top: 100px;
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    border: solid 1px;
+    border-bottom: solid 2px #000;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.ae-baslik {
+    margin: 0px;
+    width: 99.5%;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    font-family: system-ui;
+}
+
+#avatareditordrag {
+    width: 100%;
+    height: 33px;
+    background-color: #367897;
+    border-top: solid 2px #408caf;
+    border-left: solid 2px #408caf;
+    border-right: solid 2px #408caf;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-bottom: solid 1px #000;
+}
+
+.avatareditor-head-box {
+    width: 487px;
+    height: 110px;
+    background: #0e3f52;
+    position: relative;
+    float: left;
+    box-sizing: content-box;
+}
+
+.avatareditor-menu {
+    width: 325px;
+    height: 29px;
+    border-bottom: 1px solid #000;
+    left: 3px;
+    position: absolute;
+    bottom: 0px;
+    float: left;
+    box-sizing: content-box;
+}
+
+.avatareditor_menu-button {
+    width: 48px;
+    height: 28px;
+    background: #7e8c8a;
+    float: left;
+    margin-right: 0px;
+    border-top: solid 1px #272e31;
+    border-left: solid 1px #272e31;
+    border-right: solid 1px #272e31;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    border-bottom: solid 1px #000000;
+    box-sizing: content-box;
+}
+
+
+
+.avatareditor_menu-button:hover {
+    background: #f6f5f0;
+    box-shadow: inset 2px 2px 0px 1px #fff;
+    border-bottom: solid 1px #ebe9df;
+}
+
+.ae-menu-ico {
+    width: 48px;
+    height: 28px;
+    float: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(-1.5px 0px 0px #00000024);
+}
+
+.avatareditor-username {
+    color: #fff;
+    font-family: 'Ubuntu';
+    font-size: 28px;
+    padding: 19px;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+.avatar-builder-viewport {
+    float: left;
+    width: 487px;
+    height: 361px;
+    position: relative;
+    border-right: solid 1px #000;
+    box-sizing: border-box;
+}
+
+.builder_viewport-menu {
+    width: 457px;
+    height: 55px;
+    left: 30px;
+    position: relative;
+    float: left;
+}
+
+.bvm-icon {
+    width: 50px;
+    height: 50px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.avatareditor-bvm-name {
+    float: left;
+    font-weight: bold;
+    font-size: 12.5px;
+    padding: 19px 20px 20px 0px;
+    font-family: system-ui;
+}
+
+#clothes-box {
+    float: left;
+    width: 331px;
+    height: 203px;
+    left: 21px;
+    position: relative;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+#clothes-box::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+#clothes-box::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+#clothes-box::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+#clothes-box::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+#clothes-box::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+#clothes-box::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+#clothes-box::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+#clothes-box::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+#clothes-box::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+#clothes-box::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+#clothes-box::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+#clothes-box::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+#clothes-box::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.clothes-object {
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background: hsla(0,0%,69.4%,0);
+    border: 3px solid hsla(0,0%,79.6%,0);
+    float: left;
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.clothes-object:hover {
+    background: #cecdc8;
+    border: solid 3px #dbdad5;
+}
+
+.body-view-generic-position {
+    object-position: 50% 28%;
+    object-fit: none;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+}
+
+.clothes-hc {
+    width: 10px;
+    height: 9px;
+    background-image: url(../images/avatareditor/clothes-hc.png);
+    position: absolute;
+    bottom: -3px;
+    right: -3px;
+}
+
+.clothes-object-active {
+    background: #b1b1b1;
+    border: solid 3px #cbcbcb;
+}
+
+#clothes-color {
+    width: 100%;
+    height: 92px;
+    left: 22px;
+    position: relative;
+    list-style: none;
+    overflow-x: hidden;
+    top: 10px;
+    float: left;
+    margin-right: 16px;
+}
+
+.color-object {
+    width: 13px;
+    height: 17px;
+    border: 2px solid #736d67;
+    margin: 3px 1px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 0px rgba(0 ,0, 0, 1 );
+    box-sizing: border-box;
+    float: left;
+    cursor: pointer;
+}
+
+.color-object-active {
+    border: 2px solid #a69d95;
+    box-shadow: 0px 4px 0px rgba(0 ,0, 0, 1 );
+    margin-top: 3px;
+    position: relative;
+    top: -2px;
+}
+
+#clothes-color::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+#clothes-color::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+#clothes-color::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+#clothes-color::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+#clothes-color::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+#clothes-color::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+#clothes-color::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+#clothes-color::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+#clothes-color::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+#clothes-color::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+#clothes-color::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+#clothes-color::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+#clothes-color::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.ccolor-max-width {
+    width: 100%;
+    float: left;
+}
+
+.myavatar-view {
+    position: absolute;
+    right: 0px;
+    width: 135px;
+    height: 361px;
+    float: right;
+}
+
+#ae-myavatar {
+    height: 220px;
+    top: 64px;
+    left: 25px;
+    position: relative;
+}
+
+.avatar-shadow {
+    background-image: url(../images/avatareditor/avatar-shadow.png);
+    width: 68px;
+    height: 34px;
+    position: absolute;
+    right: 33px;
+    top: 213px;
+    float: right;
+}
+
+.turn-avatar {
+    background-image: url(../images/avatareditor/turn.png?0);
+    width: 44px;
+    height: 29px;
+    position: relative;
+    margin: 35px 46px 49px 46px;
+    cursor: pointer;
+}
+
+.ae_save-changes {
+    background: linear-gradient(#f3f3f3 50%,#d9d9d9 0);
+    box-shadow: inset 0 0 0 2px #d9d9d9;
+    height: 25px;
+    float: left;
+    left: 5px;
+    width: auto;
+    border: solid #000;
+    border-width: 1px 1px 2px;
+    border-radius: 4px;
+    bottom: 0;
+    box-sizing: initial;
+    cursor: pointer;
+}
+
+.sc-text {
+    font-size: 13px;
+    padding: 2px 4px;
+    text-align: center;
+    font-weight: 700;
+    font-family: system-ui;
+}
+
+.avatareditor-wardrobe {
+    width: 167px;
+    height: 441px;
+    float: right;
+    position: absolute;
+    right: 5px;
+}
+
+.wardrobe-desc {
+    color: #878682;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 87px 10px 15px 10px;
+    text-align: center;
+    font-family: system-ui;
+}
+
+.wardrobe-bg {
+    background-image: url(../images/avatareditor/wardrobe-bg.png);
+    width: 135px;
+    height: 294px;
+    margin: 0px 16px;
+    padding-top: 26px;
+    box-sizing: content-box;
+}
+
+.wardrobe-processing-center {
+    position: relative;
+    left: 12px;
+    width: 45px;
+    height: 50px;
+    float: left;
+    margin-right: 21px;
+    margin-bottom: 9px;
+}
+
+.put-in-wardrobe {
+    width: 8px;
+    height: 9px;
+    background: #cacaca;
+    top: 12px;
+    left: 1px;
+    position: relative;
+    background-image: url(../images/avatareditor/put-in-wardrobe.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+    cursor: pointer;
+}
+
+.use-the-outfit {
+    width: 8px;
+    height: 9px;
+    background: #cacaca;
+    top: 28px;
+    left: 1px;
+    position: relative;
+    background-image: url(../images/avatareditor/use-the-outfit.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.wardrobe-user-clothing-box {
+    width: 24px;
+    height: 50px;
+    position: absolute;
+    float: right;
+    right: 0px;
+    top: 0px;
+}
+
+.wardrobe-avatar {
+    object-position: -2px -9px;
+    object-fit: none;
+    width: 24px;
+    height: 50px;
+}
+
+#male-clothes-box {
+    height: 375px;
+}
+
+#female-clothes-box {
+    height: 375px;
+}
+
+.body-view-generic-cross {
+    object-position: 50% 50%;
+    object-fit: none;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+}
+
+.hair-view-generic-position {
+    object-position: 50% 18%;
+    object-fit: none;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+}
+
+.hat-view-generic-position {
+    object-position: 50% 22%;
+    object-fit: none;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+}
+
+#headhair-clothes-box {
+    height: 375px;
+}
+
+#headhat-clothes-box {
+    height: 375px;
+}
+
+#headacc-clothes-box {
+    height: 375px;
+}
+
+#eyeacc-clothes-box {
+    height: 375px;
+}
+
+#faceacc-clothes-box {
+    height: 375px;
+}
+
+#uppershirt-clothes-box {
+    height: 375px;
+}
+
+#upperprint-clothes-box {
+    height: 375px;
+}
+
+#upperjacket-clothes-box {
+    height: 375px;
+}
+
+#upperchest-clothes-box {
+    height: 375px;
+}
+
+#corelo-clothes-box {
+    height: 375px;
+}
+
+#lowershoes-clothes-box {
+    height: 375px;
+}
+
+#lowerwaist-clothes-box {
+    height: 375px;
+}
+
+.headacc-view-generic-position {
+    object-position: 49% 20%;
+    object-fit: none;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+}
+
+.eyeacc-view-generic-position {
+    object-position: 69% 29%;
+    object-fit: none;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+}
+
+.faceacc-view-generic-position {
+    object-position: 65% 33%;
+    object-fit: none;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+}
+
+.shirt-view-generic-position {
+    object-position: 50% 67%;
+    object-fit: none;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+}
+
+.print-view-generic-position {
+    object-position: 67% 67%;
+    object-fit: none;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+}
+
+.jacket-view-generic-position {
+    object-position: 49% 68%;
+    object-fit: none;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+}
+
+.chest-view-generic-position {
+    object-position: 61% 62%;
+    object-fit: none;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+}
+
+.leg-view-generic-position {
+    object-position: 58% 100%;
+    object-fit: none;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+}
+
+.shoes-view-generic-position {
+    object-position: 59% 115%;
+    object-fit: none;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+}
+
+.waist-view-generic-position {
+    object-position: 55% 85%;
+    object-fit: none;
+    width: 44px;
+    height: 44px;
+    transition: 0.5s;
+}
+
+.best-of-avatar {
+    padding-left: 30px;
+    padding-top: 13px;
+    font-family: 'Ubuntu';
+    font-size: 19px;
+    float: left;
+    width: 350px;
+}
+
+.best-of-avatar_desc {
+    padding-left: 30px;
+    padding-top: 3px;
+    font-family: 'Ubuntu';
+    font-size: 13px;
+    float: left;
+    width: 350px;
+}
+
+.best-avatar-views {
+    width: 294px;
+    height: 286px;
+    float: left;
+    margin-left: 27px;
+    margin-top: 22px;
+}
+
+.best-aviews-box {
+    width: 35px;
+    height: 60px;
+    float: left;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    box-sizing: border-box;
+    margin-right: 7px;
+    position: relative;
+    margin-bottom: 7px;
+    border-radius: 4px;
+    background: linear-gradient(#f3f3f3 50%, #d9d9d9 50%);
+    box-shadow: rgb(217 217 217) 0px 0px 0px 2px inset;
+    cursor: pointer;
+}
+
+.best-aviews-box:hover {
+    background: linear-gradient(#ffffff 50%, #f4f4f4 50%);
+    box-shadow: rgb(255 255 255) 0px 0px 0px 2px inset;
+}
+
+.best-of-avatar-views {
+    object-position: 2px -5px;
+    object-fit: none;
+    width: 35px;
+    height: 60px;
+}
+
+.ae-mactv {
+    height: 27px;
+    background: rgb(235, 233, 223);
+    border-width: 2px 2px 1px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(235, 233, 223);
+    box-shadow: rgb(255 255 255) 2px 2px 2px 0px inset;
+}
+
+.icon-hd {
+    background-image: url(../images/avatareditor/body.png);
+}
+
+.icon-head {
+    background-image: url(../images/avatareditor/hair.png);
+}
+
+.icon-torso {
+    background-image: url(../images/avatareditor/tops.png);
+}
+
+.icon-legs {
+    background-image: url(../images/avatareditor/bottoms.png);
+}
+
+.corelo-view-generic-position {
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background: rgba(177, 177, 177, 0);
+    border: 3px solid rgba(203, 203, 203, 0);
+    float: left;
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.corelotest {
+    display: flex;
+    width: 71%;
+    float: left;
+}
+
+.corelotest-g6 {
+    display: flex;
+    width: 35.6%;
+    float: left;
+}
+
+.bort {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

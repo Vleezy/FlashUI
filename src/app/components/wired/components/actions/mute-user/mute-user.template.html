@@ -1,0 +1,17 @@
+<nitro-wired-action-base-component [(delay)]="delay">
+    <div class="wiredrange-box">
+        <p class="wired-subheader">{{ ('wiredfurni.params.length.minutes') | translate:'minutes':length }}</p>
+        <div  class="wiredrange-box">
+            <div class="wiredrange_box">
+                <div class="decrease-number" (click)="decreaseLength()"></div>
+                <ngx-slider name="length" [options]="lengthSliderOptions" [(value)]="length"></ngx-slider>
+                <div class="increase-number" (click)="increaseLength()"></div>
+            </div>
+        </div>
+    </div>
+    <div class="wired_hr"></div>
+    <div class="wired-options-box">
+        <p class="wired-subheader">{{ ('wiredfurni.params.message') | translate }}</p>
+        <input type="text" class="wpanel-input" [(ngModel)]="message">
+    </div>
+</nitro-wired-action-base-component>

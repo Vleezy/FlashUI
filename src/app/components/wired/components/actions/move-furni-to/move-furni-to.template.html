@@ -1,0 +1,31 @@
+<nitro-wired-action-base-component [(delay)]="delay">
+	<div class="wired-options-box">
+		<p class="wired-subheader">{{ ('wiredfurni.params.emptytiles') | translate:'tiles':spacing }}</p>
+		<div  class="wiredrange-box">
+			<div class="wiredrange_box">
+				<div class="decrease-number" (click)="decreaseSpacing()"></div>
+				<ngx-slider name="spacing" [options]="spacingSliderOptions" [(value)]="spacing"></ngx-slider>
+				<div class="increase-number" (click)="increaseSpacing()"></div>
+			</div>
+		</div>
+	</div>
+	<div class="wired-options-box" style="margin-bottom: 5px;">
+		<p class="wired-subheader">{{ ('wiredfurni.params.startdir') | translate }}</p>
+		<div class="rs-select_container-radiosmall">
+            <input class="form-check-input" type="radio" name="movement" value="0" [(ngModel)]="movement">
+            <label class="form-check-label"><img src="/assets/images/wiredpanel/right-up.png"></label>
+        </div>
+		<div class="rs-select_container-radiosmall">
+            <input class="form-check-input" type="radio" name="movement" value="2" [(ngModel)]="movement">
+            <label class="form-check-label"><img src="/assets/images/wiredpanel/right-down.png"></label>
+        </div>
+		<div class="rs-select_container-radiosmall">
+            <input class="form-check-input" type="radio" name="movement" value="4" [(ngModel)]="movement">
+            <label class="form-check-label"><img src="/assets/images/wiredpanel/left-down.png"></label>
+        </div>
+		<div class="rs-select_container-radiosmall">
+            <input class="form-check-input" type="radio" name="movement" value="6" [(ngModel)]="movement">
+            <label class="form-check-label"><img src="/assets/images/wiredpanel/left-up.png"></label>
+        </div>
+	</div>
+</nitro-wired-action-base-component>

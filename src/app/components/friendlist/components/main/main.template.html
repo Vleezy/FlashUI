@@ -1,0 +1,91 @@
+<!--<div *ngIf="visible" [bringToTop] [draggable] class="nitro-friendlist card">
+    <div class="drag-handler d-flex justify-content-between align-items-center px-3 pt-3">
+        <h6 class="m-0">{{ ('messenger.title') | translate }}</h6>
+        <button type="button" class="close" (click)="hide()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="row p-3">
+        <div class="col-4 d-flex flex-column">
+            <button class="btn btn-secondary w-100 mb-1" (click)="displayFriends()" [ngClass]="{ 'active': friendsVisible }">
+                {{ ('friendlist.friends') | translate }}<span *ngIf="(totalFriendRequests > 0)" class="badge badge-danger ml-1" style="font-size:12px;">{{ totalFriendRequests }}</span>
+            </button>
+            <h6 class="mt-2 mb-1"><span class="badge text-uppercase">{{ ('toolbar.icon.label.messenger') | translate }}</span></h6>
+            <perfect-scrollbar class="position-relative w-100" style="min-height:320px;max-height:320px;height:320px;">
+                <div nitro-friendlist-thread-list-component [currentThread]="currentThread" [threadSelector]="selectThread"></div>
+            </perfect-scrollbar>
+        </div>
+        <div class="col d-flex flex-column">
+            <div *ngIf="friendsVisible" nitro-friendlist-friends-viewer-component [threadSelector]="selectThread"></div>
+            <div *ngIf="currentThread" nitro-friendlist-thread-viewer-component [thread]="currentThread"></div>
+        </div>
+    </div>
+</div>-->
+
+<div *ngIf="visible" [bringToTop] [draggable] id="messenger">
+    <div id="messengerdrag" class="drag-handler">
+        <p class="messenger-title">{{ ('messenger.title') | translate }}</p>
+        <div class="messenger-close" (click)="hide()"></div>
+    </div>
+    <div class="user-activity-status" style="display:none;">
+        <div class="userstatus-head"></div>
+        <div class="online-status-box">
+            <div class="ua-online-box"></div>
+            <p class=" activity-status-txt">Online</p>
+        </div>
+        <div class="idle-status-box">
+            <div class="ua-idle-box"></div>
+            <p class=" activity-status-txt">Leerlauf</p>
+        </div>
+        <div class="do_not_disturb-status-box">
+            <div class="ua-donotdisturb-box"></div>
+            <p class=" activity-status-txt">Kümmern Sie sich nicht</p>
+            <p class=" activity-status-desc">Sie erhalten keine Desktop-Benachrichtigungen.</p>
+        </div>
+        <div class="offline-status-box">
+            <div class="ua-offline-box"></div>
+            <p class=" activity-status-txt">Offline</p>
+            <p class=" activity-status-desc">Es wird nicht online angezeigt, aber Sie können im Hotel aktiv bleiben.</p>
+        </div>
+        <div class="uas-bottom"></div>
+        <div class="userstatus-bottom"></div>
+    </div>
+    <div class="messenger-box">
+        <div class="messenger-group_list">
+            <div class="gl-friends_chats-box">
+                <div class="message-arrived" style="display: none;">
+                    <p *ngIf="(totalFriendRequests > 0)" class="number-of-incoming-messages">{{ totalFriendRequests }}</p>
+                </div>
+                <div class="friendsico" style="background-image: url(../../../assets/images/chat2/friends.png);" (click)="displayFriends()" [ngClass]="{ 'active': friendsVisible }"></div>
+            </div>
+            <div id="active-groups-list">
+                <div class="gl-groups_chats-box">
+                    <div class="groupsico" style="background-image: url(../../../assets/images/chat2/groupico.png);"></div>
+                </div>
+            </div>
+        </div>
+        <div class="messenger-friends_list">
+            <input class="search-friends" placeholder="Search..">
+            <div class="friends-button" (click)="displayFriends()" [ngClass]="{ 'active': friendsVisible }">
+                <p class="frib-text">{{ ('friendlist.friends') | translate }}</p>
+            </div>
+            <div class="direct-messages">
+                <p class="drcmsg_text">{{ ('toolbar.icon.label.messenger') | translate }}
+                </p>
+                <div class="direct-messages-list">
+                    <div nitro-friendlist-thread-list-component [currentThread]="currentThread" [threadSelector]="selectThread"></div>
+                </div>
+            </div>
+            <div class="me-profil">
+                <div class="drcmsg-activechat_user-avatar">
+                    <img src="https://www.habbo.com/habbo-imaging/avatarimage?figure=hd-180-1.ch-255-66.lg-280-110.sh-305-62.ha-1012-110.hr-828-61&amp;action=std&amp;gesture=std&amp;direction=2&amp;head_direction=2&amp;size=s&amp;headonly=1&amp;img_format=png" class="drcmsg-uavatar-position">
+                    <div class="user-onof-status online"></div>
+                </div>
+                <div class="drcmsg-username">(ME) username</div>
+                <div class="user-status">user_status</div>
+            </div>
+        </div>
+        <div >
+            <div *ngIf="friendsVisible" nitro-friendlist-friends-viewer-component [threadSelector]="selectThread" style="width: 452px;float: right;"></div>
+            <div *ngIf="currentThread" nitro-friendlist-thread-viewer-component [thread]="currentThread"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,144 @@
+/*.nitro-hotelview-component {
+    display: block;
+	position: fixed;
+	width: 100%;
+	height: calc(100% - 70px);
+	background: rgba(0, 0, 0, 1);
+
+	.hotel-image {
+		display: block;
+		position: relative;
+		height: 100%;
+		width: 100%;
+		background-color: #68E5FF;
+		background: url('../../../assets/images/hotelview/rainbow19_background_left.png'), 
+				   url('../../../assets/images/hotelview/background_right_easter2016.png'),
+				   url('../../../assets/images/hotelview/rainbow19_background_gradient.png');
+		background-repeat: no-repeat, no-repeat, repeat-x;
+		background-position: left bottom, right bottom, 100px top;
+		background-size: auto, auto, auto, 1% 100%;
+		z-index: 1;
+    }
+	
+	.avatar-image {
+		bottom: 12px;
+		left: 63px;
+		position: absolute;
+		z-index: 1;
+	}
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+.hotel-bosluk {
+    width: 100%;
+    height: 95%;
+    position: absolute;
+    margin: auto;
+    background-position: center center;
+    font-family: "Ubuntu";
+}
+
+.hotel-view-haber-box {
+    position: absolute;
+    margin: 90px 0px 0px 306px;
+    width: 550px;
+    height: auto;
+}
+
+.view-haber {
+    width: auto;
+    height: 150px;
+    float: left;
+    margin-bottom: 111px;
+}
+
+.hv-haber-gorsel {
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-right: 33px;
+}
+
+.hv-haber-baslik {
+    float: left;
+    font-size: 17px;
+    text-shadow: 1px 1px 0px #0000002b;
+    width: 300px;
+    margin-top: -3px;
+}
+
+.hv-haber-aciklama {
+    float: left;
+    font-size: 12px;
+    width: 235px;
+    line-height: 14px;
+    padding-top: 0px;
+}
+
+.habbo-drape {
+    position: absolute;
+    left: 100px;
+    width: 145px;
+    height: 200px;
+    background: url(../images/reception/drape.png?0);
+    float: left;
+}
+
+.bosluk-sol {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+
+.bosluk-sag {
+    width: 484px;
+    height: 463px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    background: url(../images/reception/background_right_easter2016.png);
+}
+
+.view-buton {
+    background: url(../images/reception/view-buton.png);
+    width: 178px;
+    height: 26px;
+    float: left;
+    top: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.vb-text {
+    font-size: 11px;
+    text-shadow: 1px 1px 0px #ffffff;
+    color: #000000cf;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.hw-haber-ex2 {
+    position: absolute;
+    margin: 90px 0px 0px 810px;
+    width: 330px;
+    height: auto;
+}
+
+.view-buton:active {
+    background: url(../images/reception/vbuton-active.png);
+}
+
+.view-buton:hover {
+    filter: drop-shadow(2px -2px 6px #ffffff4a);
+}
+
+.hotelview_habbo-avatar {
+    float: left;
+    position: absolute;
+    bottom: 34px;
+    left: 122px;
+}

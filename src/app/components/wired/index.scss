@@ -1,0 +1,654 @@
+.nitro-wired-component {
+    position: absolute;
+    width: 275px;
+	max-width: 275px;
+	
+	.icon {
+		width: 16px;
+		height: 9px;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		&.icon-mv-1 {
+			background-image: url('^assets/images/wired/icon_wired_around.png');
+		}
+		&.icon-mv-2 {
+			background-image: url('^assets/images/wired/icon_wired_up_down.png');
+		}
+		&.icon-mv-3 {
+			background-image: url('^assets/images/wired/icon_wired_left_right.png');
+		}
+		&.icon-ne {
+			background-image: url('^assets/images/wired/icon_wired_north_east.png');
+		}
+		&.icon-se {
+			background-image: url('^assets/images/wired/icon_wired_south_east.png');
+		}
+		&.icon-sw {
+			background-image: url('^assets/images/wired/icon_wired_south_west.png');
+		}
+		&.icon-nw {
+			background-image: url('^assets/images/wired/icon_wired_north_west.png');
+		}
+		&.icon-rot-1 {
+			background-image: url('^assets/images/wired/icon_wired_rotate_clockwise.png');
+		}
+		&.icon-rot-2 {
+			background-image: url('^assets/images/wired/icon_wired_rotate_counter_clockwise.png');
+		}
+	}
+
+	.select-furni {
+		border-top: $card-cap-border-width solid $card-cap-border-color;
+	}
+
+	p, label {
+		font-size: 14px;
+	}
+}
+
+
+
+/**/ 
+
+.wiredpanel .wpanel-top{
+    background-image:url(/assets/images/wiredpanel/wiredbg-top.png);
+    width: 100%;
+    height: 21px;
+    background-repeat: repeat-y;
+    float: left;
+}
+
+.wiredpanel{
+    width: 240px;
+    position: absolute;
+    z-index: 20000;
+    top: 250px;
+    left: 500px;
+    font-family: 'Ubuntu';
+}
+
+.wiredpanel .wpanel-middle{
+    width: 240px;
+    background: url(/assets/images/wiredpanel/wiredbg-middle.png);
+    padding: 10px 6px;
+    background-repeat: repeat-y;
+    float: left;
+}
+
+.wiredpanel .wpanel-bottom{
+    width: 100%;
+    background: url(/assets/images/wiredpanel/wiredbg-bottom.png);
+    height: 36px;
+    background-repeat: repeat-y;
+    float: left;
+}
+
+.wpanel-hood {
+    font-size: 11px;
+    padding: 5px;
+    text-align: center;
+    position: absolute;
+    width: 240px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.wpanel-close {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    float: right;
+    right: 0px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.wpanel-close:hover {
+    background: url(/assets/images/wiredpanel/close_h.png);
+}
+
+.wpanel-close:active {
+  background: url(/assets/images/wiredpanel/close_a.png);
+}
+
+.wpanel-ready_button {
+    width: 103px;
+    height: 22px;
+    margin: 6px 5.5px 6px 11px;
+    float: left;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.wpanel-ready_button:hover {
+    box-shadow: inset 0px 0px 0px 2px #fff;
+}
+
+.wpanel-ready_button:active {
+    background: #fff;
+}
+
+.wpanel-close_button {
+    width: 103px;
+    height: 22px;
+    margin: 6px 11px 6px 5.5px;
+    float: right;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.wpanel-close_button:hover {
+    box-shadow: inset 0px 0px 0px 2px #fff;
+}
+
+.wpanel-close_button:active {
+    background: #fff;
+}
+
+.wpanel-ready_button-text {
+    padding: 3px;
+}
+
+.wpanel-close_button-text {
+    padding: 3px;
+}
+
+.wired-help {
+    font-size: 10px;
+    text-decoration: underline;
+    text-align: center;
+    width: 230px;
+    cursor: pointer;
+    float: left;
+    padding-top: 10px;
+    margin-bottom: -5px;
+}
+
+.wpanel-wired_name {
+    font-size: 10.5px;
+    text-align: left;
+    max-height: 40px;
+    overflow: hidden;
+    float: left;
+    width: 205px;
+    padding-bottom: 10px;
+}
+
+.wiredico {
+    width: 23px;
+    height: 14px;
+    overflow: hidden;
+    float: left;
+    background-image: url(/assets/images/wiredpanel/wiredico.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.wired_hr {
+    width: 228px;
+    height: 1px;
+    background: #232323;
+    float: left;
+    margin-top: 3px;
+}
+
+.select-mobi-box {
+    float: left;
+    padding: 5px 4px 10px;
+    width: 220px;
+}
+
+.number-of-selected-mobi {
+    font-size: 11px;
+    text-shadow: 1px 1px 0px #ffffff38;
+}
+
+.nosm-descripton {
+    font-size: 10px;
+    padding-top: 3px;
+}
+
+.wiredrange-box {
+    float: left;
+    padding: 5px 4px;
+    width: 228px;
+}
+
+.wired-subheader {
+    font-size: 11px;
+    text-shadow: 1px 0px 0px #ffffff70;
+}
+
+.wiredrange[type=range] {
+  -webkit-appearance: none;
+  width: 141px;
+  background: url(/assets/images/wiredpanel/wiredrange-bg.png);
+  outline: none;
+  height: 17px;
+  float: left;
+}
+
+.wiredrange[type=range]::-webkit-slider-thumb {
+  box-shadow: inset -1px -1px 0px 0px #bab4a1;
+  border: 1px solid #000000;
+  height: 12px;
+  width: 9px;
+  border-radius: 3px;
+  background: #e8e2c8;
+  cursor: pointer;
+  -webkit-appearance: none;
+  filter: drop-shadow(1px 1px 0px #00000082);
+}
+
+.wiredrange_box {
+    height: 20px;
+    margin: 6px 11px;
+}
+
+.decrease-number {
+    width: 20px;
+    height: 20px;
+    float: left;
+    border: solid 1px #fff;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-right: 6px;
+    cursor: pointer;
+    background-image: url(/assets/images/wiredpanel/left.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.increase-number {
+    width: 20px;
+    height: 20px;
+    float: right;
+    border: solid 1px #fff;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-left: 6px;
+    cursor: pointer;
+    background-image: url(/assets/images/wiredpanel/right.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.decrease-number:hover {
+    border: solid 2px #fff;
+}
+
+.decrease-number:active {
+    background: #fff;
+}
+
+.increase-number:hover {
+    border: solid 2px #fff;
+}
+
+.increase-number:active {
+    background: #fff;
+}
+
+.what-was-said-box {
+    float: left;
+    padding: 5px 4px;
+    width: 220px;
+}
+
+.wpanel-input {
+    width: 220px;
+    height: 16px;
+    background: #fff0;
+    box-sizing: border-box;
+    border: solid 1px #fff;
+    outline: 0;
+    color: #fff;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.select-trigger-user {
+    float: left;
+    padding: 5px 4px;
+    width: 220px;
+}
+
+.wpanel-select_container {
+    height: 12px;
+    font-family: 'Ubuntu';
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 11px;
+    padding-left: 20px;
+    float: left;
+    width: 90%;
+    margin-top: 7px;
+    margin-bottom: 0 !important;
+}
+
+p.select-text {
+    margin-top: -2px;
+}
+
+.wpanel-select_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-image: url(/assets/images/wired/sec1.png);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.wpanel-select_container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.wpanel-select_container .checkmark:after {
+	left: 0px;
+	top: 0px;
+	width: 12px;
+	height: 12px;
+	background-image: url(/assets/images/wired/sec2.png);
+	border-radius: 50px;
+}
+
+.designated-user-input {
+    width: 200px;
+    height: 16px;
+    background: #fff0;
+    box-sizing: border-box;
+    border: solid 1px #fff;
+    outline: 0;
+    color: #fff;
+    font-size: 11px;
+    margin-top: 5px;
+    float: right;
+}
+
+.wpanel-select_container2 {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 11px;
+    padding-left: 20px;
+    margin-top: 7px;
+    height: 12px;
+  }
+  
+  .wpanel-select_container2 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 0px;
+    border: solid 1px #fff;
+    box-sizing: content-box;
+  }
+  
+  .wpanel-select_container2 input:checked ~ .checkmark2 {
+  box-shadow: inset 0px 0px 0px 1px #fff;
+  }
+  
+  .checkmark2:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .wpanel-select_container2 input:checked ~ .checkmark2:after {
+    display: block;
+  }
+  
+  .wpanel-select_container2 .checkmark2:after {
+    left: 5px;
+    top: -3px;
+    width: 2px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2.5px 2.5px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    filter: drop-shadow(1px 1px 0px #3d3d3d) drop-shadow(-1px -1px 0px #3d3d3d) drop-shadow(-1px 1px 0px #3d3d3d) drop-shadow(1px -1px 0px #3d3d3d);
+    box-sizing: content-box;
+}
+  
+  .mobi-criteria-to-be-met {
+      float: left;
+      padding: 5px 4px;
+      width: 220px;
+  }
+
+.show-message-input {
+    float: left;
+    padding: 5px 4px;
+    width: 220px;
+}
+
+.when-movement-is-blocked {
+    float: left;
+    padding: 5px 4px;
+    width: 220px;
+}
+
+.wpanel-select_container3 {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 11px;
+  padding-left: 16px;
+  margin-top: 7px;
+  float: left;
+  padding-right: 13px;
+}
+
+.wpanel-select_container3 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 9.5px;
+  width: 9.5px;
+  border: solid 1px white;
+  border-radius: 50px;
+}
+
+.checkmark3:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.wpanel-select_container3 input:checked ~ .checkmark3:after {
+  display: block;
+}
+
+.wpanel-select_container3 .checkmark3:after {
+  left: 1px;
+  top: 1px;
+  width: 7.5px;
+  height: 7.5px;
+  background: #fff;
+  border-radius: 50px;
+}
+
+.wired-options-box {
+    float: left;
+    padding: 5px 4px;
+    width: 100%;
+}
+
+.wbottom10 {
+  margin-bottom: 10px;
+}
+
+.ngx-slider{
+	height: 20px !important;
+	width: 141px !important;
+	margin: 0 !important;
+	margin-top: -4px !important;
+
+		.ngx-slider-pointer{
+			width: 11px !important;
+			height: 14px !important;
+			background-image: url(/assets/images/wired/wiredamk.png) !important;
+			outline: none !important;
+			top: 2px !important;
+			border-radius: 0px !important;
+			background-color: #0db9f000 !important;
+
+			&::after{
+				display: none !important;
+			}
+		}
+
+		.ngx-slider-bar{
+			background-image: url(/assets/images/wired/wiredrange-bg.png) !important;
+			width: 141px !important;
+			height: 17px !important;
+			outline: none !important;
+			background-color: #b39f9f00 !important;
+		}
+
+		.ngx-slider-bar-wrapper {
+			width: 141px !important;
+		}
+}
+
+input[type=radio] {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    -webkit-appearance: none;
+    outline: 0;
+    top: -2px;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    background-image: url(/assets/images/wired/sec1.png);
+}
+
+input[type="radio"]:after {
+    height: 12px;
+    position: relative;
+    width: 12px;
+    content: '';
+    display: block;
+    margin-right: 5px;
+}
+
+input[type="radio"]:checked:after {
+    height: 12px;
+    width: 12px;
+    background-image: url(/assets/images/wired/sec2.png);
+}
+
+
+
+.rs-select_container-radio {
+    height: auto;
+    min-height: 12px;
+    font-family: "Ubuntu";
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 11px;
+    padding-left: 20px;
+    float: left;
+    width: 90%;
+    margin-top: 7px;
+    margin-bottom: 0 !important;
+}
+
+.rs-select_container-radiosmall {
+    height: 12px;
+    font-family: "Ubuntu";
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 11px;
+    padding-left: 20px;
+    float: left;
+    width: 55px;
+    margin-top: 7px;
+    margin-bottom: 0 !important;
+}
+
+.wiredavatar {
+    float: left;
+}
+
+.wiredavatar-buton {
+    float: left;
+    width: 130px;
+    position: relative;
+    height: 130px;
+}
+
+.wabuttonbox {
+    position: absolute;
+    bottom: 0px;
+    border: solid 1px #000;
+    background: white;
+    font-size: 11px;
+    font-family: 'Ubuntu';
+    border-radius: 5px;
+    height: 25px;
+    width: auto;
+    outline: 0 !important;
+}
+
+.wabuttonbox:active {
+    background: #bfbfbf;
+}
+
+.wiredselectbox {
+    width: 218px;
+    height: 23px;
+    background-image: url(/assets/images/wiredselect.png);
+    border: solid 0px #fff;
+    background-color: #fff0;
+    font-size: 12px;
+    cursor: pointer;
+    outline: 0 !important;
+}

@@ -1,0 +1,18 @@
+<nitro-wired-action-base-component [(delay)]="delay">
+    <div class="wired-options-box">
+        <p class="wired-subheader">{{ ('wiredfurni.params.bot.name') | translate }}</p>
+        <input type="text" maxlength="32" class="wpanel-input" [(ngModel)]="botName">
+    </div>
+    <div class="wired-options-box">
+        <p class="wired-subheader">{{ ('wiredfurni.params.message') | translate }}</p>
+        <input type="text" maxlength="32" class="wpanel-input" [(ngModel)]="message">
+    </div>
+    <div class="wired-options-box">
+        <p class="wired-subheader">{{ ('wiredfurni.params.whisper') | translate }}</p>
+        <input type="text" maxlength="32" class="wpanel-input" [(ngModel)]="mode">
+    </div>
+    <div class="wired-options-box">
+        <p class="wired-subheader">{{ ('wiredfurni.params.talk') | translate }}</p>
+        <input type="text" maxlength="32" class="wpanel-input" [(ngModel)]="mode">
+    </div>
+</nitro-wired-action-base-component>

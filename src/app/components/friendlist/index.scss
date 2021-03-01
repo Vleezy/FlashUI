@@ -1,0 +1,1243 @@
+/*.nitro-friendlist {
+    position: absolute;
+    width: $friendlist-width;
+}
+
+.nitro-friend-list {
+    .nitro-friend-list-item {
+        max-width: 99%;
+    }
+}
+
+.nitro-friendlist-thread-viewer-component {
+    .thread-viewer-user {
+        border-bottom: $card-cap-border-width solid $card-cap-border-color;
+
+        .avatar-img {
+            width: 50px;
+            height: 50px;
+
+            img {
+                position: relative;
+                top: -40px;
+                left: -30px;
+            }
+        }
+    }
+
+    .thread-viewer-user-info {
+        span {
+            max-width: 55%;
+        }
+    }
+
+    .thread-viewer-list {
+        display: flex;
+        flex-direction: column;
+
+        .thread-viewer-list-item {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+
+            .thread-viewer-list-item-message {
+                background:$secondary
+            }
+
+            &.thread-viewer-list-right {
+                align-self: flex-end;
+                flex-direction: row-reverse;
+                
+                .thread-viewer-list-item-message {
+                    background:$blue;
+                }
+
+                .avatar-image {
+                    transform: scaleX(-1);
+                }
+            }
+        }
+    } 
+}
+*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+
+#messenger {
+    width: 669px;
+    height: 420px;
+    float: left;
+    position: absolute;
+    background-image: url(../../../assets/images/chat2/bgmessenger.png);
+    left: 250px;
+    top: 200px;
+    padding-left: 1px;
+    box-sizing: content-box;
+        filter: drop-shadow(2px 4px 6px #00000040);
+}
+
+
+.messenger-close {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    float: right;
+    right: -1px;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.messenger-title {text-shadow: 1px 1px 0px #ffffff;color: #262626;font-size: 11px;padding-left: 10px;font-weight: bold;float: left;font-family: 'Ubuntu';padding: 11px;}
+
+p {
+    margin: 0px;
+}
+
+#messengerdrag {
+    height: 37px;
+    width: 668px;
+    border-bottom: solid 1px #b8b8b8;
+    box-sizing: content-box;
+    float: left;
+}
+
+.messenger-box {
+    width: 668px;
+    height: 376px;
+    float: left;
+    box-sizing: content-box;
+}
+
+.messenger-group_list {
+    width: 56px;
+    height: 376px;
+    box-sizing: border-box;
+    border-right: solid 1px #b8b8b8;
+    float: left;
+    box-shadow: inset 3px 5px 5px 0px #c9c9c9;
+}
+
+.gl-friends_chats-box {
+    width: 55px;
+    height: 55px;
+    background: #e2e0e0;
+    border-bottom: solid 1px #b8b8b8;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: inset 4px 4px 10px 0px #c5c5c5;
+}
+
+.friendsico {
+    filter: drop-shadow(1px 1px 0px rgba(255, 255, 255, 0.7)) drop-shadow(-1px -1px 0px rgba(255, 255, 255, 0.7)) drop-shadow(-1px 1px 0px rgba(255, 255, 255, 0.7)) drop-shadow(1px -1px 0px rgba(255, 255, 255, 0.7));
+    width: 55px;
+    height: 55px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.message-arrived {
+    width: 15px;
+    height: 15px;
+    background: #e93636;
+    position: relative;
+    border: solid 1px #a02626;
+    box-sizing: border-box;
+    border-radius: 100%;
+    float: right;
+    margin: 5px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.number-of-incoming-messages {
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    /* padding-left: 2px; */
+    /* padding-right: 3px; */
+}
+
+.gl-groups_chats-box {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.groupsico {
+    width: 55px;
+    height: 55px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+
+.messenger-friends_list {
+    width: 160px;
+    height: 376px;
+    box-sizing: border-box;
+    border-right: solid 1px #b8b8b8;
+    float: left;
+    box-shadow: inset 4px 4px 10px 0px #c5c5c5;
+    overflow: hidden;
+}
+
+div#active-groups-list {
+    border-top: solid 1px #fff;
+}
+
+.groupsico:active {
+    filter: drop-shadow(0px 0px 3px #0000007a);
+}
+
+.search-friends {
+    width: 145px;
+    height: 20px;
+    background: #fff0;
+    border: solid 0px #fff0;
+    box-sizing: border-box;
+    background-image: url(../../../assets/images/chat2/search.png);
+    outline: 0;
+    font-size: 11px;
+    padding-left: 5px;
+    font-family: 'Ubuntu';
+    margin: 10px 7px 0px 7px;
+}
+
+.friends-button {
+    width: 145px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url(../../../assets/images/chat2/friendsbox.png);
+    margin: 3px 7px 0px 7px;
+}
+
+.frib-text {
+    text-align: center;
+    color: #262626;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px;
+    text-shadow: 0.4px 0.4px 0px #ffffff;
+    font-family: "Ubuntu";
+}
+
+.friends-button:active {
+    background-image: url(../../../assets/images/chat2/friendsbox-on.png);
+}
+
+.drcmsg_text {
+    text-shadow: 1px 1px 0px #ffffff;
+    color: #262626;
+    font-size: 11px;
+    padding-left: 10px;
+    font-weight: bold;
+    float: left;
+    font-family: 'Ubuntu';
+    padding: 7px 5px 4px 7px;
+}
+
+.active-chat-menu-box {
+    width: 160px;
+    height: 40px;
+    float: left;
+    cursor: pointer;
+    position: relative;
+}
+
+.active-chat-menu-box-active {
+    background-image: url(../../../assets/images/chat2/chat-box_active.png);
+}
+
+.drcmsg-activechat_user-avatar {
+    width: 27px;
+    height: 27px;
+    background: #00000024;
+    border-radius: 100px;
+    margin: 7px 7px 7px 8px;
+    float: left;
+    cursor: pointer;
+}
+
+.drcmsg-uavatar-position {
+    margin: -1px 1.5px;
+}
+
+.drcmsg-username {
+    text-shadow: 0px 0.5px 1px #ffffff;
+    color: #262626;
+    font-size: 11px;
+    font-weight: bold;
+    float: left;
+    font-family: 'Ubuntu';
+    padding: 6px 1px 0px 1px;
+    width: 115px;
+}
+
+.user-status {
+    color: #000000d6;
+    font-size: 9px;
+    float: left;
+    font-family: 'Ubuntu';
+    padding: 0px 1px 3px 1px;
+    width: 115px;
+}
+
+.messenger-chat-box {
+    width: 452px;
+    height: 376px;
+    float: left;
+    box-sizing: content-box;
+}
+
+.chatted-user {
+    width: 452px;
+    height: 44px;
+    box-sizing: border-box;
+    border-bottom: solid 1px #b8b8b8;
+    float: left;
+    box-shadow: inset 4px 4px 10px 0px #c5c5c5;
+}
+
+.avatar-box {
+    width: 27px;
+    height: 27px;
+    border-radius: 100px;
+    margin: 8px 8px 8px 14px;
+    float: left;
+    cursor: pointer;
+}
+
+.message-user-info {
+    width: 191px;
+    height: 43px;
+    float: left;
+    position: relative;
+}
+
+.messenger-info_chated-username {
+    text-shadow: 0px 0.5px 0px #ffffff;
+    color: #262626;
+    font-size: 11px;
+    font-weight: bold;
+    float: left;
+    font-family: 'Ubuntu';
+    padding: 8px 1px 1px 1px;
+    width: 140px;
+    cursor: pointer;
+}
+
+.messenger-info_chated-user-status {
+    color: #000000d6;
+    font-size: 9px;
+    float: left;
+    font-family: 'Ubuntu';
+    padding: 1px 1px 3px 1px;
+    width: 140px;
+}
+
+.message-action {
+    width: 260px;
+    height: 43px;
+    float: right;
+    padding-right: 12px;
+}
+
+.search-message {
+    width: 145px;
+    height: 20px;
+    background: #fff0;
+    border: solid 0px #fff0;
+    box-sizing: border-box;
+    background-image: url(../../../assets/images/chat2/search.png);
+    outline: 0;
+    font-size: 11px;
+    padding-left: 5px;
+    font-family: 'Ubuntu';
+    margin: 12px 12px 12px 4px;
+    float: right;
+}
+
+.user-ticket {
+    background-image: url(../../../assets/images/chat2/ticket.png);
+    width: 70px;
+    height: 20px;
+    float: right;
+    margin: 12px 0px 12px 4px;
+    cursor: pointer;
+}
+
+.goroom-user {
+    background-image: url(../../../assets/images/chat2/goroom.png);
+    width: 21px;
+    height: 20px;
+    float: right;
+    margin: 12px 0px 12px 4px;
+    cursor: pointer;
+}
+
+.goroom-user:active {
+    background-image: url(../../../assets/images/chat2/goroom-on.png);
+}
+
+.user-ticket:active {
+    background-image: url(../../../assets/images/chat2/ticket-on.png);
+}
+
+.uticket_txt {
+    text-shadow: 1px 1px 0px #ffffff;
+    color: #262626eb;
+    font-size: 10px;
+    font-weight: bold;
+    float: left;
+    text-align: center;
+    width: 100%;
+    padding: 2.5px;
+    font-family: "Ubuntu";
+}
+.messenger-chat {
+    float: left;
+    width: 428px;
+    height: 268px;
+    padding: 12px;
+    box-sizing: content-box;
+}
+
+.write-message {
+    float: left;
+    margin: 6px 13px;
+}
+
+input.send-message {
+    width: 425px;
+    height: 28px;
+    background: #fff0;
+    border: solid 0px #fff0;
+    box-sizing: border-box;
+    float: left;
+    background-image: url(../../../assets/images/chat2/chatinput.png);
+    outline: 0;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.send-button {
+    width: 58px;
+    height: 19px;
+    position: absolute;
+    float: right;
+    margin: 4px 19px;
+    cursor: pointer;
+    overflow: hidden;
+    right: 0px;
+    background-image: url(../../../assets/images/chat2/send.png);
+}
+
+.send-button:active {
+    background-image: url(../../../assets/images/chat2/send-on.png);
+}
+
+.send-txt {
+    text-shadow: 1px 1px 0px #ffffff;
+    color: #262626eb;
+    font-size: 10px;
+    font-weight: bold;
+    float: left;
+    text-align: center;
+    width: 100%;
+    padding: 2px;
+    font-family: "Ubuntu";
+}
+
+.chat-message-box {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    position: relative;
+    float: left;
+}
+
+.sendmsg-user_avatar {
+    width: 40px;
+    height: 50px;
+    overflow: hidden;
+    float: left;
+    margin-right: 6px;
+    margin-left: -5px;
+}
+
+.sendmsg-avatar-position {
+    position: relative;
+    left: -10px;
+    top: -22px;
+}
+
+.sendmsg-user-information {
+    float: left;
+    width: auto;
+    margin-bottom: 4px;
+}
+
+.sendmsg-username {
+    text-shadow: 0px 0.5px 0px #ffffff;
+    color: #262626;
+    font-size: 11px;
+    font-weight: bold;
+    float: left;
+    font-family: 'Ubuntu';
+    padding: 3px 0px 0px 0px;
+    width: auto;
+    cursor: pointer;
+}
+
+.message-time {
+    color: #5f5f5f;
+    font-size: 10px;
+    float: left;
+    font-family: 'Ubuntu';
+    padding: 4px 0px 0px 5px;
+    width: 140px;
+}
+
+.sendmsg-chat-box {
+    width: 300px;
+    padding: 6px 7px;
+    background: #fff;
+    float: left;
+    border-top: solid 1px #b8b8b8;
+    border-radius: 5px;
+    box-shadow: inset 0px -4px 0px 0px #f1f1f1;
+    color: #404040;
+    font-size: 11px;
+    font-family: "Ubuntu";
+    box-sizing: content-box;
+    min-height: 18px;
+}
+
+.all-message-list {
+    width: 428px;
+    height: 275px;
+    list-style: none;
+    overflow-y: scroll;
+}
+
+.all-message-list::-webkit-scrollbar {
+    width: 9px;
+}
+
+.all-message-list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: url(/assets/images/message-sc2.png?000000);
+}
+
+.all-message-list::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 10px;
+    border: solid 1px #c9c5d2;
+}
+
+.me-profil {
+    width: 159px;
+    height: 43px;
+    box-sizing: border-box;
+    border-top: solid 1px #b8b8b8;
+    border-bottom: solid 1px #d4d4d4;
+    float: left;
+    box-shadow: inset 4px 4px 10px 0px #c5c5c5;
+    overflow: hidden;
+    position: absolute;
+    bottom: 6px;
+}
+
+.direct-messages-list {
+    width: 160px;
+    height: 255px;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+.direct-messages-list::-webkit-scrollbar {
+    width: 11px;
+}
+
+.direct-messages-list::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: url(/assets/images/message-sc2.png?0000000);
+}
+
+.direct-messages-list::-webkit-scrollbar-track {
+    background: url(/assets/images/message-sc1.png?000000000000);
+}
+
+.directchat_message-arrived {
+    width: 14px;
+    height: 13px;
+    background: #e93636;
+    position: absolute;
+    border: solid 1px #a02626;
+    box-sizing: border-box;
+    border-radius: 100%;
+    float: right;
+    margin: -3px;
+    z-index: 1;
+    overflow: hidden;
+    margin-left: 18px;
+}
+
+.directchat_message-arrived-no {
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    top: -1px;
+    position: relative;
+}
+
+.user-onof-status {
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 100%;
+    float: right;
+    margin: 6px;
+    z-index: 1;
+    overflow: hidden;
+    bottom: 0;
+    margin-left: 21px;
+}
+
+.online {
+    background: #4caf50;
+    border: solid 1px #2f8032;
+}
+
+.offline {
+    background: #f44336;
+    border: solid 1px #a9241a;
+}
+
+.chatonline {
+    background: #4caf50;
+    border: solid 1px #2f8032;
+    width: 7px;
+    height: 7px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 100%;
+    float: left;
+    margin: 5px;
+    z-index: 1;
+    overflow: hidden;
+    top: 0;
+}
+
+.chatoffline {
+    background: #f44336;
+    border: solid 1px #a9241a;
+    width: 7px;
+    height: 7px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 100%;
+    float: left;
+    margin: 5px;
+    z-index: 1;
+    overflow: hidden;
+    top: 0;
+}
+
+.user-activity-status {
+    width: 180px;
+    height: auto;
+    background-color: #e2e2e2;
+    position: absolute;
+    float: left;
+    margin-top: 0;
+    z-index: 10;
+    filter: drop-shadow(2px 2px 6px #00000057);
+    padding: 10px;
+    border: solid 1px #3c3c3c;
+    border-radius: 6px;
+    box-shadow: inset 0px -4px 0px 0px #d3d3d3;
+    left: 35px;
+    top: 194px;
+}
+
+.uas-bottom {
+    position: absolute;
+    left: 27px;
+    bottom: -17px;
+    border-style: solid;
+    border-top-width: 15px;
+    border-right-width: 15px;
+    border-left-width: 15px;
+    border-top-color: #d3d3d3;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    filter: drop-shadow(0px 1px 0px);
+    color: #000;
+}
+
+.online-status-box {
+    width: 100%;
+    height: 30px;
+    border-bottom: solid 1px #b8b8b8;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+}
+
+.ua-online-box {
+    background: #43b581;
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    border-radius: 100%;
+    z-index: 1;
+    overflow: hidden;
+    margin: 7px 0px;
+    float: left;
+}
+
+.activity-status-txt {
+    position: relative;
+    text-shadow: 1px 1px 0px #ffffff;
+    color: #262626;
+    font-size: 11px;
+    padding-left: 10px;
+    font-weight: bold;
+    float: left;
+    font-family: 'Ubuntu';
+    padding: 6px 8px 3px 8px;
+    width: 150px;
+}
+
+.ua-idle-box {
+    background: #faa61a;
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    border-radius: 100%;
+    z-index: 1;
+    overflow: hidden;
+    margin: 7px 0px 0px 0px;
+    float: left;
+}
+
+.activity-status-desc {
+    position: relative;
+    text-shadow: 1px 1px 0px #ffffff;
+    color: #262626bf;
+    font-size: 9px;
+    padding-left: 10px;
+    font-weight: bold;
+    float: left;
+    font-family: 'Ubuntu';
+    padding: 0px 18px;
+    width: 150px;
+}
+
+.idle-status-box {
+    cursor: pointer;
+    margin-top: 5px;
+    float: left;
+}
+
+.do_not_disturb-status-box {
+    cursor: pointer;
+    margin-top: 5px;
+    float: left;
+}
+
+.ua-donotdisturb-box {
+    background: #f04747;
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    border-radius: 100%;
+    z-index: 1;
+    overflow: hidden;
+    margin: 7px 0px 0px 0px;
+    float: left;
+}
+
+.ua-offline-box {
+    background: #bebebe;
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    border-radius: 100%;
+    z-index: 1;
+    overflow: hidden;
+    margin: 7px 0px 0px 0px;
+    float: left;
+}
+
+.offline-status-box {
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.userstatus-head {
+    background: #fff;
+    height: 4px;
+    width: 198px;
+    position: absolute;
+    margin: -10px -9px;
+    border-radius: 43px;
+}
+
+.gonderilen-chat-message-box {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    position: relative;
+    float: left;
+}
+
+
+.gonderilen-sendmsg-user_avatar {
+    width: 40px;
+    height: 50px;
+    overflow: hidden;
+    float: right;
+    margin-right: 5px;
+    margin-left: 0px;
+}
+
+.gonderilen-sendmsg-user-information {
+    float: right;
+    width: auto;
+    margin-bottom: 4px;
+}
+
+.gonderilen-sendmsg-username {
+    text-shadow: 0px 0.5px 0px #ffffff;
+    color: #262626;
+    font-size: 11px;
+    font-weight: bold;
+    float: right;
+    font-family: 'Ubuntu';
+    padding: 3px 5px 0px 0px;
+    width: auto;
+    cursor: pointer;
+}
+
+.gonderilen-message-time {
+    color: #5f5f5f;
+    font-size: 10px;
+    float: right;
+    font-family: 'Ubuntu';
+    padding: 4px 4px 0px 3px;
+    width: auto;
+    text-align: right;
+}
+
+.gonderilen-sendmsg-chat-box {
+    float: right;
+    width: 300px;
+    padding: 6px 7px;
+    background: #369eff;
+    border-top: solid 1px #0000001c;
+    border-radius: 5px;
+    box-shadow: inset 0px -4px 0px 0px #0000000f;
+    color: #ffffff;
+    font-size: 11px;
+    font-family: "Ubuntu";
+    box-sizing: content-box;
+    margin-right: 5px;
+    min-height: 18px;
+}
+
+
+.friendsbutton {
+    background: linear-gradient(to bottom,#ffffff 3px, #e2e2e2 3px 10px, #d9d9d9 8px);
+    width: 27.5%;
+    margin: 3px;
+    height: 20px;
+    border-radius: 5px;
+    border: solid 1px #919191;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px 0px #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.friendsbuttongrup {
+    width: 100% !important;
+    position: relative;
+    display: flex;
+    vertical-align: middle;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    background: #fff0;
+    margin-top: 2px;
+}
+
+.friendsbuttongrup-hr {
+    width: 438px;
+    border-bottom: solid 1px #fff;
+    margin: -1px 6px 6px 7px;
+    box-shadow: 0px -1px 0px 0px #b8b8b8;
+}
+
+p.fbuttontxt {
+    width: 100%;
+    text-align: center;
+    text-shadow: 0.4px 0.4px 0px #ffffff;
+    color: #262626;
+    font-family: "Ubuntu";
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.fbsearch {
+    width: 50px;
+    color: #4caf50 !important;
+}
+
+.friendsbutton-active {
+    background: #d9d9d9;
+    box-shadow: inset 2px 2px 2px 0px #cfcfcf;
+}
+
+.fbsearchcolor {
+    color: #28702b !important;
+}
+
+/**/ 
+
+.fb-bodygrup {
+    margin: 0px 7px;
+}
+
+.fb-usernamebox {
+    width: 378px;
+    height: 25px;
+    float: left;
+    margin-right: 5px;
+    background: linear-gradient(to bottom, #ffffff 3px, #e2e2e2 3px 10px, #d9d9d9 8px);
+    border-radius: 5px;
+    border: solid 1px #818181;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px 0px #fff;
+    cursor: pointer;
+}
+
+.fb-userprofilbox {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-right: 5px;
+    background: linear-gradient(to bottom, #ffffff 3px, #e2e2e2 3px 10px, #d9d9d9 8px);
+    border-radius: 5px;
+    border: solid 1px #818181;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px 0px #fff;
+    cursor: pointer;
+}
+
+.fb-userdeletedbox {
+    width: 25px;
+    height: 25px;
+    float: left;
+    background: linear-gradient(to bottom, #f16a5e 3px, #dd5246 3px 10px, #d5493d 8px);
+    border-radius: 5px;
+    border: solid 1px #81261e;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px 0px #fff;
+    cursor: pointer;
+}
+
+.fbutton-bodybutton-listbox {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 25px;
+}
+
+p.deletedtxt {
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    margin: -0.5px;
+}
+
+.fbuttonbox {
+    width: 101%;
+    height: 25px;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.fb-buttonbox {
+    margin: 0px 6px;
+}
+
+.fb-username-box {
+    width: 365px;
+    height: 25px;
+    float: left;
+    margin-left: 5px;
+    background: #00000008;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.fb-username-box:hover {
+    background: #00000012;
+}
+
+.fb-userprofil-box {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-left: 5px;
+    background-image: url(friends-profil.png);
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px 0px #fff;
+    cursor: pointer;
+}
+
+.fb-userprofil-box:hover {
+    background-image: url(friends-profil-active.png);
+}
+
+.fb-userdeleted-box {
+    width: 25px;
+    height: 25px;
+    float: left;
+    background-image: url(friends-red.png);
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px 0px #fff;
+    cursor: pointer;
+}
+
+.fb-userdeleted-box:hover {
+    background-image: url(friends-red-active.png);
+}
+
+p.userdeletetxt {
+    text-align: center;
+    margin: -2px -3px;
+    font-family: Arial;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+p.useronaytxt {
+    text-align: center;
+    margin: -4px -3px;
+    font-family: Arial;
+    font-weight: 900;
+    font-size: 21px;
+}
+
+p.username-ad {
+    font-family: 'Ubuntu';
+    font-size: 13px;
+    color: #262626;
+    font-weight: bold;
+    text-shadow: 0.4px 0.4px 0px #ffffff;
+    text-align: left;
+    padding: 3px 5px;
+}
+
+.fb-useronay-box {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-left: 5px;
+    background-image: url(friends-onay.png);
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px 0px #fff;
+    cursor: pointer;
+}
+
+.fb-useronay-box:hover {
+    background-image: url(friends-onay-active.png);
+}
+
+.fbutton-list {
+    width: 448px;
+    height: 325px;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+.fbutton-list::-webkit-scrollbar {
+    width: 11px;
+}
+
+.fbutton-list::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: url(/assets/images/message-sc2.png?0000000);
+}
+
+.fbutton-list::-webkit-scrollbar-track {
+    background: white;
+    box-shadow: inset 0px 0px 0px 1px #c9c5d2;
+    border-radius: 5px;
+}
+
+button.all-reddet {
+    width: 100%;
+    height: 25px;
+    float: left;
+    margin-bottom: 5px;
+    background: #dd5246;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: solid 0px #de5246;
+    font-size: 13px;
+    font-family: 'Ubuntu';
+    color: #ffffff;
+}
+
+.bildirim {
+    width: auto;
+    min-width: 15px;
+    height: 15px;
+    position: absolute;
+    background: #ac1d19;
+    top: -3px;
+    padding-left: 3px;
+    padding-right: 4px;
+    box-shadow: inset 0px 0px 0px 1px #ed2823;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    border-radius: 5px;
+    right: -3px;
+    font-size: 9px;
+    text-align: center;
+    font-family: 'Ubuntu';
+    font-weight: bold;
+}
+
+button.all-reddet:hover {
+    background: #d24c41;
+}
+
+
+.leftok {
+    position: absolute;
+    border-style: solid;
+    border-bottom-width: 5px;
+    border-right-width: 5px;
+    left: 10px;
+    top: 16px;
+    border-left-width: 5px;
+    border-bottom-color: #ffffff;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    filter: drop-shadow(0px -1px 0px);
+    color: #939393;
+}
+
+.rightok {
+    position: absolute;
+    border-style: solid;
+    border-bottom-width: 5px;
+    border-right-width: 5px;
+    right: 16px;
+    top: 16px;
+    border-left-width: 5px;
+    border-bottom-color: #369eff;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    filter: drop-shadow(0px -1px 0px);
+    color: #1869b6;
+}
+
+.user-friendship-status {
+    width: 126px;
+    height: auto !important;
+    position: absolute !important;
+    float: left !important;
+    margin-top: 0 !important;
+    z-index: 10 !important;
+    filter: drop-shadow(2px 2px 6px #00000057) !important;
+    border: solid 1px #3c3c3c !important;
+    border-radius: 6px !important;
+    box-shadow: inset 0px -4px 0px 0px #d3d3d3 !important;
+    left: -35px !important;
+    top: 35px !important;
+    background: linear-gradient(to bottom, #ffffff 3px, #e2e2e2 3px 10px, #e2e2e2 8px) !important;
+    margin: 0 !important;
+    padding: 7px 7px 7px 7px;
+}
+
+.activity-fs-txt {
+    position: relative !important;
+    text-shadow: 1px 1px 0px #ffffff !important;
+    color: #262626 !important;
+    font-size: 11px !important;
+    padding-left: 10px !important;
+    font-weight: bold !important;
+    float: left !important;
+    font-family: "Ubuntu" !important;
+    padding: 4px 8px 3px 8px !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.fs-box {
+    width: 55px !important;
+    height: 24px !important;
+    border-bottom: solid 1px #b8b8b8 !important;
+    box-shadow: 0px 1px 0px 0px #fff !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    float: left !important;
+    clear: none !important;
+}
+
+.fs-box:hover {
+    background-color: rgba(196, 196, 196, 0.1) !important;
+}
+
+.fs-box:nth-child(3) {
+    border-bottom: solid 0px #b8b8b8 !important;
+    box-shadow: 0px 0px 0px 0px #fff !important;
+}
+
+.fs-box:nth-child(2) {
+    border-left: solid 1px #b8b8b8 !important;
+    box-shadow: -1px 1px 0px 0px #fff !important;
+}
+
+.fs-box:nth-child(4) {
+    border-left: solid 1px #b8b8b8 !important;
+    box-shadow: -1px 0px 0px 0px #fff !important;
+    border-bottom: solid 0px #b8b8b8 !important;
+}
+
+.fs-bottom {
+    position: absolute !important;
+    left: 43% !important;
+    top: -12px !important;
+    border-style: solid !important;
+    border-bottom-width: 10px !important;
+    border-right-width: 10px !important;
+    border-left-width: 10px !important;
+    border-bottom-color: #ffffff !important;
+    border-right-color: transparent !important;
+    border-top-color: transparent !important;
+    border-left-color: transparent !important;
+    filter: drop-shadow(0px -1px 0px) !important;
+    color: #000 !important;
+}

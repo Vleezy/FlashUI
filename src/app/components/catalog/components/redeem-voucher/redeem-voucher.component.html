@@ -1,0 +1,17 @@
+<!--<div class="d-flex flex-column justify-content-center">
+    <div class="input-group">
+        <input type="text" [(ngModel)]="voucherCode" placeholder="{{ localization.texts[1] }}" class="form-control form-control-sm">
+        <div class="input-group-append">
+            <button type="button" class="btn btn-primary btn-sm" (click)="redeem()">{{ ('redeem') | translate }}</button>
+        </div>
+    </div>
+</div>
+-->
+
+<div class="fiskodu_box">
+    <p class="fiskodu-aciklama">Burada bir fiş kodunu bozdur:</p>
+    <input class="fis-kod" [(ngModel)]="voucherCode" placeholder="{{ localization.texts[1] }}">
+    <div class="fis-bozdur_box" (click)="redeem()">
+        <p class="fbozdur-butontext">{{ ('redeem') | translate }}</p>
+    </div>
+</div>

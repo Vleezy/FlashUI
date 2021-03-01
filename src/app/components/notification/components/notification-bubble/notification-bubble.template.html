@@ -1,0 +1,4 @@
+<div class="notification-oldhabbo" [class.removing]="removing" (click)="clickNotification()">
+    <div *ngIf="getDefaultImage()" [ngStyle]="{ 'background-image': 'url(' + getDefaultImage() + ')' }" class="notification-resim"></div>
+    <p class="notification-mesajyazi" [innerHTML]="getDefaultMessage()"></p>
+</div>

@@ -1,0 +1,23 @@
+
+<div class="friendsbuttongrup">
+    <div class="friendsbutton" [ngClass]="{ 'friendsbutton-active': (friendsShowing && onlineOnly) }"(click)="showOnlineFriends()">
+        <p class="fbuttontxt">{{ ('friendlist.online') | translate }}</p>
+    </div>
+    <div class="friendsbutton" [ngClass]="{ 'friendsbutton-active': (friendsShowing && !onlineOnly) }"(click)="showFriends()">
+        <p class="fbuttontxt">{{ ('friendlist.friends.all') | translate }}</p>
+    </div>
+    <div class="friendsbutton" [ngClass]="{ 'friendsbutton-active': requestsShowing }" (click)="showRequests()">
+        <p class="fbuttontxt">{{ ('friendbar.requests.title') | translate }}</p>
+        <div *ngIf="(totalFriendRequests > 0)" class="bildirim">{{ totalFriendRequests }}</div>
+    </div>
+    <div class="friendsbutton fbsearch">
+        <p class="fbuttontxt fbsearchcolor">{{ ('generic.search') | translate }}</p>
+    </div>
+</div>
+<div class="friendsbuttongrup-hr"></div>
+<div class="d-flex w-100">
+    <div class="fbutton-list"> 
+        <div *ngIf="friendsShowing" nitro-friendlist-friends-list-component class="fb-buttonbox" [threadSelector]="threadSelector" [onlineOnly]="onlineOnly"></div>
+        <div *ngIf="requestsShowing" nitro-friendlist-requests-list-component class="fb-buttonbox"></div>
+    </div>
+</div>

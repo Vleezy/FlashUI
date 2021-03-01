@@ -1,0 +1,100 @@
+<!--<div *ngIf="visible" class="row nitro-inventory-furni-component" (mouseup)="onMouseUp()">
+    <div class="col-12" *ngIf="!hasGroupItems">
+        {{ ('inventory.empty.title') | translate }}
+        {{ ('inventory.empty.desc') | translate }}
+    </div>
+    <ng-container *ngIf="hasGroupItems">
+        <div class="col-7 d-flex flex-column" style="z-index: 1;">
+            <div class="d-flex mb-2">
+                <div class="d-flex justify-content-center align-items-center bg-secondary border shadow px-2"><i class="fas fa-search"></i></div>
+                <input type="text" class="form-control form-control-sm flex-grow-1" [(ngModel)]="search" />
+                <select class="form-control form-control-sm w-auto" [(ngModel)]="searchType">
+                    <option [value]="''">{{ ('inventory.filter.option.everything') | translate }}</option>
+                    <option [value]="'s'">{{ ('inventory.furni.tab.floor') | translate }}</option>
+                    <option [value]="'i'">{{ ('inventory.furni.tab.wall') | translate }}</option>
+                </select>
+            </div>
+            <perfect-scrollbar class="grid-container w-100" style="min-height: 209px;max-height: 209px;height:209px;">
+                <div class="grid-items grid-5">
+                    <div class="d-flex flex-column item-detail justify-content-center align-items-center"
+                        *ngFor="let groupItem of groupItems;trackBy:trackByType | paginate: paginateConfig" [ngStyle]="{ 'opacity': (!groupItem.getUnlockedCount() ? '0.5' : '1') }"
+                        (mousedown)="onMouseDown(groupItem)" (mouseout)="onMouseOut(groupItem)">
+                        <button type="button" class="position-relative btn btn-secondary align-items-end detail-info has-image" [ngClass]="{ 'active': (selectedGroup === groupItem), 'bg-success': groupItem.hasUnseenItems }" [ngStyle]="{ 'background-image': 'url(' + getIconUrl(groupItem) + ')' }">
+                            <div class="position-absolute btn btn-sm btn-primary px-1 py-0 rounded count" *ngIf="!groupItem.stuffData.uniqueNumber">{{ groupItem.getUnlockedCount() }}</div>
+                            <div *ngIf="groupItem.stuffData.uniqueNumber" class="badge badge-primary w-100">{{ groupItem.stuffData.uniqueNumber }}</div>
+                        </button>
+                    </div>
+                </div>
+            </perfect-scrollbar>
+            <pagination-template *ngIf="groupItems.length > paginateConfig.itemsPerPage" #p="paginationApi" [id]="paginateConfig.id" [maxSize]="11" (pageChange)="paginateConfig.currentPage = $event">
+                <ul class="pagination pagination-sm custom-pagination">
+                    <li class="page-item" *ngFor="let page of p.pages" [class.active]="p.getCurrent() === page.value">
+                        <div class="page-link" *ngIf="p.getCurrent() !== page.value" (click)="p.setCurrent(page.value)">
+                            {{ page.label }}</div>
+                        <div class="page-link" *ngIf="p.getCurrent() === page.value">{{ page.label }}</div>
+                    </li>
+                </ul>
+            </pagination-template>
+        </div>
+        <div class="col-5 d-flex flex-column">
+            <div class="room-preview" nitro-room-preview-component [roomPreviewer]="roomPreviewer" [height]="140"></div>
+            <div class="d-flex flex-column flex-grow-1 justify-content-between" *ngIf="selectedGroup"
+                style="z-index: 1;">
+                <div class="d-flex justify-content-center align-items-center w-100 h-100">{{ selectedGroup.name }}</div>
+                <div class="btn-group-vertical w-100">
+                    <button *ngIf="!tradeRunning && canPlace" type="button" class="btn btn-secondary w-100"(click)="attemptItemPlacement()">{ ('inventory.furni.placetoroom') | translate }}</button>
+                    <button *ngIf="tradeRunning" type="button" class="btn btn-secondary w-100" (click)="attemptItemOffer()" [ngClass]="{ 'disabled': !selectedGroup.getUnlockedCount()} ">{{ ('inventory.trading.offer') | translate }}</button>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
+-->
+
+
+<div *ngIf="visible" id="envanter-mobi" (mouseup)="onMouseUp()">
+    <div class="envanterbos" *ngIf="!hasGroupItems">
+        <div class="envantersolimg"></div>
+        <div class="envantersagaciklama">
+            <p class="ebos-hood">{{ ('inventory.empty.title') | translate }}</p>
+            <p class="ebos-desc">{{ ('inventory.empty.desc') | translate }}</p>
+        </div>
+    </div>
+    <ng-container *ngIf="hasGroupItems">
+        <div class="envanter-options" > 
+            <input class="envanter_mobi-search" [(ngModel)]="search" />
+            <select class="envanter_select-kategori" [(ngModel)]="searchType">
+                <option [value]="''">{{ ('inventory.filter.option.everything') | translate }}</option>
+                <option [value]="'s'">{{ ('inventory.furni.tab.floor') | translate }}</option>
+                <option [value]="'i'">{{ ('inventory.furni.tab.wall') | translate }}</option>
+            </select>
+        </div>
+        <div class="envanter_mobi-list" >
+            <div class="item-detail-box" [ngClass]="{ 'item-detail-box-active': (selectedGroup === groupItem), 'unseen': groupItem.hasUnseenItems }" 
+            *ngFor="let groupItem of groupItems;trackBy:trackByType | paginate: paginateConfig" [ngStyle]="{ 'opacity': (!groupItem.getUnlockedCount() ? '0.5' : '1') }"
+            (mousedown)="onMouseDown(groupItem)" (mouseout)="onMouseOut(groupItem)">
+                <div class="inv-mobiview" [ngStyle]="{ 'background-image': 'url(' + getIconUrl(groupItem) + ')' }"></div>
+                <div class="items-part-number" >
+                    <p class="ipn-text">x{{ groupItem.getUnlockedCount() }}</p>
+                    <p class="ipn-text" *ngIf="groupItem.stuffData.uniqueNumber">{{ groupItem.stuffData.uniqueNumber }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="room-furni-preview" nitro-room-preview-component [roomPreviewer]="roomPreviewer" [height]="140" style="position: relative;z-index: 1;">
+                <div class="cannot-traded"></div>
+                <div class="is-traded" style="display: none;"></div>
+            </div>
+            <div class="inv-mobiinfobox" *ngIf="selectedGroup" >
+                <p class="envanter-items_name">{{ selectedGroup.name }}</p>
+                <div *ngIf="!tradeRunning && canPlace" class="place-it-the-room" (click)="attemptItemPlacement()">
+                    <p class="place-text">{{ ('inventory.furni.placetoroom') | translate }}</p>
+                </div>
+                <div *ngIf="tradeRunning" class="place-it-the-room" (click)="attemptItemOffer()" [ngClass]="{ 'disabled': !selectedGroup.getUnlockedCount()} ">
+                    <p class="place-text">{{ ('inventory.trading.offer') | translate }}</p>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>

@@ -1,0 +1,455 @@
+.nitro-alert {
+    position: absolute;
+    width: 350px;
+    max-width: 350px;
+
+    &.multiple-messages {
+        width: 430px;
+        max-width: 430px;
+    }
+}
+
+.nitro-notification-bubble {
+    width:230px;
+    margin-bottom: 5px;
+    padding: 0.23rem;
+    cursor: pointer;
+
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s; 
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both; 
+    -webkit-animation-name: bounceIn; 
+    animation-name: bounceIn;
+
+    &.bubble-event {
+        cursor: default;
+    }
+
+    .bubble-message {
+        font-size: 14px;
+    }
+
+    .bubble-image {
+        min-width: 50px;
+        min-height: 50px;
+        display: flex;
+        justify-content: center;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &.removing {
+        animation-delay: 0s;
+        -webkit-animation-duration: 0.4s;
+        animation-duration: 0.4s; 
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both; 
+        -webkit-animation-name: scaleZero; 
+        animation-name: scaleZero;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+       opacity: 0;
+       transform: scale(.3);
+    }
+    50% {
+       opacity: 1; 
+       transform: scale(1.1);
+    }
+    70% {
+       transform: scale(.9);
+    }
+    100% {
+       transform: scale(1);
+    }
+}
+
+@keyframes scaleZero {
+    0% {
+       opacity: 1;
+       transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.koyu-tamekran {
+    position: fixed;
+    left: 0;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000000b0;
+}
+
+#corelo-ha {
+    width: 352px;
+    height: auto;
+    min-height: 190px;
+    background-color: #ebe9df;
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid;
+    border-bottom: 2px solid #000;
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #000;
+    z-index: 11;
+    box-sizing: initial;
+    filter: drop-shadow(1px 1px 10px #00000081);
+}
+
+#coreloha-drag {
+    width: 99%;
+    height: 31px;
+    background-color: #367897;
+    border-top: 2px solid #408caf;
+    border-left: 2px solid #408caf;
+    border-right: 2px solid #408caf;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    box-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 38%);
+    box-sizing: initial;
+}
+
+p.cha-baslik {
+    margin: 0;
+    width: 96.5%;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    font-family: system-ui;
+    box-sizing: initial;
+}
+
+.chabox {
+    width: 100%;
+    height: auto;
+    min-height: 117px;
+    float: left;
+}
+
+.cha-text-box {
+    font-size: 13px;
+    display: flex;
+    width: 297px;
+    float: left;
+    box-sizing: initial;
+    font-family: system-ui;
+    text-shadow: 0 0 black;
+}
+
+p.cha-text {
+    padding-top: 5px;
+    text-align: left;
+    padding-bottom: 40px;
+}
+
+.cha-close {
+    float: left;
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    left: 0px;
+}
+
+.cha-ok-box {
+    width: auto;
+    height: 23px;
+    background: linear-gradient(#f3f3f3 50%, #d9d9d9 50%);
+    box-shadow: rgb(217 217 217) 0px 0px 0px 2px inset;
+    border-radius: 4px;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    float: left;
+    bottom: -5px;
+    position: absolute;
+    cursor: pointer;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.cha-tamam-text {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 2px 9px;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.cha-ok-box:hover {
+    background: linear-gradient(#ffffff 50%, #eeeeee 50%);
+    box-shadow: #eeeeee 0px 0px 0px 2px inset;
+}
+
+.cha-ok-box:active {
+    background: linear-gradient(#e1e1e1 50%, #a3a3a3 50%);
+    box-shadow: #a3a3a3 0px 0px 0px 2px inset;
+}
+
+.w50cha-iptal {
+    float: left;
+    position: absolute;
+    bottom: 18px;
+    font-size: 14px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    left: 0px;
+    cursor: pointer;
+}
+
+.w50cha-onay {
+    float: right;
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    right: 0px;
+}
+
+.ch50-tamam-text {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 3px 9px;
+}
+
+#corelo-cmnd {
+    width: 420px;
+    height: 400px;
+    background-color: #ebe9df;
+    left: 250px;
+    top: 100px;
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    border: solid 1px;
+    border-bottom: solid 2px #000;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    color: #000;
+}
+
+#corelocmnd-drag {
+    width: 99.3%;
+    height: 31px;
+    background-color: #367897;
+    border-top: solid 2px #408caf;
+    border-left: solid 2px #408caf;
+    border-right: solid 2px #408caf;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    box-shadow: inset 0px -1px 0px 0px #00000061;
+    box-sizing: content-box;
+}
+
+p.ccmnd-baslik {
+    margin: 0px;
+    width: 405px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    box-sizing: initial;
+    font-family: system-ui;
+}
+
+.ccmndbox {
+    width: 410px;
+    height: 350px;
+    margin: 4px;
+    box-sizing: content-box;
+}
+
+.ccmnd-commandslist {
+    height: 86%;
+    list-style: none;
+    overflow-y: scroll;
+    width: 410px;
+    position: absolute;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.ccmnd-commandslist::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+.ccmnd-commandslist::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+.ccmnd-commandslist::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+.ccmnd-commandslist::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+.ccmnd-commandslist::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+.ccmnd-commandslist::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+.ccmnd-commandslist::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+.ccmnd-commandslist::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.ccmnd-commandslist::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.ccmnd-commandslist::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+.ccmnd-commandslist::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+.ccmnd-commandslist::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+.ccmnd-commandslist::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+p.ccmnd-desc {
+    font-family: 'Ubuntu';
+    font-size: 14px;
+    color: #000;
+    padding: 10px 8px 0px 8px;
+}
+
+p.ccmnd-hood {
+    font-family: 'Ubuntu';
+    font-size: 25px;
+    color: #fd6305;
+    padding: 5px 8px 0px 8px;
+}
+
+p.ccmnd-commands {
+    font-size: 14px;
+    color: #000;
+    padding: 0px 8px 0px 8px;
+    line-height: 19px;
+    font-weight: bold;
+    font-family: system-ui;
+}
+
+.w50cha-link {
+    float: left;
+    position: absolute;
+    bottom: 17px;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    cursor: pointer;
+}
+
+.w50cha-close {
+    float: right;
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    right: 0;
+}
+
+.alerthr {
+    width: 332px;
+    height: 1px;
+    float: left;
+    background: #cccccc;
+    box-shadow: 0px 1px 0px 0px #fff;
+    margin: 0px 10px;
+}
+
+.w100-alertclose {
+    float: left;
+    position: absolute;
+    bottom: 11px;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    left: 0px;
+    cursor: pointer;
+}
+
+.notification-oldhabbo {
+    width: 190px;
+    min-height: 66px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background: #3d3d3d;
+    font-size: 11px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    position: relative;
+    float: left;
+    border-radius: 5px;
+}
+
+.notification-resim {
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+    float: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+p.notification-mesajyazi {
+    float: left;
+    width: 124px;
+    color: white;
+    line-height: 11px;
+    padding: 8px 0px;
+}

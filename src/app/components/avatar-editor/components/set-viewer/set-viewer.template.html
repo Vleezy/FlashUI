@@ -1,0 +1,22 @@
+<!--<perfect-scrollbar class="grid-container" style="min-height:158px;max-height:158px;height:158px;">
+    <div class="grid-items grid-6">
+        <div class="d-flex flex-column item-detail justify-content-center align-items-center"
+            *ngFor="let part of partSet" (click)="selectPart(part)">
+            <button type="button" class="btn btn-secondary detail-info has-image"
+                [ngClass]="{ 'active': part.isSelected }"
+                [ngStyle]="(part.imageUrl && { 'background-image': 'url(' + part.imageUrl + ')' })">
+                <i *ngIf="part.isClear" class="fas fa-times h5 m-0"></i>
+            </button>
+
+        </div>
+    </div>
+</perfect-scrollbar>-->
+
+
+<div id="clothes-box">
+    <div class="clothes-object" *ngFor="let part of partSet" (click)="selectPart(part)" [ngClass]="{ 'clothes-object-active': part.isSelected }">
+        <div class="corelo-view-generic-position" [ngStyle]="(part.imageUrl && { 'background-image': 'url(' + part.imageUrl + ')' })">
+            <i *ngIf="part.isClear" class="i icon clear-icon"></i>
+            </div>
+    </div>
+</div>

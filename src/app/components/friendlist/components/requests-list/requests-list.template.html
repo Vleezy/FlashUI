@@ -1,0 +1,24 @@
+<!--<ng-container *ngIf="(requests.size > 0)">
+    <button type="button" class="btn btn-danger mb-1 w-100" (click)="declineAllRequests()">{{ ('friendbar.requests.discard') | translate }}</button>
+    <ng-container *ngFor="let request of requests | keyvalue">
+        <div class="btn-group w-100 mb-1">
+            <button type="button" class="btn btn-primary w-100">{{ request.value.requesterName }}</button>
+            <button type="button" class="btn btn-success" (click)="acceptRequest(request.value)"><i class="fas fa-check"></i></button>
+            <button type="button" class="btn btn-danger" (click)="declineRequest(request.value)"><i class="fas fa-times"></i></button>
+        </div>
+    </ng-container>
+</ng-container>-->
+
+
+<ng-container *ngIf="(requests.size > 0)">
+    <button type="button" class="all-reddet" (click)="declineAllRequests()">{{ ('friendbar.requests.discard') | translate }}</button>
+    <ng-container *ngFor="let request of requests | keyvalue">
+        <div class="fbuttonbox">
+            <div class="fb-userdeleted-box" (click)="declineRequest(request.value)"></div>
+            <div class="fb-useronay-box" (click)="acceptRequest(request.value)"></div>
+            <div class="fb-username-box">
+                <p class="username-ad">A new request from <u style="color: #9a1d1a;">({{ request.value.requesterName }})</u>!</p>
+            </div>
+        </div>
+    </ng-container>
+</ng-container>

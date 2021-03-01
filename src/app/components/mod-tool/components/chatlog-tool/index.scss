@@ -1,0 +1,206 @@
+#modt-roomchat {
+    width: 480px;
+    height: auto;
+    left: 430px;
+    top: 100px;
+    position: absolute;
+    background: #e9e9e1;
+    border-bottom: solid 2px #000;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    border: solid 1px #000;
+    border-radius: 6px;
+    overflow: hidden;
+    box-sizing: content-box;
+    font-family: system-ui;
+    padding-bottom: 5px;
+}
+#modt-roomchatdrag {
+    width: 100%;
+    height: 33px;
+    background-color: #367897;
+    border-top: solid 2px #408caf;
+    border-left: solid 2px #408caf;
+    border-right: solid 2px #408caf;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-bottom: solid 1px #000;
+}
+
+.roomchatlog-infobox {
+    width: 478px;
+    height: 30px;
+}
+
+.rc-roomname {
+    font-size: 13px;
+    color: #000;
+    font-weight: bold;
+    padding: 5px 10px;
+    float: left;
+    width: 240px;
+    line-height: 13px;
+}
+
+.rc-button {
+    width: 110px;
+    height: 22px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    border: solid 1px #000;
+    box-sizing: border-box;
+    box-shadow: inset -1px -1px 0px 0px #cccccc;
+    background: #fff;
+    margin-bottom: 1px;
+    float: right;
+    margin: 4px;
+}
+
+.rc-button:hover {
+    box-shadow: inset 0px 0px 0px 1px #000;
+}
+
+.rc-button:active {
+    box-shadow: inset 1px 1px 0px 0px #535353;
+    background: #989898;
+}
+
+p.rcbutton-txt {
+    color: #000;
+    padding: 2px 3px;
+}
+
+.room-conversation-recordings-list {
+    width: 475px;
+    height: 505px;
+    margin-left: 2px;
+    list-style: none;
+    overflow-x: hidden;
+    background-image: url(/assets/images/modtools/noscroll.png);
+}
+
+.talk-box {
+    width: 450px;
+    min-height: 18px;
+    height: auto;
+    background: #c3ecfa;
+    padding-right: 4px;
+    float: left;
+}
+
+.talk-box:nth-child(even) {
+    background: #ffffff;
+}
+
+.message-clock {
+    width: 39px;
+    height: 18px;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 3px;
+    margin-right: 3px;
+    float: left;
+    margin-top: -1px;
+}
+
+p.user-who-sent-message {
+    width: 100px;
+    height: 18px;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    float: left;
+    text-decoration: underline;
+    line-height: 16px;
+}
+
+.message-sent {
+    width: auto;
+    height: auto;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 142px;
+    position: relative;
+    padding-bottom: 0px;
+    margin-top: -1px;
+}
+
+.room-conversation-recordings-list::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+.room-conversation-recordings-list::-webkit-scrollbar-button {
+    background: #fff0 url(/assets/images/scrollbar-button.png);
+}
+
+.room-conversation-recordings-list::-webkit-scrollbar-button:hover {
+    background: #fff0 url(/assets/images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+.room-conversation-recordings-list::-webkit-scrollbar-button:active {
+    background: #fff0 url(/assets/images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+.room-conversation-recordings-list::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(/assets/images/scrollbar-button2.png);
+}
+
+.room-conversation-recordings-list::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(/assets/images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+.room-conversation-recordings-list::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(/assets/images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+.room-conversation-recordings-list::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(/assets/images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.room-conversation-recordings-list::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(/assets/images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.room-conversation-recordings-list::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(/assets/images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+.room-conversation-recordings-list::-webkit-scrollbar-track-piece{
+    background: #fff0 url(/assets/images/scrollbar-track-piece.png) no-repeat center center;
+}
+
+.nav-oda-liste::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+.room-conversation-recordings-list::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+
+
+.old-loglist {
+    color: black;
+    font-family: system-ui;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px;
+}

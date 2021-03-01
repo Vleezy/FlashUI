@@ -1,0 +1,9 @@
+<div  class="online-friends-box" *ngFor="let friend of friends" id="friends">
+    <img class="onfriends-avatar-head" src="https://www.habbo.com/habbo-imaging/avatarimage?figure={{ friend.figure }}&amp;action=std&amp;gesture=std&amp;direction=2&amp;head_direction=2&amp;size=n&amp;headonly=1&amp;img_format=png">
+    <p class="onfriends-username">{{ friend.name }}</p>
+    <div class="bottombar-user-options">
+        <div class="buopt-chatico"></div>
+        <div class="buopt-goroomico"></div>
+        <div class="buopt-profileico"></div>
+    </div>
+</div>

@@ -1,0 +1,239 @@
+$customstackheight-width: 300px;
+
+.nitro-room-furniture-customstackheight-component {
+    position: absolute;
+    width: $customstackheight-width;
+    max-width: $customstackheight-width;
+
+    @media (pointer:none), (pointer:coarse) {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        top: 100px;
+        left: 0;
+
+        .card-body {
+            overflow-y: auto;
+        }
+    }
+
+    .custom-slider {
+        width: 41px;
+        height: 280px;
+
+        .ngx-slider {
+
+            .ngx-slider-full-bar {
+                background-color: transparent;
+                background-image: url('^assets/images/stackhelper/slider-background.png');
+                width: 41px;
+                height: 280px;
+            }
+
+            .ngx-slider-bar {
+                background: transparent;
+            }
+
+            // .ngx-slider-selection {
+            //     background: orange;
+            // }
+
+            .ngx-slider-pointer {
+                width: 30px;
+                height: 22px;
+                top: auto; /* to remove the default positioning */
+                bottom: 0;
+                background-color: transparent;
+                background-image: url('^assets/images/stackhelper/slider-pointer.png');
+                border-radius: 0;
+                outline: none;
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            // .ngx-slider-bubble {
+            //     bottom: 14px;
+            // }
+
+            // .ngx-slider-limit {
+            //     font-weight: bold;
+            //     color: orange;
+            // }
+
+            // .ngx-slider-tick {
+            //     width: 1px;
+            //     height: 10px;
+            //     margin-left: 4px;
+            //     border-radius: 0;
+            //     background: #ffe4d1;
+            //     top: -1px;
+
+            //     &.ngx-slider-selected {
+            //         background: orange;
+            //     }
+            // }
+        }
+    }
+}
+
+.oldstackbox {
+    width: 320px;
+    height: 189px;
+    position: absolute;
+    background-image: url(stackbg.png);
+    z-index: 1;
+    left: 40%;
+    top: 30%;
+}
+
+.stackhead {
+    width: 100%;
+    height: 37px;
+}
+
+.stack-title {
+    text-shadow: 1px 1px 0 #fff;
+    color: #262626;
+    font-size: 11px;
+    font-weight: 700;
+    float: left;
+    font-family: Ubuntu;
+    padding: 11px;
+}
+
+.stack-close {
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin: 9px 8px;
+    cursor: pointer;
+}
+
+p.stack-desc {
+    color: #262626;
+    font-size: 11px;
+    padding-left: 10px;
+    float: left;
+    font-family: Ubuntu;
+    width: 95%;
+    box-sizing: content-box;
+    line-height: 12px;
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+
+.stack-slider {
+    width: 238px;
+    height: 30px;
+    top: 100px;
+    margin-left: 10px;
+    float: left;
+}
+
+.stack-deger {
+    float: right;
+    width: 58px;
+    height: 30px;
+    background: url(sr-input.png);
+    border: solid 0px #fff;
+    top: 100px;
+    margin-right: 11px;
+    outline: 0;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.stack-deger-box {
+    float: left;
+    width: 100%;
+    height: 30px;
+    margin-top: 15px;
+}
+
+.stack-button {
+    width: auto;
+    height: 28px;
+    float: left;
+    cursor: pointer;
+}
+
+.stack-butbox {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 12px;
+    width: 94%;
+}
+
+.b-left {
+    width: 15px;
+    height: 28px;
+    background: url(b-l.png);
+    float: left;
+}
+
+.b-middle {
+    width: auto;
+    height: 28px;
+    background: url(b-m.png);
+    float: left;
+}
+
+.b-right {
+    width: 15px;
+    height: 28px;
+    background: url(b-r.png);
+    float: left;
+}
+
+p.stackbutton-txt {
+    text-shadow: 1px 1px 0 #fff;
+    color: #262626;
+    font-size: 11px;
+    font-weight: 700;
+    float: left;
+    font-family: Ubuntu;
+    padding: 6px 0;
+}
+
+.stack-custom-slider {
+    .ngx-slider{
+        height: 30px !important;
+        width: 238px !important;
+        margin: 0 !important;
+        user-select: none !important;
+        touch-action: pan-x !important;
+        position: absolute !important;
+
+            .ngx-slider-pointer{
+                width: 20px !important;
+                height: 30px !important;
+                background-image: url(sr-button.png) !important;
+                outline: none !important;
+                top: 0px !important;
+                border-radius: 0px !important;
+                background-color: #0db9f000 !important;
+                left: 0px;
+
+                &::after{
+                    display: none !important;
+                }
+            }
+
+            .ngx-slider-bar{
+                background-image: url(stackrange.png) !important;
+                width: 238px !important;
+                height: 30px !important;
+                outline: none !important;
+                background-color: #b39f9f00!important;
+            }
+
+            .ngx-slider-bar-wrapper {
+                width: 238px !important;
+            }
+    }
+}

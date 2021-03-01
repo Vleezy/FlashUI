@@ -1,0 +1,71 @@
+<!--<div *ngIf="roomData" class="nitro-room-tools">
+    <div class="row m-0">
+        <div class="d-flex">
+            <div class="card">
+                <div class="d-flex p-2 h-100">
+                    <div class="d-flex justify-content-center align-items-center h-100" (click)="toggleRoomOptions()">
+                        <button type="button" class="btn btn-sm btn-secondary h-100"><i class="fas" [ngClass]="open ? 'fa-chevron-right' : 'fa-chevron-left'"></i></button>
+                    </div>
+                    <div *ngIf="roomOptionsVisible" class="d-flex flex-column ml-2">
+                        <button type="button" class="btn btn-sm btn-secondary w-100" (click)="toggleRoomTools()">{{ ('room.settings.button.text') | translate }}</button>
+                        <button type="button" class="btn btn-sm btn-secondary w-100" (click)="toggleZoom()">{{ ('room.zoom.button.text') | translate }}</button>
+                        <button *ngIf="canRate" type="button" class="btn btn-sm btn-secondary w-100" (click)="likeRoom()">{{ ('room.like.button.text') | translate }}</button>
+                        <button type="button" class="btn btn-sm btn-secondary w-100" (click)="toggleChatHistory()">{{ ('room.chathistory.button.text') | translate }}</button>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-secondary w-100" (click)="goInDirection('back')" [disabled]="!canGo('back')"><i class="fas fa-arrow-left"></i></button>
+                            <button type="button" class="btn btn-sm btn-secondary w-100" (click)="goInDirection('forward')" [disabled]="!canGo('forward')"><i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="roomNameVisible" class="d-flex align-items-end flex-grow-1 ml-2" [@inOutAnimation]>
+            <div class="card w-100">
+                <div class="d-flex flex-column p-3">
+                    <p class="h5 text-truncate">{{ roomData.roomName }}</p>
+                    <p class="h6 room-owner m-0">{{ (roomData.showOwner ? ((('room.tool.room.owner.prefix') | translate) + ' ' + roomData.ownerName) : (('room.tool.public.room') | translate)) }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<nitro-room-event-view-component [(visible)]="roomToolsVisible" [roomData]="roomData"></nitro-room-event-view-component>
+-->
+
+<div *ngIf="roomData" class="bottom-room-information">
+    <div [class]="acac" class="bri-slide-box" (click)="toggleRoomOptions()"></div>
+    <div class="bri-room-options" *ngIf="roomOptionsVisible">
+        <div class="bri-ro-settings-box" (click)="toggleRoomTools()">
+            <div class="settingsico"></div>
+            <p class="room-options-desc_text">{{ ('room.settings.button.text') | translate }}</p>
+        </div>
+        <div class="bri-ro-zoom-box"  (click)="toggleZoom()">
+            <div class="zoomico"></div>
+            <p class="room-options-desc_text">{{ ('room.zoom.button.text') | translate }}</p>
+        </div>
+        <div class="bri-ro-roomchat-box" (click)="toggleChatHistory()" >
+            <div class="roomchatico"></div>
+            <p class="room-options-desc_text">{{ ('room.chathistory.button.text') | translate }}</p>
+        </div>
+        <div *ngIf="canRate" class="bri-ro-roomlike-box" (click)="likeRoom()">
+            <div class="roomlikeico"></div>
+            <p class="room-options-desc_text">{{ ('room.like.button.text') | translate }}</p>
+        </div>
+        <div class="bri-ro-roomurl-box">
+            <div class="roomurlico"></div>
+            <p class="room-options-desc_text">Oda Bağlantısı</p>
+        </div>
+        <div class="rt-mainbutton">
+            <div class="enter-previous-room" (click)="goInDirection('back')" ></div>
+            <div class="rooms-ıve-been-to-before"></div>
+            <div class="enter-next-room" (click)="goInDirection('forward')" ></div>
+        </div>
+    </div>
+    <div class="bri-room-name_and_owner-box" *ngIf="roomNameVisible" [@inOutAnimation]> 
+        <div class="bri-room_name">{{ roomData.roomName }}</div>
+        <div class="bri-room_owner">{{ (roomData.showOwner ? ((('room.tool.room.owner.prefix') | translate) + ' ' + roomData.ownerName) : (('room.tool.public.room') | translate)) }}</div>
+    </div>
+</div>
+<nitro-room-event-view-component [(visible)]="roomToolsVisible" [roomData]="roomData"></nitro-room-event-view-component>
+
+

@@ -1,0 +1,117 @@
+<!--<div [draggable] [center]="false" dragHandle=".card-header" class="card chatlog-tool-card">
+	<div class="card-header">
+			<span>
+			<i class="icon modtool-chatlog-icon" style="margin-right: 5px;"></i>
+                Chatlogs: {{roomChatlogs.name}}
+			</span>
+		<button type="button" class="close" (click)="close()"><i class="fas fa-times"></i></button>
+	</div>
+	<div class="card-body">
+        <div class="row">
+            <div class="col" *ngIf="showRoomChatlogs()" >
+                <div class="log-list" *ngIf="roomChatlogs">
+                    <div class="row" *ngFor="let chatlog of roomChatlogs.chatlogs">
+                        <div class="col">
+                            <div class="badge badge-secondary badge-block" style="width: 100%; text-align:left;">
+                                {{chatlog.timestamp}} - {{chatlog.username}} - {{chatlog.message}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="log-list" *ngIf="!roomChatlogs">
+                    Not in a room
+                </div>
+            </div>
+            <div class="col" *ngIf="showUserChatlogs()">
+                <div class="log-list" *ngIf="visits">
+                    <div class="row" *ngFor="let visit of visits">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <span style="font-size: 13px">
+                                        [{{visit.roomId}}]{{visit.roomName}}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="badge badge-secondary badge-block" style="width:100%; text-align:left;">
+                                        <div *ngFor="let chatlog of visit.chatlogs">
+                                            {{chatlog.timestamp}} - {{chatlog.userName}} - {{chatlog.message}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="log-list" *ngIf="!visits">
+                    No user selected
+                </div>
+            </div>
+        </div>
+
+
+	</div>
+</div>
+-->
+
+
+<div [draggable] [center]="false" dragHandle="#modt-roomchatdrag" id="modt-roomchat">
+    <div id="modt-roomchatdrag">
+        <p class="oldhabbo-headhood">Room Chatlog: <b>{{roomChatlogs.name}}</b></p>
+        <div class="old-kapat" (click)="close()"></div>
+    </div>
+    <div class="roomchatlog-infobox">
+        <p class="rc-roomname">Room: {{roomChatlogs.name}}</p>
+        <div class="rc-button">
+            <p class="rcbutton-txt">Room information
+            </p>
+        </div>
+        <div class="rc-button">
+            <p class="rcbutton-txt">Go to room</p>
+        </div>
+    </div>
+
+    <div class="room-conversation-recordings-list" *ngIf="showRoomChatlogs()">
+        <div *ngIf="roomChatlogs">
+            <div class="talk-box" *ngFor="let chatlog of roomChatlogs.chatlogs">
+                <p class="message-clock">{{chatlog.timestamp}}
+                </p>
+                <p class="user-who-sent-message">{{chatlog.username}}
+                </p>
+                <p class="message-sent">{{chatlog.message}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="log-list" *ngIf="!roomChatlogs">
+        Not in a room
+    </div>
+
+
+    
+    <div class="room-conversation-recordings-list" *ngIf="showUserChatlogs()">
+        <div class="col">
+            <span style="font-size: 13px">
+                [{{visit.roomId}}]{{visit.roomName}}
+            </span>
+        </div>
+        <div *ngIf="roomChatlogs">
+            <div *ngFor="let visit of visits">
+                <div class="talk-box" *ngFor="let chatlog of visit.chatlogs">
+                    <p class="message-clock">{{chatlog.timestamp}}
+                    </p>
+                    <p class="user-who-sent-message">{{chatlog.username}}
+                    </p>
+                    <p class="message-sent">{{chatlog.message}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="old-loglist" *ngIf="!visits" style="display: none;">
+        No user selected
+    </div>
+
+</div>

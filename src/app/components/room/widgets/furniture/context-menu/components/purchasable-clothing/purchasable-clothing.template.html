@@ -1,0 +1,41 @@
+<!--<div *ngIf="visible" [bringToTop] [draggable] class="nitro-furniture-purchasable-clothing card">
+    <div class="drag-handler d-flex justify-content-between align-items-center px-3 pt-3">
+        <h6 class="m-0">{{ 'useproduct.widget.title.bind_clothing' | translate }}</h6>
+        <button type="button" class="close" (click)="hide()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="row p-3">
+        <div class="col-4 d-flex align-items-center justify-content-center">
+            <div class="bg-secondary rounded" nitro-avatar-image [figure]="newFigureString" [direction]="2"></div>
+        </div>
+        <div class="col-8 d-flex flex-column align-items-center justify-content-center">
+            <p>{{ ('useproduct.widget.text.bind_clothing') | translate }}</p>
+            <p>{{ ('useproduct.widget.info.bind_clothing') | translate }}</p>
+        </div>
+    </div>
+    <div class="d-flex justify-content-between align-items-center p-3">
+        <button type="button" class="btn btn-secondary" (click)="handleButton('cancel')">{{ 'useproduct.widget.cancel' |
+            translate }}</button>
+        <button type="button" class="btn btn-success" (click)="handleButton('use')">{{ 'useproduct.widget.bind_clothing' | translate }}</button>
+    </div>
+</div>-->
+
+<div *ngIf="visible" [bringToTop] [draggable] class="useclothing">
+    <div class="drag-handler uchead">
+        <p class="cha-baslik">{{ 'useproduct.widget.title.bind_clothing' | translate }}</p>
+        <div class="old-kapat" (click)="hide()"></div>
+    </div>
+    <div class="ucbox">
+        <div class="avatar-view-ucbox">
+            <div style="margin-top: -8px;margin-left: -5px;" nitro-avatar-image [figure]="newFigureString" [direction]="2"></div>
+        </div>
+        <div class="uc-rightbox">
+            <p class="uc-desc"><u class="uc-uyari">Merhaba yeni bir kıyafet açmak üzeresin!</u>{{ ('useproduct.widget.text.bind_clothing') | translate }}</p>
+            <p class="uc-desc_not">{{ ('useproduct.widget.info.bind_clothing') | translate }}</p>
+            <div class="uc-buy">
+                <div class="ucbuy-button" (click)="handleButton('use')">
+                    <p class="mb-tamam-text">{{ 'useproduct.widget.bind_clothing' | translate }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div [draggable] [center]="false" dragHandle=".card-header" class="card user-tool-card" style="display:none;">
+	<div class="card-header">
+			<span>
+			<i class="icon modtool-user-icon" style="margin-right: 5px;"></i>
+			{{user.username}}
+			</span>
+		<button type="button" class="close" (click)="hideTool()"><i class="fas fa-times"></i></button>
+	</div>
+	<div class="card-body">
+		<ul class="list-group">
+			<li class="list-group-item">Username: {{user.username}}</li>
+		</ul>
+	</div>
+</div>

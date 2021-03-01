@@ -1,0 +1,241 @@
+.nitro-purse-component {
+    width: 192px;
+    z-index: 300;
+    pointer-events: none;
+
+    .item-detail {
+        flex:46%;
+        margin-bottom: 3px;
+        padding: 0.23rem;
+        margin-right: 3px;
+
+        &:nth-child(2n),
+        &:last-child {
+            margin-right:0;
+        }
+
+        .detail-value {
+            padding: 2px 5px;
+            font-size: 14px;
+        }
+
+        .detail-icon {
+            position: relative;
+            width: 25px;
+            height: 25px;
+            border-radius: $card-border-radius;
+
+            .currency-icon {
+                position: absolute;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .grid-container {
+        .grid-items {
+            &.grid-2 {
+                .item-detail {
+                    height: unset !important;
+                    padding: 0.23rem;
+                    border: 1px solid #000;
+            
+                    .detail-value {
+                        padding: 2px 5px;
+                        font-size: 14px;
+                    }
+            
+                    .detail-icon {
+                        position: relative;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: $card-border-radius;
+            
+                        .currency-icon {
+                            position: absolute;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.corelo-pursebox {
+    position: relative;
+    width: 192px;
+    height: 28px;
+    background: #2e2e2ce0;
+    box-shadow: inset 0px 0px 0px 2px #ffffff33;
+    padding-top: 3px;
+    border-radius: 6px;
+    border: solid 1px #000000;
+    margin-bottom: 3px;
+    z-index: 300;
+    pointer-events: auto;
+}
+
+.corelo-pursebox:nth-child(4) {
+    display: none;
+}
+
+
+.cpurse-name {
+    float: left;
+    font-family: 'Ubuntu';
+    font-size: 12px;
+    font-weight: 900;
+    padding: 0.5px 7px;
+    user-select: none;
+    left: 0px;
+    position: relative;
+}
+
+.kredirenk {
+    color: #f1bb24;
+}
+
+.purseicon-detail {
+    width: 30px;
+    height: 28px;
+    position: relative;
+    background: #2e2e2ce0;
+    right: -1px;
+    top: -4px;
+    box-shadow: inset 0px 0px 0px 2px #ffffff33;
+    border-radius: 6px;
+    border: solid 1px #000000;
+    display: flex;
+    float: right;
+}
+
+.pi-kredirenk {
+    background: #a47d15;
+    box-shadow: inset 0px 0px 0px 2px #e2ae1d;
+}
+
+.cpurse-miktar {
+    float: right;
+    font-family: 'Ubuntu';
+    font-size: 12px;
+    font-weight: 900;
+    padding: 0.5px 7px;
+    user-select: none;
+    left: 0px;
+    position: relative;
+    flex: auto;
+    display: flex;
+}
+
+.ordekrenk {
+    color: #d071ce;
+}
+
+.elmasrenk {
+    color: #7cbac2;
+}
+
+.pi-ordekrenk {
+    background: #9F6194;
+    box-shadow: inset 0px 0px 0px 2px #DA86D1;
+}
+
+.pi-elmasrenk {
+    background: #5a8689;
+    box-shadow: inset 0px 0px 0px 2px #7cbac2;
+}
+
+.hcrenk {
+    color: #bd802e;
+}
+
+.pi-hcrenk {
+    background: #a6722d;
+    box-shadow: inset 0 0 0 2px #bf8a42;
+}
+
+.cp-hcico {
+    background-image: url(./ico_hc.png);
+    width: 30px;
+    height: 25.5px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.cb-help-buton {
+    width: 59.5px;
+    height: 18px;
+    background: linear-gradient(to bottom,#207ab4 10%, #207ab4 10% 40%, #207ab4 40% 60%, #207ab4 90% 80%, #126296 90%);
+    box-shadow: inset 0px 0px 0px 1px #000;
+    border-radius: 4px;
+    float: left;
+    margin-left: 4px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.cb-help-buton:hover {
+    box-shadow: inset 0px 0px 0px 2px #000;
+}
+
+p.cb-buton-text {
+    font-size: 11px;
+    text-align: center;
+    font-family: 'Ubuntu';
+    padding-top: 1px;
+}
+
+
+.cb-exit-buton {
+    width: 59.5px;
+    height: 18px;
+    background: linear-gradient(to bottom,#f16a5e 10%, #dd5246 10% 40%, #dd5246 40% 60%, #dd5246 90% 80%, #962f26 90%);
+    box-shadow: inset 0px 0px 0px 1px #000;
+    border-radius: 4px;
+    float: left;
+    margin-left: 2px;
+    margin-top: 1px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.cb-exit-buton:hover {
+    box-shadow: inset 0px 0px 0px 2px #000;
+}
+
+img.cb-buton-ico {
+    margin: -11px 23px 0px 24px;
+}
+
+.cb-settings-buton {
+    width: 59.5px;
+    height: 18px;
+    background: linear-gradient(to bottom,#888493 10%, #716a85 10% 40%, #716a85 40% 60%, #716a85 90% 80%, #655e7b 90%);
+    box-shadow: inset 0px 0px 0px 1px #000;
+    border-radius: 4px;
+    top: 4px;
+    float: left;
+    margin-left: 1.5px;
+    margin-top: 1px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.cb-settings-buton:hover {
+    box-shadow: inset 0px 0px 0px 2px #000;
+}
+
+.currency-icon {
+    width: 30px;
+    height: 25.5px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,173 @@
+<!--<div class="phone-menu">
+    <div class="user-mobile">
+        <div class="habbomenu-header">
+            <p class="habbomenu-hood">Habbo Mobile Menu</p>
+        </div>
+        <div class="mobile-menu-flex">
+            <div class="phonemenu-list" *ngIf="isInRoom" (click)="clickIcon('hotel_view')">
+                <div class="habbomenu-ico"><img class="menuico" src="./assets/images/bottombar/habbo.png"></div>
+                <div class="menu-hoodbox">
+                    <div class="menu-aciklama">Hotel View</div>
+                </div>
+            </div>
+            <div class="phonemenu-list" (click)="clickIcon('navigator')">
+                <div class="habbomenu-ico"><img class="menuico" src="./assets/images/bottombar/nav.png"></div>
+                <div class="menu-hoodbox">
+                    <div class="menu-aciklama">Navigator</div>
+                </div>
+            </div>
+            <div class="phonemenu-list" (click)="clickIcon('catalog')">
+                <div class="habbomenu-ico"><img class="menuico" src="./assets/images/bottombar/magaza.png"></div>
+                <div class="menu-hoodbox">
+                    <div class="menu-aciklama">Catalogue</div>
+                </div>
+            </div>
+            <div class="phonemenu-list" (click)="clickIcon('inventory')">
+                <div class="habbomenu-ico"><img class="menuico" src="./assets/images/bottombar/envanter.png"></div>
+                <div class="menu-hoodbox">
+                    <div class="menu-aciklama">Inventory</div>
+                </div>
+            </div>
+            <div class="phonemenu-list">
+                <div class="habbomenu-ico">
+                    <div nitro-avatar-image [figure]="figure" [headOnly]="true" [direction]="2" class="bar_habbo-avatar">
+                    </div>
+                    <div class="mobicountbox count" style="top: 4px;right: 0px;" *ngIf="unseenAchievementsCount">
+                        <p class="count-txt ng-tns-c168-1">{{ unseenAchievementsCount }}</p>
+                    </div>
+                </div>
+                <div class="menu-hoodbox">
+                    <div class="menu-aciklama">Me (Corelo)</div>
+                </div>
+            </div>
+            <div class="phonemenu-list">
+                <div class="habbomenu-ico"><img class="menuico" src="./assets/images/bottombar/kamera.png"></div>
+                <div class="menu-hoodbox">
+                    <div class="menu-aciklama">Camera</div>
+                </div>
+            </div>
+            <div class="phonemenu-list" (click)="clickIcon('friendlist')">
+                <div class="habbomenu-ico"><img class="menuico" src="./assets/images/bottombar/arkadas-liste.png"></div>
+                <div class="mobicountbox" *ngIf="unseenFriendListCount">
+                    <p class="count-txt">{{ unseenFriendListCount }}</p>
+                </div>
+                <div class="menu-hoodbox">
+                    <div class="menu-aciklama">Friends List</div>
+                </div>
+            </div>
+            <div class="phonemenu-list" (click)="clickIcon('friendlist')">
+                <div class="habbomenu-ico"><img class="menuico" src="./assets/images/bottombar/arkadas-ara.png"></div>
+                <div class="menu-hoodbox">
+                    <div class="menu-aciklama">Find Friends</div>
+                </div>
+            </div>
+            <div class="phonemenu-list" (click)="clickIcon('friendlist')">
+                <div class="habbomenu-ico"><img class="menuico" src="./assets/images/bottombar/sohbet.png"></div>
+                <div class="menu-hoodbox">
+                    <div class="menu-aciklama">Chat</div>
+                </div>
+            </div>
+            <div class="menu-close">
+                <p class="menuclose-txt">Close menu</p>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+
+<div id="bottom-bar">
+    <nitro-toolbar-me-menu-component></nitro-toolbar-me-menu-component>
+    <div #navigationList class="bar-left">
+        <img class="bottom-left-ufalt" src="./assets/images/bottombar/sol-kapat.png">
+        <div class="barico-left ev-icon" *ngIf="!isInRoom" (click)="clickIcon('home_room')">
+            <img src="./assets/images/bottombar/house.png">
+        </div>
+        <div class="barico-left habbo-icon" *ngIf="isInRoom" (click)="clickIcon('hotel_view')">
+            <img src="./assets/images/bottombar/habbo.png">
+        </div>
+        <div class="barico-left navigator-icon" (click)="clickIcon('navigator')">
+            <img src="./assets/images/bottombar/nav.png?0">
+        </div>
+        <div class="barico-left magaza-icon" (click)="clickIcon('catalog')">
+            <img src="./assets/images/bottombar/magaza.png">
+        </div>
+        <div class="barico-left envanter-icon" (click)="clickIcon('inventory')">
+            <img src="./assets/images/bottombar/envanter.png">
+            <div class="mobicountbox" *ngIf="unseenInventoryCount">
+                <p class="count-txt">{{ unseenInventoryCount }}</p>
+            </div>
+        </div>
+        <div class="barico-left bar-avatar" (click)="clickIcon('me_menu')">
+            <div nitro-avatar-image [figure]="figure" [headOnly]="false" [direction]="2" class="bar_habbo-avatar"></div>
+            <div class="mobicountbox count" style="top: 4px;right: 0px;" *ngIf="unseenAchievementsCount">
+                <p class="count-txt ng-tns-c168-1">{{ unseenAchievementsCount }}</p>
+            </div>
+        </div>
+        <div class="barico-left kamera-icon">
+            <img src="./assets/images/bottombar/kamera.png">
+        </div>
+        <div class="bottom-bar-ayirici"></div>
+    </div>
+    <div class="bar-right">
+        <div class="bottom-right-ufalt" style="background-image: url(/assets/images/bottombar/sag-kapat.png);"></div>
+        <div class="bottombar-friends-list-box">
+            <div class="friends-left-box"></div>
+            <div class="bottombar-friends-list">
+                <div class="bottom-fl-content">
+                    <!--(click)="buyut($event)"-->
+                    <div class="online-friends-box" *ngFor="let friend of friends" id="friends">
+                        <img class="onfriends-avatar-head"
+                            src="https://www.habbo.com/habbo-imaging/avatarimage?figure={{ friend.figure }}&amp;action=std&amp;gesture=std&amp;direction=2&amp;head_direction=2&amp;size=n&amp;headonly=1&amp;img_format=png">
+                        <p class="onfriends-username">{{ friend.name }}</p>
+                        <div class="bottombar-user-options">
+                            <div class="buopt-chatico"></div>
+                            <div class="buopt-goroomico"></div>
+                            <div class="buopt-profileico"></div>
+                        </div>
+                    </div>
+                    <div class="add-friends-box">
+                        <img class="add-avatar-head" src="./assets/images/bottombar/addfriends.png">
+                        <p class="onfriends-username">{{ ('friend.bar.find.title') | translate }}</p>
+                    </div>
+                    <div class="add-friends-box">
+                        <img class="add-avatar-head" src="./assets/images/bottombar/addfriends.png">
+                        <p class="onfriends-username">{{ ('friend.bar.find.title') | translate }}</p>
+                    </div>
+                    <div class="add-friends-box">
+                        <img class="add-avatar-head" src="./assets/images/bottombar/addfriends.png">
+                        <p class="onfriends-username">{{ ('friend.bar.find.title') | translate }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="friends-right-box"></div>
+        </div>
+        <div class="barico-right sohbet-icon">
+            <img src="./assets/images/bottombar/sohbet.png">
+        </div>
+        <div class="barico-right arkadas-ara-icon" (click)="clickIcon('friendlist')">
+            <img src="./assets/images/bottombar/arkadas-ara.png">
+        </div>
+        <div class="barico-right arkadas-liste-icon" (click)="clickIcon('friendlist')">
+            <img src="./assets/images/bottombar/arkadas-liste.png">
+            <div class="mobicountbox" *ngIf="unseenFriendListCount">
+                <p class="count-txt">{{ unseenFriendListCount }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--
+
+    
+                    <div [class]="acac" (click)="yukselt()" class="online-friends-box" *ngFor="let friend of friends">
+                        <img class="onfriends-avatar-head" src="https://www.habbo.com/habbo-imaging/avatarimage?figure={{ friend.figure }}&amp;action=std&amp;gesture=std&amp;direction=2&amp;head_direction=2&amp;size=n&amp;headonly=1&amp;img_format=png">
+                        <p class="onfriends-username">{{ friend.name }}</p>
+                        <div class="bottombar-user-options">
+                            <div class="buopt-chatico"></div>
+                            <div class="buopt-goroomico"></div>
+                            <div class="buopt-profileico"></div>
+                        </div>
+                    </div>
+-->

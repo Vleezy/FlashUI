@@ -1,0 +1,33 @@
+<!--<div class="btn-group w-100">
+    <button type="button" class="btn btn-primary w-100 text-left" (click)="toggleCollapsed()">
+        <i class="fas" [ngClass]="{ 'fa-minus': isCollapsed, 'fa-plus': !isCollapsed }"></i> {{ resultCode | translate }}
+    </button>
+    <button *ngIf="(displayMode !== 2)" type="button" class="btn btn-primary" (click)="toggleListMode()">
+        <i class="fas" [ngClass]="{ 'fa-bars': (displayMode === 1), 'fa-th': (displayMode === 0) }"></i>
+    </button>
+</div>
+
+<div *ngIf="isCollapsed && (result.rooms.length > 0)" class="navigator-grid-container position-relative mt-1">
+    <div class="grid-items" [ngClass]="{ 'grid-2': (displayMode >= 1), 'grid-1': (displayMode === 0) }">
+        <div nitro-navigator-search-result-item-component *ngFor="let room of result.rooms" class="d-flex flex-column item-detail justify-content-center align-items-center" [room]="room" [displayMode]="displayMode" [ngClass]="{ 'tall-detail': (displayMode >= 1) }"></div>
+    </div>
+</div>-->
+
+<div class="actvroom-box">
+
+    <div class="aroom_b-head">
+        <div class="room-box-active" (click)="toggleCollapsed()" [ngClass]="{ 'room-box-active': isCollapsed, 'room-box-notactive': !isCollapsed }"></div>
+        <p class="navhead-baslik">{{ resultCode | translate }}</p>
+        <div class="room-navico_ex"></div>
+        <div *ngIf="(displayMode !== 2)" class="room-navico4" (click)="toggleListMode()"></div>
+        <div *ngIf="(displayMode !== 2)" class="room-navico3" (click)="toggleListMode()"></div>
+        <!--<div class="room-navico3"></div>-->
+    </div>
+    <div *ngIf="isCollapsed && (result.rooms.length > 0)" class="navigator-grid-container position-relative mt-1">
+        <div [ngClass]="{ 'grid-1': (displayMode === 0) }">
+            <div nitro-navigator-search-result-item-component *ngFor="let room of result.rooms" [room]="room" [displayMode]="displayMode"></div>
+        </div>
+    </div>
+    
+    
+</div>

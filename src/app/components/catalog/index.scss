@@ -1,0 +1,2116 @@
+.nitro-catalog {
+    position: absolute;
+    width: 600px;
+    max-width: 600px;
+    min-height: 570px;
+
+    .grid-container {
+
+        .grid-items {
+
+            .item-detail {
+                height: 50px;
+                max-height: 50px;
+
+                .count {
+                    top: 0.16rem;
+                    right: 3px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .nitro-catalog-navigation-component {
+
+        .list-group {
+
+            .nav-item {
+
+                .list-group-item {
+                    padding: 4px 10px;
+                    font-weight: 300;
+                    font-size: 14px;
+                    width: 100%;
+
+                    &:hover {
+                        background: rgba(196, 196, 196, 0.1);
+                        cursor: pointer;
+                    }
+
+                    .icon-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 20px;
+                        margin-right: 3px;
+                    }
+                }
+
+                .nav-item {
+
+                    .list-group-item {
+                        padding-left: 18px;
+                    }
+
+                    .nav-item {
+
+                        .list-group-item {
+                            padding-left: 26px;
+                        }
+
+                        .nav-item {
+
+                            .list-group-item {
+                                padding-left: 34px;
+                            }
+
+                            .nav-item {
+
+                                .list-group-item {
+                                    padding-left: 42px;
+                                }
+
+                                .nav-item {
+
+                                    .list-group-item {
+                                        padding-left: 50px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .quantity-area,
+    .purchase-area {
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .quantity-area,
+    .price-area {
+
+        p {
+            font-size: 14px;
+        }
+
+        input {
+            width: 60px;
+        }
+    }
+
+	.front-page-item {
+        border-radius: 5px;
+        background-position: center;
+        position: relative;
+        cursor: pointer;
+        box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.45);
+
+        .front-page-item-caption {
+            position: absolute;
+            background: rgba(0, 0, 0, .5);
+            color: #fff;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 5px 15px;
+            bottom: 0;
+            text-shadow: 2px 2px rgba(0, 0, 0, .2);
+        }
+    }
+
+    .front-page-item.tall {
+        height: 100%;
+    }
+
+    .front-page-item.wide {
+        height: 123px;
+    }
+}
+
+.nitro-catalog-confirm-purchase-component {
+    position: absolute;
+    width: 300px;
+
+    .product-preview {
+        width: 120px;
+        height: 150px;
+        max-width: 120px;
+        max-height: 150px;
+        background-color: rgba($primary, 1);
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        border-radius: $border-radius;
+    }
+}
+
+.nitro-catalog-confirm-vip-subscription-component {
+    position: absolute;
+    widows: 300px;
+
+    .icon {
+        width: 120px;
+        height: 150px;
+        max-width: 120px;
+        max-height: 150px;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+
+        background: url('^assets/images/catalog/hc_big.png');
+    }
+
+}
+
+.nitro-catalog-layout-trophies-component {
+
+    .nitro-catalog-layout-trophies-selector {
+        min-height: 130px;
+    }
+
+    .nitro-catalog-layout-trophies-types {
+        min-height: 50px;
+    }
+
+    .color-gold {
+        background-color: #CBA200;
+    }
+
+    .color-silver {
+        background-color: #A2A2A2;
+    }
+
+    .color-bronze {
+        background-color: #A25100;
+    }
+
+    .selected {
+        border:1px solid #000;
+        box-shadow: inset 0 0 0 2px $white;
+    }
+
+    textarea {
+        color: #fff;
+        resize: none;
+
+        &:focus {
+            outline:0;
+            box-shadow: 0;
+        }
+    }
+}
+
+
+/* corelo */ 
+#catalog {
+    width: 570px;
+    height: 635px;
+    background-color: #ebe9df;
+    left: 250px;
+    top: 100px;
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    border: solid 1px;
+    border-bottom: solid 2px #000;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    color: #000;
+    box-sizing: content-box;
+}
+
+#catalogdrag {
+    width: 99.3%;
+    height: 31px;
+    background-color: #367897;
+    border-top: solid 2px #408caf;
+    border-left: solid 2px #408caf;
+    border-right: solid 2px #408caf;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    box-shadow: inset 0px -1px 0px 0px #00000061;
+    box-sizing: content-box;
+}
+
+.ch-baslik {
+    margin: 0px;
+    width: 558px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.catalog-menu {
+    width: 550px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0px 10px;
+    box-sizing: content-box;
+    z-index: 1111;
+    position: relative;
+}
+
+.ctlgmenu-button {
+    width: 100%;
+    height: 22px;
+    background: #cac9c1;
+    float: left;
+    margin-right: 0px;
+    margin-top: 4px;
+    border-top: solid 1px #504f4e;
+    border-left: solid 1px #504f4e;
+    border-right: solid 1px #504f4e;
+    border-radius: 6px 6px 0px 0px;
+    padding: 7px 5px 1px 5px;
+    font-size: 13px;
+    cursor: pointer;
+    border-bottom: solid 1px #85847c;
+    text-align: center;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.ctlg-page-headinfo {
+    width: 570px;
+    height: 90px;
+    background: #0e3f52;
+    box-shadow: inset 0px 0px 0px 2px #ffffff3b;
+    overflow: hidden;
+    position: relative;
+}
+
+.ctlgmenu-button:hover {
+    background: #f6f5f0;
+    box-shadow: inset -2px 0 0 0 #ffffff, inset 0 2px 0 0 #ffffff, inset 2px 0 0 0 #ffffff;
+    border-bottom: 1px solid #f6f5f0;
+}
+
+.catalog_header {
+    opacity: 0.1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 570px;
+    height: 90px;
+    filter: grayscale(1);
+    transform: scale(2);
+}
+
+.catalog_header-ico {
+    float: left;
+    width: 85px;
+    height: 90px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(2px 1px 0px #0000003d);
+    transform: scale(2);
+}
+
+.catalog_header-title-text {
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 9px;
+    padding-left: 80px;
+    text-shadow: 1px 1px 0px #0000003d;
+    font-family: "Ubuntu";
+}
+
+.catalog_header-description-text {
+    position: relative;
+    line-height: 14px;
+    color: #fff;
+    font-size: 12.3px;
+    width: 560px;
+    padding-left: 85px;
+    font-family: 'Ubuntu';
+    height: 42px;
+    overflow: hidden;
+    margin-top: -55px;
+    float: left;
+}
+
+.yeniurun1_box {
+    width: 184px;
+    height: 460px;
+    float: left;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.frontpage-yeniurunler {
+    margin: 9px;
+}
+
+.yeniurun2_box {
+    width: 356px;
+    height: 126px;
+    background: #b7b6ae;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.yeniurun3_box {
+    width: 356px;
+    height: 126px;
+    background: #b7b6ae;
+    float: left;
+    margin-top: 7px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.yeniurun4_box {
+    width: 356px;
+    height: 126px;
+    background: #b7b6ae;
+    float: left;
+    margin-top: 7px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.fiskodu_box {
+    background: #50baed;
+    width: 345px;
+    height: 61px;
+    float: left;
+    margin: 5.5px;
+    border-radius: 8px;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.bigbox-yeniurun-aciklama {
+    width: 166px;
+    padding: 3px 5px 5px 5px;
+    background: #2220207d;
+    position: absolute;
+    bottom: 0;
+    margin: 4px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px #ffffff42;
+    line-height: 18px;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.smallbox-yeniurun-aciklama {
+    width: 336px;
+    padding: 6px;
+    background: #00000063;
+    position: absolute;
+    bottom: 0;
+    margin: 4px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px #ffffff42;
+    line-height: 18px;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.fiskodu-aciklama {
+    padding: 4px 15px 4px 15px;
+    font-size: 14px;
+    word-spacing: -0.5px;
+    width: auto;
+    float: left;
+}
+
+.fis-kod {
+    width: 214px;
+    height: 23px;
+    border: solid 1px #204a5f;
+    border-radius: 6px;
+    margin-left: 15px;
+    float: left;
+    outline: 0;
+    padding-left: 5px;
+    font-size: 12px;
+    padding-top: 0px;
+}
+
+.fis-bozdur_box {
+    background: linear-gradient(#f3f3f3 50%,#d9d9d9 0);
+    box-shadow: inset 0 0 0 2px #d9d9d9;
+    height: 20px;
+    float: right;
+    position: relative;
+    width: auto;
+    border: solid #000;
+    border-width: 1px 1px 2px;
+    border-radius: 4px;
+    right: 7px;
+    cursor: pointer;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.fbozdur-butontext {
+    font-size: 13px;
+    padding: 0px 7px;
+}
+
+.fis-bozdur_box:hover {
+    background: linear-gradient(#ffffff 50%, #eeeeee 50%);
+    box-shadow: #eeeeee 0px 0px 0px 2px inset;
+}
+
+.fis-bozdur_box:active {
+    background: linear-gradient(#e1e1e1 50%, #a3a3a3 50%);
+    box-shadow: #a3a3a3 0px 0px 0px 2px inset;
+}
+
+#frontpage-box {
+    width: 570px;
+    height: 567px;
+}
+
+.catalog-leftbox {
+    float: left;
+    width: 200px;
+    height: 475px;
+}
+
+.catalog-ara {
+    margin: 1px;
+    width: 155px;
+    padding-left: 5px;
+    border: 0px solid transparent;
+    background: hsla(0,0%,100%,0);
+    height: 21px;
+    outline: 0;
+    color: #727272;
+    font-size: 12px;
+    font-family: Arial;
+    box-sizing: content-box;
+    position: absolute;
+    margin-top: 1px;
+}
+
+.ara-bgbox {
+    margin: 6px 8px;
+    width: 184px;
+    height: 24px;
+    background-image: url(../images/catalog/ara-bgbox.png);
+    float: left;
+    box-sizing: content-box;
+    position: relative;
+}
+
+.catalog-menubox {
+    margin: 0 8px;
+    width: 176px;
+    height: 423px;
+    background-image: url(../images/catalog/menu-bgbox.png);
+    float: left;
+    padding: 5px 4px;
+    box-sizing: content-box;
+}
+
+.cmenu-box {
+    width: 300%;
+    height: 16px;
+    background: rgba(99, 197, 233, 0);
+    border-top: 2px solid rgba(130, 209, 237, 0);
+    border-bottom: 2px solid rgba(130, 209, 237, 0);
+    cursor: pointer;
+    box-shadow: 0 1px 0 0 rgb(180 180 174 / 0%);
+    margin-bottom: 1px;
+    color: #686868;
+    box-sizing: initial;
+    margin-left: -60px;
+    padding-left: 40px;
+}
+
+.cmenu-box:hover {
+    background: #63c5e9;
+    border-top: solid 2px #82d1ed;
+    border-bottom: solid 2px #82d1ed;
+    box-shadow: 0px 1px 0px 0px #b4b4ae;
+    color: #ffffff;
+}
+
+.menulist-pagebox {
+    width: 177px;
+    height: 20px;
+    margin-top: -2px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    box-sizing: initial;
+}
+
+.list-menu-ico {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    float: left;
+    margin-top: -4px;
+    margin-left: 2px;
+}
+
+.list-menu-pagename {
+    float: left;
+    padding: 2px 2px 3px 28px;
+    position: absolute;
+    font-size: 12px;
+    text-shadow: 0 0 0 rgba(91,91,91,.4117647058823529);
+    font-weight: bolder;
+    font-family: Arial;
+    width: auto;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+.list-menu-ac {
+    position: absolute;
+    float: left;
+    background-image: url(../images/catalog/menu-ac.png);
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 140px;
+    z-index: 1;
+}
+
+.list-menu-kapat {
+    position: absolute;
+    float: left;
+    background-image: url(../images/catalog/menu-kapat.png);
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 140px;
+    z-index: 1;
+}
+
+.catalog-ara::placeholder {
+    color: #727272a1;
+}
+
+.ctlg_menu-liste {
+    width: 177px;
+    height: 424px;
+    list-style: none;
+    overflow-x: hidden;
+    position: relative;
+    box-sizing: content-box;
+}
+
+.ctlg_menu-liste::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+.ctlg_menu-liste::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+.ctlg_menu-liste::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+.ctlg_menu-liste::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+.ctlg_menu-liste::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+.ctlg_menu-liste::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+.ctlg_menu-liste::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+
+.ctlg_menu-liste::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.ctlg_menu-liste::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.ctlg_menu-liste::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+.ctlg_menu-liste::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+.ctlg_menu-liste::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+
+.catalog-rightbox {
+    width: 360px;
+    height: 460px;
+    float: right;
+    margin: 6px 7px 0px 0px;
+}
+
+.mobi-display-box {
+    width: 360px;
+    height: 240px;
+    background: #000;
+    overflow: hidden;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+}
+
+.catalog-mobibox {
+    margin: 5px 0;
+    width: 352px;
+    height: 147px;
+    background-image: url(../images/catalog/mobi-bgbox.png);
+    float: left;
+    padding: 4px;
+    overflow: hidden;
+    position: absolute;
+    box-sizing: content-box;
+}
+
+.ctlg_mobi-liste {
+    width: 352px;
+    height: 95%;
+    list-style: none;
+    overflow: auto;
+    position: absolute;
+}
+
+.ctlg_mobi-liste::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+
+}
+
+.ctlg_mobi-liste::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+.ctlg_mobi-liste::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+.ctlg_mobi-liste::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+.ctlg_mobi-liste::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+.ctlg_mobi-liste::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+.ctlg_mobi-liste::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+.ctlg_mobi-liste::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.ctlg_mobi-liste::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.ctlg_mobi-liste::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+.ctlg_mobi-liste::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+.ctlg_mobi-liste::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+.ctlg_mobi-liste::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.mobi-menuview {
+    width: 53px;
+    max-height: 74px;
+    height: auto;
+    float: left;
+    padding-bottom: 6px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    margin-left: 3px;
+}
+
+.mview-box {
+    width: 53px;
+    height: 39px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.first-price-box {
+    width: 49px;
+    height: 11px;
+}
+
+.second-price-box {
+    width: 49px;
+    height: 11px;
+    margin-top: 3px;
+}
+
+.mobi-price-ico {
+    width: 11px;
+    height: 11px;
+    float: right;
+    right: 3px;
+    top: -6px;
+    position: relative;
+}
+
+.mobi-price-caption {
+    font-size: 11px;
+    height: 11px;
+    line-height: 11.5px;
+    font-weight: 700;
+    width: 100%;
+    position: absolute;
+    text-align: right;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.3490196078);
+    overflow: hidden;
+    font-family: system-ui;
+    float: right;
+    right: 18px;
+}
+
+.mview-height {
+    width: 55px;
+    height: 74px;
+    float: left;
+    position: relative;
+}
+
+.multiple-purchase-indicators {
+    width: auto;
+    height: 8px;
+    max-width: 30px;
+    padding: 2px 3px;
+    background: #ff3200;
+    float: right;
+    overflow: hidden;
+    position: relative;
+    top: 24px;
+    font-size: 10px;
+    line-height: 8px;
+    color: #cc6;
+    border-radius: 5px;
+    right: 5px;
+    font-family: Arial;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.34901960784313724);
+    box-sizing: content-box;
+}
+
+.mobi-fiyat-box {
+    width: auto;
+    height: 26px;
+    background: #bab8b4;
+    box-shadow: inset 0 0 0 2px #fff;
+    border: solid #000;
+    border-width: 1px 1px 2px;
+    border-radius: 6px;
+    position: absolute;
+    float: right;
+    right: 6px;
+    bottom: 6px;
+    padding-left: 6px;
+    padding-right: 3px;
+    box-sizing: content-box;
+}
+
+.mdb-fbox {
+    height: 26px;
+    float: left;
+    margin-right: 5px;
+}
+
+.mobi-fiyat-birimico {
+    width: 20px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.mobi-mapfbox-fiyat-text {
+    float: left;
+    width: auto;
+    height: 26px;
+    line-height: 26px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    font-family: system-ui;
+}
+
+.mobi-purchase-box {
+    margin: 5px 0;
+    width: 360px;
+    height: 65px;
+    float: left;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    background: #ebe9df;
+    z-index: 1;
+}
+
+.mobi-hediye-box {
+    width: 168px;
+    height: 21px;
+    background: linear-gradient(#f3f3f3 50%,#d9d9d9 0);
+    box-shadow: inset 0 0 0 2px #d9d9d9;
+    border-radius: 4px;
+    border: solid #000;
+    border-width: 1px 1px 2px;
+    float: left;
+    box-sizing: initial;
+    font-family: system-ui;
+    position: absolute;
+    bottom: 0px;
+}
+
+.mobi-buy-box {
+    width: 166px;
+    height: 20px;
+    background: linear-gradient(#00a100 50%,#009000 0);
+    box-shadow: inset 0 0 0 2px #009000;
+    border-radius: 4px;
+    border: solid #000;
+    border-width: 2px 2px 3px;
+    float: right;
+    right: 0;
+    box-sizing: content-box;
+    bottom: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+.mobibuy-text {
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold;
+    font-family: system-ui;
+}
+
+.mobigift-text {
+    text-align: center;
+    font-size: 13px;
+    padding: 0;
+}
+
+.mobi-hediye-box:hover {
+    background: linear-gradient(#ffffff 50%, #eeeeee 50%);
+    box-shadow: #eeeeee 0px 0px 0px 2px inset;
+}
+
+.mobi-hediye-box:active {
+    background: linear-gradient(#e1e1e1 50%, #a3a3a3 50%);
+    box-shadow: #a3a3a3 0px 0px 0px 2px inset;
+}
+
+.mobi-buy-box:hover {
+    background: linear-gradient(#00a900 50%, #009c00 50%);
+    box-shadow: inset 0px 0px 0px 2px #009c00;
+}
+
+.mobi-buy-box:active {
+    background: linear-gradient(#009500 50%, #006c00 50%);
+    box-shadow: inset 0px 0px 0px 2px #006c00;
+}
+
+.mobi-adet-box {
+    width: 170px;
+    float: left;
+    bottom: 29px;
+    position: absolute;
+}
+
+.mobiadet {
+    width: 30px;
+    height: 25px;
+    background: #ffffff00;
+    border: solid 0px #5d5d5a00;
+    float: left;
+    background-image: url(../images/catalog/mobiadet.png?0);
+    outline: 0;
+    padding-left: 4px;
+    font-size: 12px;
+}
+
+.mobiadet-text {
+    float: left;
+    width: 65px;
+    font-size: 14px;
+    color: #727272;
+    padding: 2px 0;
+    font-family: system-ui;
+}
+
+.mobi-altfiyat-box {
+    width: 170px;
+    float: right;
+    bottom: 29px;
+    position: absolute;
+    right: 0px;
+}
+
+.mobifiyat-text {
+    float: left;
+    width: 65px;
+    font-size: 14px;
+    color: #727272;
+    padding: 2px 0;
+    font-family: system-ui;
+}
+
+.mdb-fbox_bottom {
+    height: 26px;
+    float: right;
+    padding-left: 2px;
+}
+
+.plusprice {
+    float: left;
+    width: auto;
+    height: 26px;
+    line-height: 25px;
+    font-weight: 1000;
+    font-size: 14px;
+    color: #000;
+    letter-spacing: 2px;
+    font-family: system-ui;
+}
+
+.select-mobi-name {
+    position: absolute;
+    padding-top: 19px;
+    padding-left: 7px;
+    color: #fff;
+    z-index: 1111;
+    left: 0;
+    top: 0;
+    background: #0000000f;
+    border-radius: 5px;
+    padding: 4px 6px;
+    margin: 20px 15px;
+    font-size: 13px;
+    font-family: 'Ubuntu';
+    text-shadow: 1px 1px 0px #0000004d;
+}
+
+.pets_mobi-display-box {
+    width: 360px;
+    height: 240px;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    position: relative;
+}
+
+.select-color-name {
+    position: absolute;
+    bottom: 0px;
+    padding-left: 10px;
+    color: #000;
+    font-size: 11px;
+    text-shadow: 0px 0px 1px #0000005e;
+}
+
+.catalog-colorSelect_mobibox {
+    margin: 5px 0px;
+    width: 352px;
+    height: 73px;
+    background-image: url(../images/catalog/pets_mobi-bgbox.png);
+    float: left;
+    padding: 4px 4px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.select-genus-name {
+    position: relative;
+    top: -3px;
+    padding-left: 10px;
+    color: #000;
+    font-size: 11px;
+    text-shadow: 0px 0px 1px #0000005e;
+}
+
+.select-cins-box {
+    width: 340px;
+    height: 25px;
+    background: #fff0;
+    margin: 0px 10px;
+    border: solid 0px #0000;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: 0;
+    cursor: pointer;
+    background-image: url(../images/catalog/select-cins.png);
+    float: left;
+    position: absolute;
+}
+
+.pets-name-input {
+    width: 340px;
+    height: 25px;
+    background: #fff0;
+    margin: 0px 10px;
+    border: solid 0px #0000;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: 0;
+    background-image: url(../images/catalog/pets-name-input.png);
+    padding-bottom: 1.5px;
+    padding-left: 7px;
+    position: absolute;
+    bottom: 44px;
+}
+
+.select-pets-name {
+    position: relative;
+    top: 38px;
+    padding-left: 10px;
+    color: #000;
+    font-size: 11px;
+    text-shadow: 0px 0px 1px #0000005e;
+}
+
+option {
+}
+
+.pets_color-select-box {
+    width: 27px;
+    height: 22px;
+    background-image: url(../images/catalog/pets-color-select-off.png?0);
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+
+.pets_color-select-box:active {
+    background-image: url(../images/catalog/pets-color-select-on.png?0);
+}
+
+.ctlg_pets-mobi-liste {
+    width: 352px;
+    height: 72px;
+    list-style: none;
+    overflow: auto;
+    position: absolute;
+}
+
+.ctlg_pets-mobi-liste::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+.ctlg_pets-mobi-liste::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+.ctlg_pets-mobi-liste::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+.ctlg_pets-mobi-liste::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+.ctlg_pets-mobi-liste::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+.ctlg_pets-mobi-liste::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+.ctlg_pets-mobi-liste::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+
+.ctlg_pets-mobi-liste::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.ctlg_pets-mobi-liste::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.ctlg_pets-mobi-liste::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+.ctlg_pets-mobi-liste::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+.ctlg_pets-mobi-liste::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+.ctlg_pets-mobi-liste::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.sub-cmenu-box {
+    width: 100%;
+    height: 16px;
+    background: rgba(99,197,233,0);
+    border-top: 2px solid rgba(130,209,237,0);
+    border-bottom: 2px solid rgba(130,209,237,0);
+    cursor: pointer;
+    box-shadow: 0 1px 0 0 rgba(180,180,174,0);
+    margin-bottom: 1px;
+    color: #4a7489;
+    padding-left: 15px;
+    font-style: italic;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+.sub-cmenu-box:hover {
+    background: #63c5e9;
+    border-top: solid 2px #82d1ed;
+    border-bottom: solid 2px #82d1ed;
+    box-shadow: 0px 1px 0px 0px #b4b4ae;
+    color: #ffffff;
+}
+
+.list-sub_menu-pagename {
+    float: left;
+    padding: 4px 2px 3px 28px;
+    position: absolute;
+    font-size: 12px;
+    text-shadow: 0px 0px 0px #5b5b5b69;
+    font-weight: bolder;
+    font-family: Arial;
+    width: 20vh;
+}
+
+.hc-bg {
+    float: left;
+    margin-top: 4px;
+    margin-left: 26px;
+    position: relative;
+}
+
+.hc-info-desc {
+    font-size: 13px;
+    padding-left: 35px;
+    float: left;
+    width: 180px;
+    box-sizing: content-box;
+    line-height: 17px;
+}
+
+.hc-info-hood {
+    font-size: 13px;
+    padding-left: 35px;
+    float: left;
+    width: 180px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+}
+
+.hc-info-box {
+    width: 360px;
+    overflow: hidden;
+    height: 171px;
+    margin-bottom: 4px;
+    font-family: system-ui;
+}
+
+.hc-buy {
+    width: 318px;
+    height: 75px;
+    background: #dedede;
+    float: left;
+    border: 1px solid #959595;
+    border-radius: 7px;
+    left: 17px;
+    position: relative;
+    margin-top: 6px;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.hc-buy-box_head {
+    background: #959595;
+    width: 306px;
+    height: 25px;
+    margin: 6px;
+    border-radius: 5px;
+}
+
+.hc-buy-box {
+    width: 86px;
+    height: 25px;
+    background: linear-gradient(#00a100 50%,#009000 0);
+    box-shadow: inset 0 0 0 2px #009000;
+    border-radius: 4px;
+    border: solid #000;
+    border-width: 2px 2px 3px;
+    float: right;
+    bottom: 0;
+    position: relative;
+    right: 6px;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.hc-buy-box:hover {
+    background: linear-gradient(#00a900 50%, #009c00 50%);
+    box-shadow: inset 0px 0px 0px 2px #009c00;
+}
+
+.hc-buy-box:active {
+    background: linear-gradient(#009500 50%, #006c00 50%);
+    box-shadow: inset 0px 0px 0px 2px #006c00;
+}
+.hcbuy-text {
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 700;
+    padding: 2.5px;
+}
+.hc-hediye-box {
+    width: 86px;
+    height: 25px;
+    background: linear-gradient(#00a100 50%,#009000 0);
+    box-shadow: inset 0 0 0 2px #009000;
+    border-radius: 4px;
+    border: solid #000;
+    border-width: 2px 2px 3px;
+    float: right;
+    bottom: 0;
+    position: relative;
+    right: 12px;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.hc-hediye-box:hover {
+    background: linear-gradient(#00a900 50%, #009c00 50%);
+    box-shadow: inset 0px 0px 0px 2px #009c00;
+}
+
+.hc-hediye-box:active {
+    background: linear-gradient(#009500 50%, #006c00 50%);
+    box-shadow: inset 0px 0px 0px 2px #006c00;
+}
+
+.hc-logo {
+    margin: 4px 6px;
+    float: left;
+}
+
+.hcbuy-months-info {
+    float: left;
+    font-weight: 500;
+    color: #fff;
+    font-size: 14px;
+    padding: 1px 18px;
+}
+
+.hc-fiyat-box {
+    width: auto;
+    height: 26px;
+    float: left;
+    right: 6px;
+    bottom: 6px;
+    padding: 3px 10px;
+}
+
+.hc-fiyat-text {
+    float: left;
+    width: auto;
+    height: 26px;
+    line-height: 26px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000000;
+}
+
+.hc-ex-info {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 350px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    font-family: system-ui;
+}
+
+#mobibuy-basarili {
+    width: 323px;
+    height: auto;
+    background-color: #ebe9df;
+    left: 500px;
+    top: 250px;
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid;
+    border-bottom: 2px solid #000;
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #000;
+    z-index: 11;
+    box-sizing: content-box;
+}
+
+#mobibuy-basarilidrag {
+    width: 319px;
+    height: 31px;
+    background-color: #367897;
+    border-top: 2px solid #408caf;
+    border-left: 2px solid #408caf;
+    border-right: 2px solid #408caf;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    box-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 38%);
+    box-sizing: content-box;
+}
+
+.mbb-baslik {
+    margin: 0;
+    width: 310px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    font-family: system-ui;
+    box-sizing: content-box;
+}
+
+.mobibuy-basarili-box {
+    width: 323px;
+    height: 229px;
+    float: left;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.mbb-mobi_onizleme {
+    width: 124px;
+    height: 150px;
+    border: solid 1px #5d5d5a;
+    border-radius: 7px;
+    background-color: #f0f0f0;
+    position: relative;
+    float: left;
+    top: 12px;
+    left: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-sizing: content-box;
+}
+
+p.mbb-mobi_adi {
+    padding-top: 39px;
+    font-weight: 700;
+    width: 170px;
+    font-family: system-ui;
+    position: relative;
+    float: left;
+    left: 10px;
+    padding-left: 10px;
+    font-size: 14px;
+    height: auto;
+}
+
+p.mbb-mobi_adi {
+    padding-top: 39px;
+    font-weight: 700;
+    width: 170px;
+    font-family: system-ui;
+    position: relative;
+    float: left;
+    left: 10px;
+    padding-left: 10px;
+    font-size: 14px;
+    height: auto;
+}
+
+p.mbb-mobi_adet {
+    padding-top: 0px;
+    font-weight: 700;
+    width: 170px;
+    font-family: system-ui;
+    position: relative;
+    float: left;
+    left: 10px;
+    padding-left: 10px;
+    font-size: 14px;
+    height: auto;
+}
+
+p.mbb-fiyat-text {
+    float: left;
+    padding-top: 3px;
+    position: relative;
+    left: 10px;
+    width: 170px;
+    padding-left: 10px;
+    font-size: 14px;
+    height: auto;
+}
+
+.mbb-fiyat-box {
+    width: auto;
+    height: 26px;
+    float: left;
+    right: 6px;
+    bottom: 6px;
+    padding: 2px 20px;
+}
+
+.mbb-islem-onayla-box {
+    width: auto;
+    height: 25px;
+    background: linear-gradient(#00a100 50%,#009000 0);
+    box-shadow: inset 0 0 0 2px #009000;
+    border-radius: 4px;
+    border: solid #000;
+    border-width: 2px 2px 3px;
+    float: right;
+    bottom: 0;
+    position: relative;
+    right: 6px;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+p.mbb-tamam-text {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 2px 15px;
+    color: #fff;
+}
+
+p.mbb-iptal-text {
+    font-size: 13px;
+    padding: 2px 15px;
+    color: #000;
+}
+
+.mbb-islem-iptal-box {
+    width: auto;
+    height: 25px;
+    background: linear-gradient(#f3f3f3 50%,#d9d9d9 0);
+    border-radius: 4px;
+    border: solid #000;
+    border-width: 2px 2px 3px;
+    float: right;
+    bottom: 0px;
+    position: relative;
+    right: 6px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 2px #d9d9d9;
+    box-sizing: content-box;
+}
+
+.mbb-islem-iptal-box:hover {
+    background: linear-gradient(#ffffff 50%, #eeeeee 50%);
+    box-shadow: #eeeeee 0px 0px 0px 2px inset;
+}
+
+.mbb-islem-iptal-box:active {
+    background: linear-gradient(#e1e1e1 50%, #a3a3a3 50%);
+    box-shadow: #a3a3a3 0px 0px 0px 2px inset;
+}
+
+.mbb-islem-onayla-box:hover {
+    background: linear-gradient(#00a900 50%, #009c00 50%);
+    box-shadow: inset 0px 0px 0px 2px #009c00;
+}
+
+.mbb-islem-onayla-box:active {
+    background: linear-gradient(#009500 50%, #006c00 50%);
+    box-shadow: inset 0px 0px 0px 2px #006c00;
+}
+
+.magaza-body {
+    width: 570px;
+    height: 602px;
+}
+
+.ctlgactive {
+    background: rgb(235, 233, 223) !important;
+    border-width: 2px 2px 1px !important;
+    border-style: solid !important;
+    border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(235, 233, 223) !important;
+    border-image: initial !important;
+    padding: 6.5px 5px 0px !important;
+    box-shadow: inset -2px 0 0 0 #ffffff, inset 0 2px 0 0 #ffffff, inset 2px 0 0 0 #ffffff !important;
+}
+
+.ctlgmenuactive {
+    background: #63c5e9;
+    border-top: solid 2px #82d1ed;
+    border-bottom: solid 2px #82d1ed;
+    box-shadow: 0px 1px 0px 0px #b4b4ae;
+    color: #ffffff;
+}
+/*
+nitro-catalog-navigation-set-component {
+    color: #4A7489;
+}*/
+ 
+.corelo-listitem {
+    position: relative;
+    display: block;
+}
+
+.list-grouptest {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    margin-bottom: 0;
+    border-radius: 7px;
+}
+
+.hatasayfa {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #8798a1;
+    background-clip: initial;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: 7px;
+    width: 340px;
+    height: 440px;
+    margin: 10px;
+}
+
+.hs-head {
+    width: 340px;
+    height: 67px;
+    margin-bottom: 7px;
+}
+
+.hs-ico {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 57px;
+    height: 57px;
+    float: left;
+    background-image: url(../images/c_images/Quests/room_builder_placewallpaper_1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.hs-ico2 {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 57px;
+    height: 57px;
+    float: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+p.hs-hood {
+    float: left;
+    color: #fff;
+    font-family: "Ubuntu";
+    padding: 10px 10px;
+    max-height: 80px;
+    height: 80px;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 260px;
+    max-width: 260px;
+    line-height: 20px;
+}
+
+p.hs-desc {
+    float: left;
+    color: #fff;
+    font-family: 'Ubuntu';
+    padding: 0px 20px;
+    font-size: 12.5px;
+    line-height: 15px;
+    padding-bottom: 5px;
+    width: 263px;
+    max-width: 263px;
+}
+
+
+.magazamobihead {
+    display: flex!important;
+    position: relative!important;
+    align-items: center!important;
+    justify-content: center!important;
+    width: 360px;
+    height: 240px;
+}
+
+.ctlgmactive {
+    background: #fff;
+    box-shadow: inset 0px 0px 0px 2px #62C4E8;
+    border-radius: 4px;
+}
+
+i.icon.icon-currencybig-5 {
+    width: 17px;
+    height: 17px;
+    background-image: url(../images/catalog/bigdia.png);
+    margin-top: 4px;
+    margin-left: 3px;
+}
+
+i.icon.icon-currencybig-cc {
+    width: 20px;
+    height: 18px;
+    background-image: url(../images/catalog/bigcc.png);
+    margin-top: 4px;
+    margin-left: 3px;
+}
+
+i.icon.icon-currencybig-0 {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    background-image: url(../images/catalog/bigduck.png);
+    margin-left: 3px;
+}
+
+.envanterbos { width: 100%; height: 270px; } 
+.envantersolimg { width: 280px; height: 250px; background-image: url(../images/bos.png); background-position: center center; background-repeat: no-repeat; float: left; } 
+.envantersagaciklama { width: 188px; height: 270px; float: left; }
+.ebos-hood {color: #e01111;text-shadow: 1px 1px 0px #fff;font-family: system-ui;font-size: 13px;font-weight: bold;padding-top: 50px;}
+.ebos-desc {color: #000000;text-shadow: 0px 1px 0px #fff;font-family: system-ui;font-size: 13px;}
+
+.urun-secilmemis {
+    position: absolute;
+    width: 360px;
+    height: 65px;
+    background-image: url(../images/catalog/urun-secilmemis.png);
+    bottom: 8px;
+}
+
+p.us-txt {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #6f6f6f;
+    font-family: system-ui;
+    padding-top: 40px;
+    font-weight: bold;
+}
+
+.spaces-select-menu-corelo {
+    height: 30px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: -29px;
+    z-index: 111111;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ssm-left {
+    width: auto;
+    height: 21px;
+    border: solid 1px #000;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: inset -1px -1px 0px 0px #cccccc;
+    border-radius: 3px 0px 0px 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 11.5px;
+    font-family: system-ui;
+    font-weight: bold;
+    outline: 0;
+}
+
+.ssm-middle {
+    width: auto;
+    height: 21px;
+    border: solid 1px #000;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: inset -1px -1px 0px 0px #cccccc;
+    margin-left: -1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 11.5px;
+    font-family: system-ui;
+    font-weight: bold;
+    outline: 0;
+}
+
+.ssm-right {
+    width: auto;
+    height: 21px;
+    border: solid 1px #000;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: inset -1px -1px 0px 0px #cccccc;
+    border-radius: 0px 3px 3px 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -1px;
+    font-size: 11.5px;
+    font-family: system-ui;
+    font-weight: bold;
+    outline: 0;
+}
+
+.selectspaces-active {
+    background: #989898;
+    box-shadow: inset 1px 1px 0px 0px #535353;
+}
+
+#mobibuy-hata {
+    width: 298px;
+    height: auto;
+    background-color: #ebe9df;
+    left: 500px;
+    top: 250px;
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    border: solid 1px;
+    border-bottom: solid 2px #000;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    color: #000;
+    z-index: 11;
+    box-sizing: content-box;
+}
+
+#mobibuy-hatadrag {
+    width: 294px;
+    height: 31px;
+    background-color: #367897;
+    border-top: solid 2px #408caf;
+    border-left: solid 2px #408caf;
+    border-right: solid 2px #408caf;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    box-shadow: inset 0px -1px 0px 0px #00000061;
+    box-sizing: content-box;
+}
+
+.mbh-baslik {
+    margin: 0px;
+    width: 96%;
+    box-sizing: content-box;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    font-family: system-ui;
+}
+
+.mobibuy-hata-box {width: auto;height: 130px;float: left;}
+
+.mbuy-hata-text-box {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    width: 298px;
+    float: left;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.mbuyh-text {
+    width: 270px;
+    padding-top: 5px;
+    text-align: center;
+    line-height: 17px;
+}
+
+.mobi-buy-iptal-et {
+    float: left;
+    position: absolute;
+    bottom: 18px;
+    font-size: 14px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    left: 0px;
+    cursor: pointer;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.mobi-buy-onayla {
+    float: right;
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    right: 0px;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.mb-islem-onayla-box {
+    width: auto;
+    height: 23px;
+    background: linear-gradient(#f3f3f3 50%, #d9d9d9 50%);
+    box-shadow: rgb(217 217 217) 0px 0px 0px 2px inset;
+    border-radius: 4px;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    float: left;
+    bottom: -5px;
+    position: absolute;
+    cursor: pointer;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+p.mb-tamam-text {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 2px 9px;
+}
+
+.mb-islem-onayla-box:hover {
+    background: linear-gradient(#ffffff 50%, #eeeeee 50%);
+    box-shadow: #eeeeee 0px 0px 0px 2px inset;
+}
+
+.mb-islem-onayla-box:active {
+    background: linear-gradient(#e1e1e1 50%, #a3a3a3 50%);
+    box-shadow: #a3a3a3 0px 0px 0px 2px inset;
+}
+
+.dd {
+    position: absolute;
+    float: left;
+    margin-left: -202px;
+    margin-top: -6px;
+    width: 570px;
+    height: 476px;
+}
+
+.trophies-mobiview {
+    width: 100%;
+    height: 135px;
+    position: relative;
+}
+
+.trophies-descbox {
+    width: 100%;
+    height: 150px;
+}
+
+.trophiesmfb {
+    background: #a58d57;
+    box-shadow: inset 0px 0px 0px 2px #e3c47c;
+    right: 0px;
+    bottom: 5px;
+}
+
+p.trophiesdesctxt {
+    font-size: 13px;
+    font-family: system-ui;
+    line-height: 15px;
+}
+
+.tmobiview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trophies-sol {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(#f3f3f3 50%, #d9d9d9 50%);
+    box-shadow: inset 0px 0px 0px 2px #d9d9d9;
+    border-radius: 4px;
+    border: solid 2px #000;
+    border-bottom: solid 3px #000;
+    float: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 10px;
+    left: 100px;
+    padding-left: 8px;
+    font-weight: 1000;
+}
+
+.trophies-sag {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(#f3f3f3 50%, #d9d9d9 50%);
+    box-shadow: inset 0px 0px 0px 2px #d9d9d9;
+    border-radius: 4px;
+    border: solid 2px #000;
+    border-bottom: solid 3px #000;
+    float: right;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 10px;
+    right: 100px;
+    padding-left: 9px;
+    font-weight: 1000;
+}
+
+.catalog-trophies-mobibox {
+    width: 360px;
+    height: 40px;
+    background-image: url(../images/catalog/trophies-mobibg.png);
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.trophies-mobinamebox {
+    width: 360px;
+    height: 83px;
+    background-image: url(../images/catalog/trophies-mobiname.png);
+    float: left;
+    overflow: hidden;
+    position: relative;
+    margin-top: 15px;
+    border: solid 0px #fff;
+    resize: none;
+    outline: 0;
+    font-size: 12px;
+    font-family: system-ui;
+    padding: 5px;
+    z-index: 10;
+}
+
+.trophies-renk-select {
+    width: 40px;
+    height: 32px;
+    border: solid 1px #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 3px -3px 3px 5px;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    cursor: pointer;
+    float: left;
+}
+
+.trsactive {
+    box-shadow: inset 0px 0px 0px 4px #fff;
+}

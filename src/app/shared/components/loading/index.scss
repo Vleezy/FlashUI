@@ -1,0 +1,212 @@
+/*.nitro-loading-component {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+
+	.logo {
+		background: url('../../../../assets/images/nitro/nitro-light.svg') no-repeat center;
+		width: 45%;
+		height: 45%;
+	}
+
+	.container {
+		margin-top: 40px;
+
+		.text {
+			text-align: center;
+			margin-bottom: 20px;
+			font-size: 20px;
+		}
+
+		.progress-container {
+
+			.loading-bar {
+
+				width: 350px;
+				background-color: $primary;
+				border-radius: 2px;
+				margin: 0 auto;
+				border: 1px solid white;
+				box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 1);
+				padding: 2px;
+				margin-bottom: 20px;
+
+				.bar {
+					background-color: #387697;
+					display: block;
+					height: 10px;
+					width: 0%;
+					transition: width 1s;
+				}
+			}
+
+			.percent {
+				font-weight: 600;
+				text-align: center;
+				display: block;
+				color: #8D8E8E;
+			}
+		}
+	}
+}
+
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+#habbo-loading {
+    background: #0e151c;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+}
+
+.loading-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.loading-bg {
+    background: url(loadingbg.png); 
+    width: 500px;
+    height: 434px;
+    margin-left: 93px;
+}
+
+.loading-habbo_logo {
+    position: absolute;
+    width: 500px;
+    height: 434px;
+    background: url(../images/loading/205__-3XE._-5sd.png) no-repeat;
+    z-index: 1;
+}
+
+.loading-text {
+    text-align: center;
+    margin: 25px auto 15px;
+    font-size: 28px;
+    font-family: 'Ubuntu', sans-serif;
+    width: 700px;
+}
+
+.loading-bar {
+    width: 400px;
+    background-color: #000;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    box-shadow: inset 0 0 0 4px #000;
+    padding: 3px;
+    margin: 0 auto 10px;
+}
+
+.bar {
+    background-image: -webkit-linear-gradient(bottom,#8ca1ad 50%,#bacad3 0);
+    display: block;
+    height: 18px;
+    width: 0;
+    transition: width 1s;
+    animation: increase 10s infinite;
+}
+
+@keyframes increase {
+   from { left: -5%; width: 5%; }
+   to { left: 130%; width: 100%;}
+}
+
+#percent {
+    text-align: center;
+    color: #8d8e8e;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.loading-room_bg {
+    position: relative;
+    height: 320px;
+    width: 320px;
+    left: 95px;
+    top: 50px;
+}
+
+#percent::after {
+    content: counter(count);
+    animation: counter 5.5s linear infinite;
+}
+  
+@keyframes counter {
+    1% {
+      counter-increment: count 1;
+    }
+    3% {
+      counter-increment: count 3;
+    }
+    5% {
+      counter-increment: count 5;
+    }
+    6% {
+      counter-increment: count 6;
+    }
+    8% {
+      counter-increment: count 8;
+    }
+    10% {
+      counter-increment: count 10;
+    }
+    14% {
+      counter-increment: count 14;
+    }
+    17% {
+      counter-increment: count 17;
+    }
+    24% {
+      counter-increment: count 24;
+    }
+    29% {
+      counter-increment: count 29;
+    }
+    29% {
+      counter-increment: count 34;
+    }
+    29% {
+      counter-increment: count 42;
+    }
+    48% {
+      counter-increment: count 48;
+    }
+    55% {
+      counter-increment: count 55;
+    }
+    67% {
+      counter-increment: count 67;
+    }
+    75% {
+      counter-increment: count 75;
+    }
+    84% {
+      counter-increment: count 84;
+    }
+    92% {
+      counter-increment: count 92;
+    }
+    100% {
+      counter-increment: count 100;
+    }
+  }
+
+  .corelogames {
+    position: absolute;
+    bottom: 8px;
+    font-family: 'Ubuntu';
+    color: #1f2b38;
+    text-align: center;
+    font-size: 11px;
+    left: 8px;
+}

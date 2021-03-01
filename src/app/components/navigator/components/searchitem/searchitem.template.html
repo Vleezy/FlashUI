@@ -1,0 +1,56 @@
+<div (click)="visit()" [ngClass]="{ '': (displayMode === 0) }">
+    <div [ngClass]="{ '': (displayMode >= 1) }">
+        <!--
+        <div *ngIf="(displayMode >= 1)" class="d-flex flex-column position-relative image-container rounded p-1 mr-1">
+            <div class="has-image w-100 h-100" [ngStyle]="thumbnail && { 'background-image': 'url(' + thumbnail + ')' }"></div>
+            <div class="badge badge-secondary text-center w-100" [ngClass]="entryBg" style="bottom:0;"><i class="fas fa-user mr-1"></i>{{ room.userCount }}</div>
+        </div>-->
+
+        <div *ngIf="(displayMode >= 1)" class="big-room-box">
+            <div class="oda-picture" [ngStyle]="thumbnail && { 'background-image': 'url(' + thumbnail + ')' }">
+                <div [ngClass]="entryBg" class="room-aktifUser">
+                    <img class="roomUser" src="./assets/images/nav/roomUser.png">
+                    <p class="roomUser-number">{{ room.userCount }}</p>
+                </div>
+                <img src="./assets/images/roomimg.png">
+            </div>
+            <div class="b_box-roomname">{{ room.roomName }}
+            </div>
+            <img class="b_box-odainfo" src="./assets/images/nav/roominfo.png">
+
+        </div>
+
+
+
+            <!--<div *ngIf="(displayMode === 0)" class="d-flex justify-content-center align-items-center badge badge-secondary text-center" [ngClass]="entryBg"><i class="fas fa-user mr-1"></i>{{ room.userCount }}</div>
+            <div class="d-flex flex-column justify-content-center flex-grow-1" [ngClass]="{ 'align-items-start px-2': (displayMode === 0) }">
+                <span class="d-block text-truncate" style="max-width:95%;">{{ room.roomName }}</span>
+                <span *ngIf="(displayMode >= 1) && room.ownerName" class="d-block text-truncate" style="max-width:95%">{{ room.ownerName }}</span>
+            </div>-->
+
+            <div class="small-room-box" *ngIf="(displayMode === 0)" >
+                    <div [ngClass]="entryBg" class="smallroombox-aktifUser">
+                        <img class="roomUser" src="./assets/images/nav/roomUser.png">
+                        <p class="roomUser-number">{{ room.userCount }}</p>
+                    </div>
+                    <div class="small_box-roomname">{{ room.roomName }}</div>
+                    <img class="b_box-odainfo" src="./assets/images/nav/roominfo.png?0">
+                    <ng-container *ngIf="(displayMode === 0)">
+                        <img class="there-is-group" src="./assets/images/nav/oda-grup.png" *ngIf="isGroup">
+                        <img class="there-is-lock" src="./assets/images/nav/oda-kilit.png" *ngIf="isDoorbell">
+                        <img class="there-is-lock" src="./assets/images/nav/sifre.png" *ngIf="isPassword">
+                    </ng-container>
+            </div>
+
+
+        </div>
+        <!--<ng-template #roomInfoTooltip>
+            <div class="container">
+                <span class="d-block">{{ room.roomName }}</span>
+                <span class="d-block small text-muted">"{{ room.description }}"</span>
+                <span class="d-block" *ngIf="room.ownerName != null"><i class="fas fa-user mr-1"></i>{{ room.ownerName }}</span>
+            </div>
+        </ng-template>-->
+
+</div>
+

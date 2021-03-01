@@ -1,0 +1,17 @@
+<nitro-wired-action-base-component [(delay)]="delay">
+    <div class="mobi-criteria-to-be-met">
+        <p class="wired-subheader">{{ ('wiredfurni.params.conditions') | translate }}</p>
+        <label class="wpanel-select_container2"><p style="margin-top:-2px;float: left;">{{ ('wiredfurni.params.condition.state') | translate }}</p>
+            <input type="checkbox" [(ngModel)]="state">
+            <span class="checkmark2"></span>
+        </label>
+        <label class="wpanel-select_container2"><p style="margin-top:-2px;float: left;">{{ ('wiredfurni.params.condition.direction') | translate }}</p>
+            <input type="checkbox" [(ngModel)]="direction">
+            <span class="checkmark2"></span>
+        </label>
+        <label class="wpanel-select_container2"><p style="margin-top:-2px;float: left;">{{ ('wiredfurni.params.condition.position') | translate }}</p>
+            <input type="checkbox" [(ngModel)]="position">
+            <span class="checkmark2"></span>
+        </label>
+    </div>
+</nitro-wired-action-base-component>

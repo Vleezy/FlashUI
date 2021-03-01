@@ -1,0 +1,61 @@
+<!--<div [bringToTop] [draggable] class="nitro-catalog-confirm-purchase-component card">
+    <div class="drag-handler d-flex justify-content-between align-items-center px-3 pt-3">
+        <h6 class="m-0">{{ ('catalog.purchase_confirmation.title') | translate }}</h6>
+        <button type="button" class="close" (click)="hide()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="row p-3">
+        <div class="col-6 d-flex flex-column">
+            <div #imageElement class="product-preview bg-secondary rounded" [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')'}"></div>
+        </div>
+        <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+            <div class="offer-name">{{ offer.localizationId }}</div>
+            <div class="offer-quantity" *ngIf="quantity">X {{ quantity }}</div>
+            <div class="d-flex align-items-center justify-content-center bg-secondary rounded w-100">
+                <p *ngIf="costCredits" class="d-flex align-items-center mb-0"><i class="icon icon-currency--1 mr-1"></i> {{ costCredits }}</p>
+                <p *ngIf="costCredits && costPoints" class="mx-2 mb-0">+</p>
+                <p *ngIf="costPoints" class="d-flex align-items-center mb-0"><i class="icon icon-currency-{{ pointsType }} mr-1"></i>{{ costPoints }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row align-items-end pt-0 px-3 pb-3">
+        <div class="col btn-group">
+            <button type="button" class="btn btn-primary" (click)="hide()">{{ ('catalog.purchase_confirmation.cancel') | translate }}</button>
+            <button type="button" class="btn btn-success" (click)="purchase()">{{ ('catalog.purchase_confirmation.buy') | translate }}</button>
+        </div>
+    </div>
+</div>-->
+
+
+<div [bringToTop] [draggable] dragHandle="#mobibuy-basarilidrag" id="mobibuy-basarili">
+    <div id="mobibuy-basarilidrag">
+        <p class="mbb-baslik">{{ (isGift ? 'catalog.purchase_confirmation.gift.title' : 'catalog.purchase_confirmation.title') | translate }}</p>
+        <div class="old-kapat" (click)="hide()"></div>
+    </div>
+    <div class="mobibuy-basarili-box">
+        <div class="mbb-mobi_onizleme" #imageElement [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')'}"></div>
+        <p class="mbb-mobi_adi offer-name">{{ offer.localizationId }}</p>
+        <p class="mbb-mobi_adet offer-quantity" *ngIf="quantity">x{{ quantity }} adet</p>
+        <p class="mbb-fiyat-text">Ücret:</p>
+        <div class="mbb-fiyat-box">
+            <div class="mdb-fbox" *ngIf="costCredits">
+                <p class="hc-fiyat-text">{{ costCredits }}</p>
+                <div class="mobi-fiyat-birimico"><i class="icon icon-currencybig-cc"></i></div>
+            </div>
+            <div class="mdb-fbox">
+                <p *ngIf="costCredits && costPoints" class="plusprice">+</p>
+                <p *ngIf="costPoints" class="hc-fiyat-text">{{ costPoints }} </p>
+                <div *ngIf="costPoints" class="mobi-fiyat-birimico"><i class="icon icon-currencybig-{{ pointsType }}"></i></div>
+            </div>
+        </div>
+        <div class="mobi-buy-iptal-et" (click)="hide()">
+            <div class="mbb-islem-iptal-box">
+                <p class="mbb-iptal-text">{{ ('catalog.purchase_confirmation.cancel') | translate }}</p>
+            </div>
+        </div>
+        <div class="mobi-buy-onayla" (click)="purchase()">
+            <div class="mbb-islem-onayla-box">
+                <p class="mbb-tamam-text">{{ (isGift ? 'catalog.purchase_confirmation.gift' : 'catalog.purchase_confirmation.buy') | translate }}</p>
+            </div>
+        </div>
+    </div>
+</div>

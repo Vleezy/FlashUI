@@ -1,0 +1,492 @@
+.nitro-achievements {
+    width: $achievements-width;
+    position: absolute;
+
+    .grid-container {
+
+        .grid-items {
+
+            .item-detail {
+                height: 50px;
+                max-height: 50px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                .detail-info {
+                    
+                    .count {
+                        top: 0.16rem;
+                        right: 3px;
+                        font-size: 10px;
+                    }
+
+                    .achievement-progress {
+                        position: absolute;
+                        bottom: 8.5px;
+                        text-align: center;
+                        font-size: 12px;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        &.achievement-category-container {
+
+            .grid-items {
+                margin-top: -7px;
+
+                .item-detail {
+                    height: 80px;
+                    max-height: 80px;
+                    width: calc(1 / 3 * 100% - (1 - 1 / 3) * 7px);
+                    margin: 7px 7px 0 0;
+                }
+            }
+
+        }
+    }
+
+    //     &.achievement-category-container {
+
+    //         .grid-items {
+    //             margin-top: -7px;
+        
+    //             .item-detail {
+    //                 height: 80px;
+    //                 max-height: 80px;
+    //                 width: calc(1 / 3 * 100% - (1 - 1 / 3) * 7px);
+    //                 margin: 7px 7px 0 0;
+    //             }
+    //         }
+    //     }
+    // }
+
+    .achievement-category-badge-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 52px);
+        grid-row-gap: 5px;
+        grid-column-gap: 5px;
+    }
+
+    .badge_preview {
+        width:100px;
+        height:100px;
+
+        img {
+            transform: scale(2);
+        }
+    }
+    
+    .greyscale {
+        filter: grayscale(1);
+    }
+
+    .achievement-progress-bar {
+
+        .achievement-progress-bar-content {
+            position: absolute;
+            top:0;
+            bottom:0;
+            margin:auto;
+            left:0;
+            right:0;
+        }
+
+        .achievement-progress-bar-inner {
+            transition: width 0.7s;
+            max-width: 100%;
+        }
+    }
+
+    .achievement-unseen {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 10px;
+    }
+}
+
+/* corelo */
+
+
+#achievements {
+    width: 390px;
+    height: auto;
+    background-color: #ebe9df;
+    left: 250px;
+    top: 100px;
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    border: solid 1px;
+    border-bottom: solid 2px #000;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    color: #000;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+#achievementsdrag {
+    width: 100%;
+    height: 33px;
+    background-color: #367897;
+    border-top: solid 2px #408caf;
+    border-left: solid 2px #408caf;
+    border-right: solid 2px #408caf;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-bottom: solid 1px #000;
+}
+
+.oldh-hood {
+    margin: 0px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.achievementsbox {
+    margin-left: 9px;
+    width: 380px;
+    height: 380px;
+}
+
+.success-info-box {
+    width: 110px;
+    height: 103px;
+    box-sizing: border-box;
+    border: solid 1px #000;
+    border-radius: 3px;
+    background: linear-gradient(#fff 50%, #f0f0f0 50%);
+    float: left;
+    margin-left: 10px;
+    margin-top: 7px;
+    cursor: pointer;
+    box-shadow: inset -1px -1px 0px 0px #b5b5b5;
+    position: relative;
+}
+
+.success-info-box:hover {box-shadow: inset -2px -2px 0px 0px #b5b5b5;}
+
+.achievements-title {
+    width: 108px;
+    height: 30px;
+}
+
+.achtxt {
+    text-align: center;
+    font-size: 12px;
+    color: #000;
+    font-weight: bold;
+    padding: 8px 0px;
+    line-height: 13px;
+}
+
+.achico {
+    width: 108px;
+    height: 65px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(2px 1px 0px);
+    color: #c0c0c0;
+}
+
+.success-info-box:hover > .achico {
+    filter: drop-shadow(4px 2px 0px);
+    color: #c0c0c0;
+}
+
+.number-of-success {
+    width: 46px;
+    height: 16px;
+    margin: 47px 31px 8px 31px;
+    position: absolute;
+}
+
+p.nostxt {
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    padding: 0px 3px;
+    line-height: 15px;
+}
+
+.achievement-progression {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+    height: 51px;
+    float: left;
+}
+
+.ach-progessbox {
+    width: 254px;
+    height: 23px;
+    box-sizing: border-box;
+    border: solid 1px #000;
+    background: #e1e1e1;
+    border-radius: 5px;
+    float: left;
+}
+
+.achprbg {
+    background: #5a534f;
+    width: 248px;
+    height: 17px;
+    margin: 2px;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.achprogress {
+    background: linear-gradient(#00b4c1 50%, #00a3af 50%);
+    box-shadow: inset 0px 0px 0px 2px #00a3af;
+    height: 17px;
+    box-sizing: border-box;
+    border-right: solid 1px #000;
+}
+
+.achprogtxt {
+    text-align: center;
+    font-size: 12.5px;
+    color: #444444;
+    padding-top: 2px;
+    font-weight: bold;
+}
+
+p.total-ach {
+    position: absolute;
+    font-size: 12px;
+    color: #ffffff;
+    padding-top: 0.5px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    line-height: 14px;
+}
+
+.achievements-check {
+    width: 388px;
+    height: auto;
+}
+
+.achcheck-head {
+    background: #8899a2;
+    box-sizing: border-box;
+    border-bottom: solid 1px #000;
+    width: 388px;
+    height: 75px;
+}
+
+.ach-backbutton {
+    width: 56px;
+    height: 74px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(/assets/images/achievements/back.png);
+    filter: drop-shadow(2px 4px 0px #6c7a83);
+    cursor: pointer;
+    float: left;
+    position: relative;
+}
+
+.ach-backbutton:hover {
+    left: -1px;
+}
+
+p.achname {
+    float: left;
+    font-size: 20px;
+    color: #fff;
+    padding: 11px 10px 0px 20px;
+    font-family: 'Ubuntu';
+    width: 202px;
+    box-sizing: content-box;
+}
+
+p.achtotal_badge {
+    float: left;
+    font-size: 13px;
+    color: #fff;
+    padding: 0px 10px 5px 20px;
+    font-family: 'Ubuntu';
+    width: 60%;
+    box-sizing: content-box;
+}
+
+.ach-badge {
+    float: right;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 75px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(2px 2px 0px #6c7a83);
+}
+
+.achcheck-body {
+    width: 372px;
+    height: auto;
+    margin: 7px 8px;
+    float: left;
+}
+
+.achcheck-box {
+    width: 62px;
+    height: 60px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+    background-image: url(/assets/images/achievements/off.png);
+    cursor: pointer;
+}
+
+.achcheck-box:active {
+    background-image: url(/assets/images/achievements/on.png);
+}
+
+.achcheck-badge {
+    width: 62px;
+    height: 60px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.achcheck-info {
+    width: 360px;
+    height: 130px;
+    background: #cbcbcb;
+    float: left;
+    box-sizing: border-box;
+    border: solid 1px #5d5d5a;
+    border-radius: 5px;
+    margin: 3px 6px 10px 6px;
+    overflow: hidden;
+}
+
+.achcheck-left {
+    width: 101px;
+    height: 127px;
+    float: left;
+    position: relative;
+}
+
+.achcheckbigbadge {
+    width: 101px;
+    height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+    image-rendering: pixelated;
+    transform: scale(2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.achcheck-levelinfo {
+    float: left;
+    font-size: 13px;
+    color: #000;
+    font-family: 'Ubuntu';
+    width: 100%;
+    text-shadow: 0px 0.5px 0px #00000026;
+    text-align: center;
+}
+
+.achcheck-right {
+    width: 257px;
+    height: 127px;
+    float: left;
+}
+
+.achcheck-title {
+    float: left;
+    font-size: 13px;
+    color: #000;
+    font-family: 'Ubuntu';
+    width: 100%;
+    text-shadow: 0px 0.5px 0px #00000026;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.achcheck-desc {
+    float: left;
+    font-size: 13px;
+    color: #000;
+    font-family: 'Ubuntu';
+    width: 92%;
+    padding-top: 2px;
+    padding-left: 15px;
+    height: auto;
+    min-height: 50px;
+    padding-bottom: 10px;
+}
+
+.achcheck-progessbox {
+    width: 185px;
+    height: 23px;
+    box-sizing: border-box;
+    border: solid 1px #000;
+    background: #e1e1e1;
+    border-radius: 5px;
+    float: left;
+    margin-left: 10px;
+}
+
+.achcheckprbg {
+    background: #5a534f;
+    width: 179px;
+    height: 17px;
+    margin: 2px;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.achcheck-leveltxt {
+    float: left;
+    font-size: 13px;
+    color: #000;
+    font-family: 'Ubuntu';
+    width: 92%;
+    padding-left: 15px;
+    height: auto;
+}
+
+.greyscale {
+    filter: grayscale(1);
+}
+
+.basari-mobicountbox {
+    position: absolute;
+    width: auto;
+    height: 17px;
+    background: #ac1d19;
+    top: 30px;
+    right: 20px;
+    padding-left: 3px;
+    padding-right: 4px;
+    box-shadow: inset 0px 0px 0px 1px #ed2823;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    border-radius: 5px;
+    color: #fff;
+    z-index: 1;
+}

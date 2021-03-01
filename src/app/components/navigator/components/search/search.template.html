@@ -1,0 +1,22 @@
+<!--<div class="input-group mb-2">
+    <div class="input-group-prepend" ngbDropdown>
+        <button type="button" class="btn btn-secondary" ngbDropdownToggle>{{ ('navigator.filter.' + this.currentFilter.name) | translate }}</button>
+        <div class="dropdown-menu" ngbDropdownMenu>
+            <button class="dropdown-item" *ngFor="let filter of searchFilters" ngbDropdownItem (click)="changeFilter(filter)">{{ ('navigator.filter.' + filter.name) | translate }}</button>
+        </div>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="searchValue" [placeholder]="('navigator.filter.input.placeholder') | translate" (keydown.enter)="search($event)">
+</div>-->
+
+<div class="nav-search">
+    <img class="nroom-filtre_ico" src="./assets/images/nav/nroom-filtre_ico.png">
+    <div ngbDropdown>
+        <button class="nroom-filtre" ngbDropdownToggle style="outline: 0;float: left;text-align: left;">{{ ('navigator.filter.' + this.currentFilter.name) | translate }}</button>
+        <div class="dropdown-menu" ngbDropdownMenu>
+            <button class="dropdown-item" *ngFor="let filter of searchFilters" ngbDropdownItem (click)="changeFilter(filter)">{{ ('navigator.filter.' + filter.name) | translate }}</button>
+        </div>
+    </div>
+    <input type="text" class="nroom-search" [(ngModel)]="searchValue" [placeholder]="('navigator.filter.input.placeholder') | translate" (keydown.enter)="search($event)">
+    <div class="icoText"></div>
+    <div class="reloadSearch"></div>
+</div>

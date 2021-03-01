@@ -1,0 +1,60 @@
+<!--<div *ngIf="visible" [bringToTop] [draggable] class="nitro-catalog card">
+    <div class="drag-handler d-flex justify-content-between align-items-center px-3 pt-3">
+        <h6 class="m-0">{{ ('catalog.title') | translate }}</h6>
+        <button type="button" class="close" (click)="hide()"><i class="fas fa-times"></i></button>
+    </div>
+    <div *ngIf="catalogRoot && (catalogRoot.children.length > 0)" class="row px-3 pt-3">
+        <div class="col-12 d-flex">
+            <div class="btn-group w-100">
+                <ng-container *ngFor="let child of catalogRoot.children">
+                    <button type="button" class="btn btn-secondary btn-sm" [ngClass]="{ 'active': (activeTab === child) }" (click)="selectTab(child)">{{ child.localization }}</button>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+    <div class="row p-3">
+        <div *ngIf="activeTab && (activeTab.children.length > 0)" nitro-catalog-navigation-component class="col-4"></div>
+        <div class="col">
+            <ng-template #layoutsContainer></ng-template>
+        </div>
+    </div>
+</div>
+<nitro-catalog-confirm-purchase-component *ngIf="purchaseOffer !== null" [page]="purchaseOfferPage" [offer]="purchaseOffer" [quantity]="purchaseOfferQuantity" [extra]="purchaseOfferExtra" [completed]="purchaseCompleted"></nitro-catalog-confirm-purchase-component>
+<nitro-catalog-confirm-vip-subscription-component *ngIf="purchaseVipSubscription !== null" [subscription]="purchaseVipSubscription"></nitro-catalog-confirm-vip-subscription-component>
+<nitro-catalog-confirm-purchase-insufficient-funds *ngIf="showInsufficientFunds"></nitro-catalog-confirm-purchase-insufficient-funds>
+-->
+
+<div *ngIf="visible" [bringToTop] [draggable] dragHandle="#catalogdrag" id="catalog">
+    <div id="catalogdrag">
+        <p class="ch-baslik">{{ ('catalog.title') | translate }}</p>
+        <div class="old-kapat" (click)="hide()"></div>
+        <div class="old-bilgi"></div>
+    </div>
+    <div class="magaza-body">
+        <div class="catalog-menu" *ngIf="catalogRoot && (catalogRoot.children.length > 0)" >
+            <ng-container *ngFor="let child of catalogRoot.children">
+                <div class="ctlgmenu-button" [ngClass]="{ 'ctlgactive': (activeTab === child) }" (click)="selectTab(child)">{{ child.localization }}</div>
+            </ng-container>
+        </div>
+        <div class="ctlg-page-headinfo">
+            <div class="catalog_header" [ngStyle]="{ 'background-image': 'url(' + headerImageUrl + ')' }"></div>
+            <div class="catalog_header-ico" [ngStyle]="{ 'background-image': 'url(' + iconUrl + ')' }"></div>
+               <p class="catalog_header-title-text">{{ activePageData?.localization }}</p>
+               <p class="catalog_header-description-text">{{ activePage?.localization?.texts[0] }}</p>
+        </div>
+        <div class="catalog-lowerbody">
+            <div class="catalog-leftbox" *ngIf="activeTab && (activeTab.children.length > 0)">
+                <div class="ara-bgbox">
+                    <input class="catalog-ara" placeholder="burada ara">
+                </div>
+                <div nitro-catalog-navigation-component></div>
+            </div>
+            <div class="catalog-rightbox">
+                <ng-template #layoutsContainer></ng-template>
+            </div>
+        </div>
+    </div>
+</div>
+<nitro-catalog-confirm-purchase-component *ngIf="purchaseOffer !== null" [page]="purchaseOfferPage" [isGift]="isGift" [offer]="purchaseOffer" [quantity]="purchaseOfferQuantity" [extra]="purchaseOfferExtra" [completed]="purchaseCompleted"></nitro-catalog-confirm-purchase-component>
+<nitro-catalog-confirm-vip-subscription-component *ngIf="purchaseVipSubscription !== null" [subscription]="purchaseVipSubscription"></nitro-catalog-confirm-vip-subscription-component>
+<nitro-catalog-confirm-purchase-insufficient-funds *ngIf="showInsufficientFunds"></nitro-catalog-confirm-purchase-insufficient-funds>

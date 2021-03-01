@@ -1,0 +1,983 @@
+.nitro-inventory {
+    position: absolute;
+    width: $inventory-width;
+    max-width: $inventory-width;
+
+    .grid-container {
+    
+        .grid-items {
+    
+            .item-detail {
+                height: 50px;
+                max-height: 50px;
+
+                .count {
+                    top: 0.16rem;
+                    right: 3px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+.envtactive {
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    filter: drop-shadow(1px 1px 0px);
+    color: #00000040;
+}
+
+#envanter {
+    width: 486px;
+    height: auto;
+    min-height: 344px;
+    background-color: #ebe9df;
+    left: 250px;
+    top: 100px;
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    border: solid 1px;
+    border-bottom: solid 2px #000;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    color: #000;
+    z-index: 1;
+    box-sizing: content-box;
+}
+
+#envanterdrag {
+    width: 482px;
+    height: 31px;
+    background-color: #367897;
+    border-top: solid 2px #408caf;
+    border-left: solid 2px #408caf;
+    border-right: solid 2px #408caf;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.eh-baslik {
+    margin: 0px;
+    width: 474px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    box-sizing: initial;
+    font-family: system-ui;
+}
+
+.envanter-menu {
+    width: 455px;
+    height: 35px;
+    padding: 0px 10px;
+    border-bottom: 1px solid #000;
+    left: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-sizing: content-box;
+}
+
+.envantermenu-button {
+    width: auto;
+    height: 24px;
+    background: #cac9c1;
+    float: left;
+    margin-right: 0px;
+    margin-top: 4px;
+    border-top: solid 1px #504f4e;
+    border-left: solid 1px #504f4e;
+    border-right: solid 1px #504f4e;
+    border-radius: 6px 6px 0px 0px;
+    padding: 5px 12px 1px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: solid 1px #85847c;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.envantermenu-button:hover {
+    background: #f6f5f0;
+    box-shadow: inset -2px 0 0 0 #ffffff, inset 0 2px 0 0 #ffffff, inset 2px 0 0 0 #ffffff;
+    border-bottom: 1px solid #f6f5f0;
+}
+
+.envanter-options {
+    width: 468px;
+    height: 26px;
+    background: #c9c9c9;
+    border-radius: 3px;
+}
+
+div#envanter-mobi {
+    padding: 5px 9px 0px 9px;
+}
+
+.envanter_mobi-search {
+    width: 139px;
+    height: 20px;
+    background: #fff0;
+    margin: 3px 4px;
+    border: solid 0px #0000;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: 0;
+    background-image: url(../images/envanter/inventorysearch.png);
+    padding-bottom: 1.5px;
+    padding-left: 7px;
+    font-family: Arial;
+    float: left;
+}
+
+.envanter_select-kategori {
+    width: 119px;
+    height: 20px;
+    background: #fff0;
+    margin: 3px 4px;
+    border: solid 0px #0000;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: 0;
+    cursor: pointer;
+    background-image: url(../images/envanter/category.png);
+    font-family: Arial;
+    float: left;
+}
+
+.envanter_mobi-list {
+    width: 284px;
+    height: 223px;
+    float: left;
+    margin: 3px 0px 0px 0px;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+.envanter_mobi-list::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+.envanter_mobi-list::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+.envanter_mobi-list::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+.envanter_mobi-list::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+.envanter_mobi-list::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+.envanter_mobi-list::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+.envanter_mobi-list::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+.envanter_mobi-list::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.envanter_mobi-list::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.envanter_mobi-list::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+.envanter_mobi-list::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+.envanter_mobi-list::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+.envanter_mobi-list::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.item-detail-box {
+    float: left;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    background: #cbcbcb;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #000;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.item-detail-box-active {
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    filter: drop-shadow(1px 1px 0px);
+    color: #00000040;
+}
+
+.item-container {
+    width: 178px;
+    height: 237px;
+    float: right;
+    margin: 3px 0px;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+.room-furni-preview {
+    width: 178px;
+    height: 130px;
+    background-position: center top 35px;
+    background-repeat: no-repeat;
+}
+
+.cannot-traded {
+    position: absolute;
+    width: 40px;
+    height: 16px;
+    background-image: url(../images/envanter/no-trade.png);
+    cursor: pointer;
+}
+
+.is-traded {
+    position: absolute;
+    width: 40px;
+    height: 15px;
+    background-image: url(../images/envanter/yes-trade.png);
+    cursor: pointer;
+}
+
+.envanter-items_name {
+    font-size: 12.5px;
+    font-weight: bold;
+    padding-top: 10px;
+    font-family: system-ui;
+}
+
+.place-it-the-room {
+    width: 175px;
+    height: 25px;
+    background: linear-gradient(#f3f3f3 50%, #d9d9d9 50%);
+    box-shadow: #d9d9d9 0px 0px 0px 2px inset;
+    border-radius: 4px;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    top: 305px;
+    position: absolute;
+    cursor: pointer;
+    box-sizing: content-box;
+    float: left;
+}
+
+.place-it-the-room:hover {
+    background: #ffffff;
+    box-shadow: inset 0px -10px 0px 2px #eeeeee;
+}
+
+.place-it-the-room:active {
+    background: linear-gradient(#e1e1e1 50%, #a3a3a3 50%);
+    box-shadow: #a3a3a3 0px 0px 0px 2px inset;
+}
+
+.place-text {
+    font-size: 13px;
+    padding: 2px 10px;
+    text-align: center;
+    font-family: system-ui;
+}
+
+.items-part-number {
+    width: auto;
+    height: 12.5px;
+    background: #fff;
+    border: 1px solid #2f6982;
+    float: right;
+    margin-right: -1px;
+    margin-top: 1px;
+    overflow: hidden;
+    box-sizing: initial;
+    position: relative;
+}
+
+.ipn-text {
+    font-size: 10px;
+    line-height: 13px;
+    color: #2f6982;
+    font-weight: 700;
+    padding: 0px 1.5px;
+    font-family: system-ui;
+}
+
+#envanter-pets {
+    padding: 5px 9px 0px 9px;
+}
+
+.envanter_pets-list {
+    width: 284px;
+    height: 249px;
+    float: left;
+    margin: 3px 0px 0px 0px;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+.envanter_pets-list::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+.envanter_pets-list::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+.envanter_pets-list::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+.envanter_pets-list::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+.envanter_pets-list::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+.envanter_pets-list::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+.envanter_pets-list::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+.envanter_pets-list::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.envanter_pets-list::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.envanter_pets-list::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+.envanter_pets-list::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+.envanter_pets-list::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+.envanter_pets-list::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.envanter-pets_items_name {
+    font-size: 12.5px;
+    font-weight: bold;
+    position: absolute;
+    font-family: system-ui;
+}
+
+.room-pets-furni-preview {
+    width: 178px;
+    height: 225px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.mobi-list-page-no {
+    position: absolute;
+    bottom: 3px;
+    float: left;
+    font-size: 11px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-family: system-ui;
+    left: 0;
+    padding-left: 9px;
+    margin-bottom: -1px;
+}
+
+.sayfasayi {
+    font-family: system-ui;
+}
+
+#envanter-badge {
+    padding: 5px 9px 0px 9px;
+}
+
+.envanter-badge_options {
+    width: 330px;
+    height: 26px;
+    background: #c9c9c9;
+    border-radius: 3px;
+    float: left;
+}
+
+.envanter_badge-list {
+    width: 330px;
+    height: 145px;
+    float: left;
+    margin: 3px 0px 0px 0px;
+    list-style: none;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.envanter_badge-list::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+.envanter_badge-list::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+.envanter_badge-list::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+.envanter_badge-list::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+.envanter_badge-list::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+.envanter_badge-list::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+.envanter_badge-list::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+.envanter_badge-list::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.envanter_badge-list::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.envanter_badge-list::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+.envanter_badge-list::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+.envanter_badge-list::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+.envanter_badge-list::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.used-badges {
+    width: 132px;
+    height: 170px;
+    list-style: none;
+    overflow-x: hidden;
+    float: right;
+    position: absolute;
+    right: 7px;
+}
+
+.usedb_text {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1.5px 1px 0px #fffc;
+    padding: 2px;
+    font-family: system-ui;
+}
+
+.used-badges-list-box {
+    margin-top: 4px;
+}
+
+.rozet-info-box {
+    width: 468px;
+    height: 55px;
+    background: #fff;
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-family: system-ui;
+}
+
+.basari-puan-info-box {
+    width: 468px;
+    height: 19px;
+    background: #418ab1;
+    position: relative;
+    float: left;
+    margin-top: 4px;
+    border-radius: 4px;
+}
+
+.secilen-rozet-box {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 7.5px 14px;
+    cursor: pointer;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.secilen-rozet-adi {
+    font-size: 15px;
+    color: #000000;
+    font-weight: bold;
+    float: left;
+    padding-top: 3px;
+    width: 260px;
+    padding-bottom: 1px;
+}
+
+.secilen-rozet-genel-aciklama {
+    font-size: 12px;
+    color: #000000c2;
+    float: left;
+    width: 260px;
+    line-height: 13px;
+    font-weight: 500;
+    font-family: Arial;
+}
+
+.use_badge-box {
+    width: auto;
+    height: 25px;
+    background: linear-gradient(#f3f3f3 50%, #d9d9d9 50%);
+    box-shadow: rgb(217 217 217) 0px 0px 0px 2px inset;
+    border-radius: 4px;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    float: right;
+    bottom: 12px;
+    position: relative;
+    right: 10px;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.info_badge-text {
+    font-size: 14px;
+    padding: 2px 10px;
+    font-family: system-ui;
+}
+
+.take_off_badge-box {
+    width: auto;
+    height: 25px;
+    background: linear-gradient(#f3f3f3 50%, #d9d9d9 50%);
+    box-shadow: rgb(217 217 217) 0px 0px 0px 2px inset;
+    border-radius: 4px;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    float: right;
+    bottom: 12px;
+    position: relative;
+    right: 10px;
+    cursor: pointer;
+}
+
+.use_badge-box:hover {
+    background: linear-gradient(#ffffff 50%, #eeeeee 50%);
+    box-shadow: #eeeeee 0px 0px 0px 2px inset;
+}
+
+.use_badge-box:active {
+    background: linear-gradient(#e1e1e1 50%, #a3a3a3 50%);
+    box-shadow: #a3a3a3 0px 0px 0px 2px inset;
+}
+
+.take_off_badge-box:hover {
+    background: linear-gradient(#ffffff 50%, #eeeeee 50%);
+    box-shadow: #eeeeee 0px 0px 0px 2px inset;
+}
+
+.take_off_badge-boxx:active {
+    background: linear-gradient(#e1e1e1 50%, #a3a3a3 50%);
+    box-shadow: #a3a3a3 0px 0px 0px 2px inset;
+}
+
+p.basari-puan-text {
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    font-family: system-ui;
+    margin-top: -1px;
+}
+
+#envanter-bot {
+    padding: 5px 9px 0px 9px;
+}
+
+.envanter_bot-list {
+    width: 284px;
+    height: 249px;
+    float: left;
+    margin: 3px 0px 0px 0px;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+.envanter_bot-list::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+.envanter_bot-list::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+.envanter_bot-list::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+.envanter_bot-list::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+.envanter_bot-list::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+.envanter_bot-list::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+.envanter_bot-list::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+.envanter_bot-list::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.envanter_bot-list::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.envanter_bot-list::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+.envanter_bot-list::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+.envanter_bot-list::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+.envanter_bot-list::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.envanter-bot_items_name {
+    font-size: 12.5px;
+    font-weight: bold;
+    position: absolute;
+    font-family: system-ui;
+}
+
+.room-bot-furni-preview {
+    width: 178px;
+    height: 225px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+p.bot-aciklama {
+    position: absolute;
+    bottom: 45px;
+    font-size: 14px;
+    font-family: system-ui;
+}
+
+.envanteractive {
+    height: 24px !important;
+    background: rgb(235, 233, 223) !important;
+    border-width: 2px 2px 1px !important;
+    border-style: solid !important;
+    border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(235, 233, 223) !important;
+    border-image: initial !important;
+    padding: 4px 12px 1px !important;
+    box-shadow: inset -2px 0 0 0 #ffffff, inset 0 2px 0 0 #ffffff, inset 2px 0 0 0 #ffffff !important;
+
+}
+
+.inv-mobiview {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: url(../images/envanter/loading.png);
+    width: 38px;
+    height: 38px;
+    position: absolute;
+}
+
+.unseen {
+    background: #9bca64;
+}
+
+
+
+/* */ 
+
+
+.envanter-takas {
+    width: 470px;
+    height: 232px;
+    background: #e2e2e2;
+    box-shadow: inset 4px 4px 10px 0px #d3d3d3;
+    float: left;
+    border: solid 1px #bebebe;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0px 8px;
+}
+
+p.takas-desc {
+    font-size: 13px;
+    font-family: system-ui, 'Ubuntu';
+    padding: 5px 10px;
+    margin-bottom: 17px;
+}
+
+.takasbox-mobi {
+    width: 208px;
+    height: 195px;
+    float: left;
+    margin-top: -17px;
+}
+
+.takas-separator-hr {
+    width: 2px;
+    height: 160px;
+    float: left;
+    background: #b4b4b4 !important;
+    border-right: solid 1px #f3f3f3 !important;
+}
+
+p.takas-yapan-user {
+    height: 23px;
+    font-size: 13px;
+    font-family: system-ui, 'Ubuntu';
+    padding-left: 4px;
+}
+
+.takas-edilen-mobiler {
+    width: 132px;
+    height: 128px;
+    float: left;
+}
+
+.takas-mobi-box {
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    box-shadow: inset 4px 4px 10px 0px #d3d3d3;
+    float: left;
+    border: solid 1px #bebebe;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.takas-unlocked {
+    width: 60px;
+    height: 125px;
+    float: left;
+    background-image: url(/assets/images/envanter/durum1.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.takas-locked {
+    width: 60px;
+    height: 125px;
+    float: left;
+    background-image: url(/assets/images/envanter/durum2.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.takas-txtinfo {
+    float: left;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.how-many-items {
+    font-size: 13px;
+    font-family: system-ui, "Ubuntu";
+    margin-top: -2px;
+}
+
+.how-many-credits {
+    font-size: 13px;
+    font-family: system-ui, "Ubuntu";
+    margin-top: -3px;
+}
+
+.takas-button {
+    float: left;
+    width: 478px;
+    height: 50px;
+    margin: 4px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.takas-iptalbuton {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 27px;
+    width: auto;
+    background: linear-gradient(#f3f3f3 50%, #d9d9d9 50%);
+    box-shadow: #d9d9d9 0px 0px 0px 2px inset;
+    border-radius: 4px;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    right: 4px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.takas-iptalbuton:hover {
+    background: #ffffff;
+    box-shadow: inset 0px -10px 0px 2px #eeeeee;
+}
+
+.takas-iptalbuton:active {
+    background: linear-gradient(#e1e1e1 50%, #a3a3a3 50%);
+    box-shadow: #a3a3a3 0px 0px 0px 2px inset;
+}
+
+.takas-onaybuton {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 27px;
+    width: auto;
+    background: linear-gradient(#f3f3f3 50%, #d9d9d9 50%);
+    box-shadow: #d9d9d9 0px 0px 0px 2px inset;
+    border-radius: 4px;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    left: 4px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.takas-onaybuton:disabled {
+    background: #c3c3c1;
+    border: solid 1px #7a7a78;
+    box-shadow: #ffffff00 0px 0px 0px 0px inset;
+}
+
+.takas-onaybuton:hover {
+    background: #ffffff;
+    box-shadow: inset 0px -10px 0px 2px #eeeeee;
+}
+
+.takas-onaybuton:active {
+    background: linear-gradient(#e1e1e1 50%, #a3a3a3 50%);
+    box-shadow: #a3a3a3 0px 0px 0px 2px inset;
+}
+
+.takasbuton-txt {
+    font-size: 13px;
+    font-family: system-ui, 'Ubuntu';
+    padding: 2px;
+}
+
+.takas-mobi-view {
+    width: 38px;
+    height: 38px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}

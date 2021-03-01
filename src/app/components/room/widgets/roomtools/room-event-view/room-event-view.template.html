@@ -1,0 +1,75 @@
+<!--<div *ngIf="isVisible" [bringToTop] [draggable] dragHandle=".card-header" class="card nitro-room-tools-room-info-component">
+    <div class="card-header">
+        {{ ('navigator.room.info.popup.title') | translate }}
+        <button type="button" class="close" (click)="close()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="card-body">
+        {{ roomData.roomName }}<br>
+        {{ ('navigator.roomownercaption') | translate }} {{ roomData.ownerName }}<br>
+        {{ ('navigator.roomrating') | translate }} {{ roomData.ranking }}
+
+        <div class="room-thumbnail"><img src=""></div>
+
+        <div class="btn-group-vertical w-100 mt-2">
+            <button type="button" *ngIf="roomSettingsVisible" class="btn btn-secondary mb-1" (click)="handleButtonClick('room_settings_button')">{{ ('navigator.room.popup.info.room.settings') | translate }}</button>
+            <button type="button" *ngIf="roomFilterVisible" class="btn btn-secondary mb-1" disabled>{{ ('navigator.roomsettings.roomfilter') | translate }}</button>
+            <button type="button" *ngIf="floorPlanVisible" class="btn btn-secondary mb-1" disabled>{{ ('open.floor.plan.editor') | translate }}</button>
+            <button type="button" *ngIf="addStaffPickedVisible" class="btn btn-secondary" disabled>{{ ('navigator.staffpicks.pick') | translate }}</button>
+        </div>
+
+        <div class="btn-group-vertical w-100 mt-2">
+            <button type="button" class="btn btn-danger" (click)="handleButtonClick('room_report_button')">{{ ('help.emergency.main.report.room') | translate }}</button>
+        </div>
+
+        <div class="btn-group-vertical w-100 mt-2">
+            <button type="button" class="btn btn-secondary mb-1" disabled>{{ ('navigator.muteall_off') | translate }}</button>
+            
+        </div>
+       
+    </div>
+</div>-->
+
+
+<div *ngIf="visible" [bringToTop] [draggable] dragHandle="#room-infodrag" id="room-info" class="nitro-room-tools-room-info-component">
+    <div id="room-infodrag">
+        <p class="ri-baslik">{{ ('navigator.room.info.popup.title') | translate }}</p>
+        <div class="old-kapat" (click)="hide()"></div>
+    </div>
+    <div class="ribox">
+        <div class="roomn-wfixed">
+            <p class="ritxt">{{ roomData.roomName }}</p>
+        </div>
+        <div class="main-room-select"></div>
+        <div class="ri-wfixed">
+            <p class="owtxt">{{ ('navigator.roomownercaption') | translate }}</p>
+            <div class="ri-userprofil"></div>
+            <p class="owname">{{ roomData.ownerName }}</p>
+        </div>
+        <div class="ri-wfixed">
+            <p class="scoretxt">{{ ('navigator.roomrating') | translate }}</p>
+            <p class="scrnumb">{{ roomData.ranking }}</p>
+        </div>
+        <div class="ri-roompicture">
+            <div class="ri-cameraico"></div>
+        </div>
+        <div class="ri-roomurl">
+            <div class="ri-roomurlico"></div>
+            <p class="ri-urltxt">Oda Bağlantısı</p>
+        </div>
+        <div id="roomsettings_on" class="ri-button" *ngIf="roomSettingsVisible" (click)="handleButtonClick('room_settings_button')">
+            <p class="ribt_txt">{{ ('navigator.room.popup.info.room.settings') | translate }}</p>
+        </div>
+        <div id="roomfilter_on" class="ri-button disabled" disabled *ngIf="roomFilterVisible">
+            <p class="ribt_txt">{{ ('navigator.roomsettings.roomfilter') | translate }}</p>
+        </div>
+        <div id="roomflooredit_on" class="ri-button disabled" disabled *ngIf="floorPlanVisible">
+            <p class="ribt_txt">{{ ('open.floor.plan.editor') | translate }}</p>
+        </div>
+        <div class="ri-roomticket" (click)="handleButtonClick('room_report_button')">
+            <p class="ri-rtxt">{{ ('help.emergency.main.report.room') | translate }}</p>
+        </div>
+        <div id="roomunmute_on" class="ri-button" (click)="handleButtonClick('room_mute_all')">
+            <p class="ribt_txt">{{ (mutedVisible ? 'navigator.muteall_on' : 'navigator.muteall_off') | translate }}</p>
+        </div>
+    </div>
+</div>

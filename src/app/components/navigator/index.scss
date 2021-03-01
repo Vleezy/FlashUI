@@ -1,0 +1,2023 @@
+.nitro-navigator {
+    position: absolute;
+    width: $navigator-width;
+    max-width: $navigator-width;
+
+    .search-result-item {
+        cursor: pointer;
+    }
+    
+    .grid-container {
+    
+        .grid-items {
+    
+            .item-detail {
+                height: 40px;
+                max-height: 40px;
+            }
+        }
+    }
+}
+
+.nitro-navigator-roomsettings-component {
+    position: absolute;
+    width: $navigator-roomsettings-width;
+    max-width: $navigator-roomsettings-width;
+}
+
+@import './components/slider/index.scss';
+
+
+
+.old-kapat {
+    width: 19px;
+    height: 20px;
+    background-image: url(../images/nav/kapat.png);
+    position: relative;
+    float: right;
+    margin: 4px;
+}
+
+.frankbaba {
+    background-image: url(../images/nav/frank.png);
+    width: 32px;
+    height: 87px;
+    margin: 7px 15px 7px 8px;
+    float: left;
+}
+
+.old-kapat:hover {
+    background-image: url(../images/nav/hkapat.png);
+}
+
+.old-kapat:active {
+    background-image: url(../images/nav/akapat.png);
+}
+
+.old-bilgi {
+    width: 19px;
+    height: 20px;
+    background-image: url(../images/nav/bilgi.png);
+    position: relative;
+    float: right;
+    margin: 4px;
+}
+
+.old-bilgi:hover {
+    background-image: url(../images/nav/hbilgi.png);
+}
+
+.old-bilgi:active {
+    background-image: url(../images/nav/abilgi.png);
+}
+
+.oldhabbo-headhood {
+    margin: 0px;
+    width: 98%;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#navigator {
+    width: 425px;
+    height: 500px !important;
+    background-color: #ebe9df;
+    left: 250px;
+    top: 100px;
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    border: solid 1px;
+    border-bottom: solid 2px #000;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    color: #000;
+    min-height: 500px;
+    max-height: 750px;
+    box-sizing: content-box;
+}
+
+#navigatordrag {
+    width: 421px;
+    height: 31px;
+    background-color: #367897;
+    border-top: solid 2px #408caf;
+    border-left: solid 2px #408caf;
+    border-right: solid 2px #408caf;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.nh-baslik {
+    margin: 0px;
+    width: 411px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.navigator-menu {
+    width: 425px;
+    height: 35px;
+    background-color: #fff;
+    border-bottom: solid 1px #000;
+    box-sizing: content-box;
+}
+
+.ex {
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/nav/ex.png);
+    float: left;
+    position: relative;
+    margin: 9px 18px 9px 15px;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.navmenu-button {
+    width: auto;
+    height: 22px;
+    background: #cac9c1;
+    float: left;
+    margin-right: 0px;
+    margin-top: 4px;
+    border-top: solid 1px #504f4e;
+    border-left: solid 1px #504f4e;
+    border-right: solid 1px #504f4e;
+    border-radius: 6px 6px 0px 0px;
+    padding: 7px 10px 1px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    z-index: 11;
+    border-bottom: solid 1px #85847c;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+
+.navmenu-button:hover {
+    background: #f6f5f0;
+    box-shadow: inset -2px 0 0 0 #ffffff, inset 0 2px 0 0 #ffffff, inset 2px 0 0 0 #ffffff;
+    border-bottom: 1px solid #f6f5f0;
+}
+
+.nav-search {
+    width: auto;
+    height: 45px;
+}
+
+.nroom-filtre {
+    width: 117px;
+    height: 24px;
+    float: left;
+    background: #fff;
+    margin: 10px 15px 10px 13px;
+    border: solid 1px #000;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: 0;
+    cursor: pointer;
+    font-family: Arial;
+}
+
+.nroom-filtre_ico {
+    float: left;
+    position: absolute;
+    left: 110px;
+    margin-top: 11px;
+    border-radius: 4px;
+    z-index: 5;
+}
+
+.oldNav-roombox {
+    width: 100%;
+    height: 70%;
+    position: relative;
+}
+
+.nroom-search {
+    width: 237px;
+    height: 24px;
+    float: left;
+    background: #fff;
+    margin: 10px 15px 10px 0px;
+    border: solid 1px #000;
+    border-radius: 6px;
+    outline: 0;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-top: 3px;
+    font-family: Arial;
+}
+
+.nroom-search::placeholder {
+    font-style: italic;
+}
+
+.icoText {
+    background-image: url(../images/nav/icoText.png);
+    width: 17px;
+    height: 18px;
+    position: absolute;
+    right: 44px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.actvroom-box {
+    width: 388px;
+    height: auto;
+    background: #fff;
+    margin: 0px 0px 0px 12px;
+    position: relative;
+    float: left;
+    margin-bottom: 5px;
+}
+
+.aroom_b-head {
+    width: 100%;
+    height: 30px;
+}
+
+.navhead-baslik {
+    color: #367897;
+    font-size: 15px;
+    padding: 3px 4px;
+    margin-left: -5px;
+    float: left;
+    cursor: pointer;
+    font-family: system-ui;
+}
+
+.room-box-active {
+    width: 25px;
+    height: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+    background-image: url(../images/nav/navico1.png);
+    cursor: pointer;
+}
+
+.room-box-notactive {
+    width: 25px;
+    height: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+    background-image: url(../images/nav/navico2.png);
+    cursor: pointer;
+}
+
+
+.room-navico_ex {
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/nav/ex.png);
+    float: right;
+    position: relative;
+    margin: 6px 6px 6px 3px;
+    cursor: pointer;
+}
+
+.room-navico4 {
+    width: 15px;
+    height: 30px;
+    background-image: url(../images/nav/navico4.png);
+    float: right;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.room-navico3 {
+    width: 15px;
+    height: 30px;
+    background-image: url(../images/nav/navico3.png);
+    float: right;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.reloadSearch {
+    background-image: url(../images/nav/reloadSearch.png);
+    width: 25px;
+    height: 23px;
+    position: absolute;
+    right: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.reloadSearch:hover {
+    background-image: url(../images/nav/reloadSearch-hover.png);
+}
+
+.reloadSearch:active {
+    background-image: url(../images/nav/reloadSearch-active.png);
+}
+
+.big-room-box {
+    width: 122px;
+    height: 144px;
+    background: #ebe9df;
+    float: left;
+    margin-left: 5.5px;
+    box-shadow: 0px 2px 0px 0px #cccccc;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 7px;
+}
+
+.oda-picture {
+    width: 106px;
+    height: 107px;
+    border: solid 1px #000;
+    margin: 7px 7px 3px 7px;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+.room-aktifUser {
+    width: 40px;
+    height: 18px;
+    position: absolute;
+    margin: 85px 33px 4px 33px;
+    border-radius: 3px;
+}
+
+.roomGray {
+    background: #cac9c0;
+}
+
+.roomGreen {
+    background: #62b061;
+}
+
+.roomOrange {
+    background: #ffb01a;
+}
+
+.roomRed {
+    background: #c1322b;
+}
+
+p {
+    margin: 0px;
+}
+
+.roomUser-number {
+    font-size: 12px;
+    float: left;
+    font-weight: 700;
+    color: #fff;
+    padding: 0px;
+    letter-spacing: 1px;
+    width: 17px;
+    text-align: center;
+    font-family: system-ui;
+    padding-left: 2px;
+}
+
+.roomUser {
+    float: left;
+}
+
+.b_box-odainfo {
+    float: right;
+    margin-right: 6px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.b_box-roomname {
+    font-size: 11px;
+    width: 85px;
+    position: absolute;
+    margin-left: 7px;
+    height: 25px;
+    line-height: 1.0;
+    overflow: hidden;
+    font-family: system-ui;
+}
+
+.nav-oda-liste {
+    height: 299px;
+    list-style: none;
+    overflow-y: scroll;
+    width: 417px;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.nav-oda-liste::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+.nav-oda-liste::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+.nav-oda-liste::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+.nav-oda-liste::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+.nav-oda-liste::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+.nav-oda-liste::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+.nav-oda-liste::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+
+.nav-oda-liste::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.nav-oda-liste::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.nav-oda-liste::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+.nav-oda-liste::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+.nav-oda-liste::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+.nav-oda-liste::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.oldnav-roomcreate {
+    width: 189px;
+    height: 60px;
+    background: url(../images/nav/roomcreate.png);
+    margin: 0px 3px 15px 10px;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.oldnav-roompromos {
+    width: 189px;
+    height: 60px;
+    background: url(../images/nav/roompromos.png);
+    margin: 0px 0px 15px 10px;
+    float: left;
+    cursor: pointer;
+}
+
+.roomcreate-hood {
+    position: relative;
+    font-family: Arial;
+    font-size: 13.5px;
+    color: #fff;
+    font-weight: bold;
+    padding: 22px 12px 22px 0px;
+    text-align: center;
+    text-shadow: 1.5px 1.5px 0px #0000002b;
+    float: right;
+}
+
+.small-room-box {
+    width: 382px;
+    height: 20px;
+    background: #d5edff;
+    float: left;
+    margin-left: 5.5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.smallroombox-aktifUser {
+    width: 40px;
+    height: 18px;
+    position: absolute;
+    margin: 1px;
+    border-radius: 3px;
+}
+
+.small-room-box:nth-child(odd) {
+    background: #ffffff;
+}
+
+.there-is-group {
+    float: right;
+    margin-right: 4px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.there-is-lock {
+    float: right;
+    margin-right: 4px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.small_box-roomname {
+    font-size: 13px;
+    position: absolute;
+    line-height: 1.0;
+    padding: 3px 3px 3px 48px;
+    overflow: hidden;
+    width: 270px;
+    height: 12px;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.box-height-adjustment {
+    width: 19px;
+    height: 19px;
+    background-image: url(../images/nav/height.png);
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    float: right;
+    cursor: pointer;
+}
+
+.nav-bottom-buttons {
+    position: absolute;
+    bottom: 0px;
+    box-sizing: content-box;
+}
+
+.navfilter-txt {
+    padding: 2px 5px;
+}
+
+[nitro-navigator-search-result-item-component]:nth-child(odd) .small-room-box {
+    background: #d5edff;
+}
+
+/* */
+div#roomcreate {
+    width: 585px;
+    height: 367px;
+    background-color: #ebe9df;
+    left: 250px;
+    top: 100px;
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    border: solid 1px;
+    border-bottom: solid 2px #000;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    color: #000;
+}
+
+#roomcreatedrag {
+    width: 583px;
+    height: 31px;
+    background-color: #367897;
+    border-top: solid 2px #408caf;
+    border-left: solid 2px #408caf;
+    border-right: solid 2px #408caf;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+}
+
+.rc-baslik {
+    margin: 0px;
+    width: 580px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 3px;
+    font-family: system-ui;
+}
+
+.roomcreatebox {
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.rcleft-box {
+    width: 240px;
+    height: 308px;
+    float: left;
+}
+
+p.rctxt {
+    font-size: 11px;
+    color: #000000;
+    font-weight: bold;
+    font-family: system-ui;
+    width: 100%;
+}
+
+.rc_roomname {
+    height: 21px;
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-size: 13px;
+    width: 100%;
+    border: solid 1px #000;
+    outline: 0;
+    font-family: system-ui;
+}
+
+.rc_roomdesc {
+    width: 100%;
+    height: 61px;
+    outline: 0;
+    border: solid 1px #000;
+    margin-bottom: 1px;
+    resize: none;
+    font-size: 13px;
+    margin-top: 4px;
+    font-family: system-ui;
+}
+
+#rccategory-select {
+    width: 100%;
+    height: 24px;
+    background: hsla(0,0%,100%,0);
+    border-radius: 4px;
+    font-size: 11px;
+    outline: 0;
+    cursor: pointer;
+    border: 0px solid #0000;
+    margin-bottom: 7px;
+    font-family: system-ui;
+}
+
+
+.rcbuttonoptions {
+    justify-content: space-between!important;
+    margin-top: 3px;
+}
+
+.rcright-box {
+    width: 293px;
+    height: 312px;
+    float: left;
+    margin-left: 20px;
+}
+
+.rc-roomcreate {
+    width: 100px;
+    height: 21px;
+    background: #fff;
+    box-sizing: border-box;
+    border: solid 1px #000;
+    cursor: pointer;
+    border-radius: 3px;
+    float: left;
+    outline: 0;
+}
+
+.rc-roomcreate:hover {
+        border: solid 2px #000;
+}
+
+.rc-roomcreate-close {
+    width: 100px;
+    height: 21px;
+    background: #fff;
+    box-sizing: border-box;
+    border: solid 1px #000;
+    cursor: pointer;
+    border-radius: 3px;
+    float: right;
+    outline: 0;
+}
+
+.rc-roomcreate-close:hover {
+        border: solid 2px #000;
+}
+
+p.rc-buttontxt {
+    font-size: 11px;
+    font-family: system-ui;
+    font-weight: bold;
+    padding: 0px;
+    text-align: center;
+    height: 21px;
+}
+
+.rc-roomview {
+    width: 135px;
+    height: 96px;
+    background: #cbcbcb;
+    border: solid 1px #5d5d5a;
+    box-sizing: border-box;
+    float: left;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 3px;
+    margin-right: 3px;
+}
+
+.rc-roomview:active {
+    background: #6e8184;
+}
+
+.rc-roomdetail {
+    width: 133px;
+    height: 94px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.rc-roomkaro {
+    position: absolute;
+    width: 133px;
+    height: 20px;
+    bottom: 0px;
+}
+
+.rico {
+    width: 25px;
+    height: 20px;
+    background-image: url(../images/roff.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.rc-karoinfo {
+    font-size: 11px;
+    float: left;
+    font-family: system-ui;
+    font-weight: bold;
+    padding: 2px 0px;
+}
+
+.rcactive {
+    background: #6e8184;
+    color: #fff;
+}
+
+.rcactive .rico {
+    background-image: url(../images/ract.png);
+}
+
+.rc-roomselect {
+    height: 295px;
+    list-style: none;
+    overflow-y: scroll;
+    width: 295px;
+    position: absolute;
+}
+
+.rc-roomselect::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+.rc-roomselect::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+.rc-roomselect::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+.rc-roomselect::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+.rc-roomselect::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+.rc-roomselect::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+.rc-roomselect::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+.rc-roomselect::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.rc-roomselect::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.rc-roomselect::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+.rc-roomselect::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+.rc-roomselect::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+.rc-roomselect::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.navactive {
+    background: rgb(235, 233, 223) !important;
+    border-width: 2px 2px 1px !important;
+    border-style: solid !important;
+    border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(235, 233, 223) !important;
+    border-image: initial !important;
+    padding: 6px 10px 1px 9px !important;
+    box-shadow: inset -2px 0 0 0 #ffffff, inset 0 2px 0 0 #ffffff, inset 2px 0 0 0 #ffffff !important;
+}
+
+.dropdown-toggle:after {
+    display: none;
+}
+
+#roomsettings {
+    width: 341px;
+    height: 477px;
+    background-color: #ebe9df;
+    left: 250px;
+    top: 100px;
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    border: solid 1px;
+    border-bottom: solid 2px #000;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    color: #000;
+    box-sizing: border-box;
+    padding-bottom: 7px;
+    font-family: system-ui;
+}
+
+#roomsettingsdrag {
+    width: 100%;
+    height: 33px;
+    background-color: #367897;
+    border-top: solid 2px #408caf;
+    border-left: solid 2px #408caf;
+    border-right: solid 2px #408caf;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-bottom: solid 1px #000;
+}
+
+.rs-baslik {
+    margin: 0px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    font-family: system-ui;
+}
+
+.rs-menu {
+    width: 339px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    border-bottom: solid 1px #000;
+}
+
+.rsmenu-button {
+    width: 67px;
+    height: 22px;
+    background: #cac9c1;
+    float: left;
+    margin-right: 0px;
+    margin-top: 4px;
+    border-top: solid 1px #504f4e;
+    border-left: solid 1px #504f4e;
+    border-right: solid 1px #504f4e;
+    border-radius: 6px 6px 0px 0px;
+    padding: 5px 5px 0px 5px;
+    font-size: 13px;
+    cursor: pointer;
+    border-bottom: solid 1px #85847c;
+    text-align: center;
+    box-sizing: content-box;
+    font-family: system-ui;
+}
+
+.rsmenu-button:hover {
+    background: #f6f5f0;
+    box-shadow: inset -2px 0 0 0 #ffffff, inset 0 2px 0 0 #ffffff, inset 2px 0 0 0 #ffffff;
+    border-bottom: 1px solid #f6f5f0;
+}
+
+#rsbasic-box {
+    width: 91%;
+    height: 385px;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    box-sizing: content-box;
+}
+
+.rssettings_txt {
+    font-size: 12.5px;
+    color: #000000;
+    font-weight: bold;
+    font-family: system-ui;
+    width: 100%;
+    float: left;
+}
+
+.rs-room_name {
+    width: 301px;
+    height: 21px;
+    margin-top: -1px;
+    outline: 0;
+    float: left;
+    line-height: 13px;
+    font-family: system-ui;
+    font-size: 12px;
+}
+
+.t2 {
+    margin-top: 2px;
+}
+
+.rs-room_desc {
+    background: #ffffff;
+    border: solid 1px #767676;
+    width: 301px;
+    height: 40px;
+    resize: none;
+    padding: 3px;
+    top: 3px;
+    position: relative;
+    outline: 0;
+    margin-top: -1px;
+    line-height: 13px;
+    font-family: system-ui;
+    font-size: 12px;
+}
+
+.rs-room_desc:hover {
+    border: solid 1px #4f4f4f;
+}
+
+.t11 {
+    margin-top: 11px;
+}
+
+
+#category-select {
+    width: 300px;
+    height: 24px;
+    background: #fff0;
+    border: solid 0px #0000;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: 0;
+    cursor: pointer;
+    background-image: url(../images/roomsettings/option.png);
+    margin-top: 1px;
+    float: left;
+}
+
+.t5 {
+    margin-top: 5px;
+}
+
+.t8 {
+    margin-top: 8px;
+}
+
+.rs-label1 {
+    width: 148px;
+    height: 16px;
+    margin-top: 3px;
+    outline: 0;
+    font-size: 12px;
+    float: left;
+}
+
+.rs-label2 {
+    width: 148px;
+    height: 16px;
+    margin-top: 3px;
+    outline: 0;
+    font-size: 12px;
+    float: left;
+    margin-left: 5px;
+}
+
+.rs-label1::placeholder {
+    color: #155d9680;
+    font-size: 12px;
+}
+
+.rs-label2::placeholder {
+    color: #155d9680;
+    font-size: 12px;
+}
+
+.rs-checkbox {
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+    float: left;
+}
+
+#check-css {
+    margin: 0px;
+    width: 15px;
+    height: 15px;
+    float: left;
+    border: solid 1px #000;
+}
+
+.checktxt {
+    font-size: 13px;
+    color: #000000;
+    font-family: 'Ubuntu';
+    padding: 0px 20px;
+}
+
+.rs-room_delete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 301px;
+    height: 40px;
+    color: #bb2200;
+}
+
+.rdeletetxt {
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: underline;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+img.deletebtn {
+    float: left;
+    margin: 3px 5px;
+}
+
+#rsaccess-box {
+    width: 91%;
+    height: 385px;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+}
+
+.rssettings_desc {
+    font-size: 12.5px;
+    color: #000000;
+    font-family: system-ui;
+    margin-bottom: -2px;
+    line-height: 15.5px;
+}
+
+.rs-select_container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 13px;
+  padding-left: 20px;
+  margin-top: 4px;
+  float: left;
+  width: 90%;
+  margin-bottom: 0px;
+}
+
+.rs-select_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmarkrs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  background-image: url(../images/roomsettings/rssc.png);
+}
+
+.checkmarkrs:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.rs-select_container input:checked ~ .checkmarkrs:after {
+  display: block;
+}
+
+.rs-select_container .checkmarkrs:after {
+  left: 2px;
+  top: 2px;
+  width: 10px;
+  height: 10px;
+  background-image: url(../images/roomsettings/rssc-act.png);
+}
+
+p.rs-sctxt {
+    margin-top: -3px;
+    font-family: system-ui;
+}
+
+.t90 {
+    margin-top: 90px;
+    float: left;
+}
+
+.rs-select_container2 {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 13px;
+    padding-left: 20px;
+    margin-top: -5px;
+    float: left;
+    width: 90%;
+}
+
+.rs-select_container2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmarkrs2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-image: url(../images/roomsettings/rssc2.png);
+}
+
+.checkmarkrs2:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.rs-select_container2 input:checked ~ .checkmarkrs2:after {
+  display: block;
+}
+
+.rs-select_container2 .checkmarkrs2:after {
+  width: 15px;
+  height: 15px;
+  background-image: url(../images/roomsettings/rssc2-act.png);
+}
+
+#rsrights-box {
+    width: 100%;
+    height: 385px;
+    margin-bottom: 12px;
+    padding: 10px 8px;
+    float: left;
+}
+
+#rsvip-box {
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    font-family: sans-serif;
+}
+
+#rsmanage-box {
+    width: 100%;
+    height: 385px;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+}
+
+.rsrightsbg {
+    background: url(../images/roomsettings/rsrights-bg.png?0);
+    width: 323px;
+    height: 362px;
+}
+
+.filter-box {
+    width: 323px;
+    height: 42px;
+    position: relative;
+    margin-bottom: 4px;
+    box-sizing: content-box;
+}
+
+.filter_user {
+    position: absolute;
+    float: right;
+    right: 0px;
+    margin: 8px;
+    width: 218px;
+    height: 24px;
+    background: #fff0;
+    border: solid 0px #fff0;
+    outline: 0;
+    padding-left: 5px;
+    font-size: 12px;
+    font-family: 'Ubuntu';
+}
+
+p.filtertxt {
+    font-family: "Ubuntu";
+    font-size: 13px;
+    font-weight: bold;
+    padding: 11px 8px;
+    color: #10100f;
+    float: left;
+}
+
+.rs-filter-left {
+    width: 150px;
+    height: 318px;
+    float: left;
+    box-sizing: content-box;
+}
+
+p.users-with-rights_txt {
+    font-size: 13px;
+    line-height: 13px;
+    padding-left: 2px;
+    margin-top: -3px;
+    margin-bottom: 6px;
+}
+
+p.friends-without-rights_txt {
+    font-size: 13px;
+    line-height: 13px;
+    padding-left: 2px;
+    margin-top: -3px;
+    margin-bottom: 7px;
+}
+
+.rs-filter-right {
+    width: 150px;
+    height: 318px;
+    float: right;
+}
+
+.users-with-rights_box {
+    width: 150px;
+    height: 256px;
+    margin-top: 3px;
+}
+
+.friends-without-rights_box {
+    width: 150px;
+    height: 289px;
+    margin-top: 3px;
+}
+
+.users-with-rights-list {
+    height: 251px;
+    list-style: none;
+    overflow-y: auto;
+    width: 146px;
+    padding: 2px 4px;
+    margin-top: 3px;
+}
+
+.users-with-rights-list::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+.users-with-rights-list::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+.users-with-rights-list::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+.users-with-rights-list::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+.users-with-rights-list::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+.users-with-rights-list::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+.users-with-rights-list::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+.users-with-rights-list::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.users-with-rights-list::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.users-with-rights-list::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+.users-with-rights-list::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+.users-with-rights-list::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+.users-with-rights-list::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.rs-filter-userbox {
+    width: 111px;
+    height: 20px;
+    background: #e9e9e1;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.rs-filter-userbox:nth-child(even) {
+    background: #ffffff00;
+}
+
+.rs-forumico {
+    background: url(../images/roomsettings/userprofil.png);
+    width: 13px;
+    height: 11px;
+    position: absolute;
+    margin-left: 9px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.rs-forumico:hover {
+    background: url(../images/roomsettings/userprofil-on.png);
+}
+
+p.rs-username {
+    float: left;
+    position: absolute;
+    margin-left: 27px;
+    font-size: 13px;
+    margin-top: -1px;
+}
+
+.rs-filter-userbox:hover > .rs-remove_user {
+    position: absolute;
+    background: url(../images/roomsettings/cikar.png);
+    width: 6px;
+    height: 10px;
+    float: right;
+    right: 0;
+    margin: 5px 1px;
+}
+
+.rs-clear-all {
+    width: 138px;
+    height: 26px;
+    background: linear-gradient(#f3f3f3 50%, #d9d9d9 50%);
+    box-shadow: #d9d9d9 0px 0px 0px 2px inset;
+    border-radius: 4px;
+    border: solid 2px #000;
+    border-bottom: solid 2px #000;
+    cursor: pointer;
+    margin: -2px 4px;
+    box-sizing: content-box;
+}
+
+p.rsclear_txt {
+    font-size: 13px;
+    padding: 3px 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rs-clear-all:hover {
+    background: #ffffff;
+    box-shadow: inset 0px -10px 0px 2px #eeeeee;
+}
+
+.rs-clear-all:active {
+    background: linear-gradient(#e1e1e1 50%, #a3a3a3 50%);
+    box-shadow: #a3a3a3 0px 0px 0px 2px inset;
+}
+
+.friends-without-rights-list {
+    height: 283px;
+    list-style: none;
+    overflow-y: auto;
+    width: 146px;
+    padding: 2px 4px;
+    margin-top: 5px;
+}
+
+.friends-without-rights-list::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+.friends-without-rights-list::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+.friends-without-rights-list::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+.friends-without-rights-list::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+.friends-without-rights-list::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+.friends-without-rights-list::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+.friends-without-rights-list::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+.friends-without-rights-list::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.friends-without-rights-list::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.friends-without-rights-list::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+.friends-without-rights-list::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+.friends-without-rights-list::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+.friends-without-rights-list::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.rs-filter-userbox:hover.rs-filter-userbox:hover > .rs-add_user {
+    position: absolute;
+    background: url(../images/roomsettings/koy.png);
+    width: 6px;
+    height: 10px;
+    float: left;
+    left: 0;
+    margin: 5px 1px;
+}
+
+.rs-filter-userbox:hover {
+    background: #b6d9ff;
+}
+
+.t15 {
+    margin-top: 15px;
+}
+
+.chat-hearing-distance {
+    width: 30px;
+    height: 16px;
+    outline: 0;
+    border: solid 1px #000;
+    margin-top: 5px;
+    float: left;
+    box-sizing: content-box;
+    font-size: 12px;
+}
+
+.pf7 {
+    float: left;
+    padding: 7px 5px;
+}
+
+.widthau-l {
+    width: 110px;
+}
+
+.t35 {
+    margin-top: 35px;
+}
+
+.t55 {
+    margin-top: 55px;
+}
+
+.banned-users-bg {
+    background: url(../images/roomsettings/yasaklibg.png);
+    width: 339px;
+    height: 156px;
+    margin: 39px -15px;
+    float: left;
+}
+
+.banned-users_box {
+    width: 172px;
+    height: 156px;
+    margin-left: 17px;
+    float: left;
+}
+
+.banned-users-list {
+    height: 148px;
+    list-style: none;
+    overflow-y: auto;
+    overflow-x: none;
+    width: 158px;
+    padding: 2px 4px;
+    margin-top: 2px;
+}
+
+.rs-bannedu-userbox {
+    width: 140px;
+    height: 20px;
+    background: #e9e9e1;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.rs-bannedu-userbox:nth-child(even) {
+    background: #ffffff00;
+}
+
+
+.banned-users-list::-webkit-scrollbar {
+    width: 16px;
+    box-sizing: border-box;
+}
+
+.banned-users-list::-webkit-scrollbar-button {
+    background: #fff0 url(../images/scrollbar-button.png);
+}
+
+.banned-users-list::-webkit-scrollbar-button:hover {
+    background: #fff0 url(../images/scrollbar-button.png?0) no-repeat center right -16px;
+}
+
+.banned-users-list::-webkit-scrollbar-button:active {
+    background: #fff0 url(../images/scrollbar-button.png) no-repeat center right 0px;
+}
+
+.banned-users-list::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #fff0 url(../images/scrollbar-button2.png);
+}
+
+.banned-users-list::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right -16px;
+}
+
+.banned-users-list::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background: #fff0 url(../images/scrollbar-button2.png) no-repeat center right 0px;
+}
+
+.banned-users-list::-webkit-scrollbar-thumb {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png) no-repeat center right -18px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.banned-users-list::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255);
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right -8px;
+    border-radius: 4px;
+    border-bottom: solid 2px #000;
+}
+
+.banned-users-list::-webkit-scrollbar-thumb:active {
+    border: 1px solid #000000;
+    box-shadow: inset 0px 0px 1px 2px #828282;
+    background: #fff url(../images/scrollbar-thumb.png?000000000000000000000) no-repeat center right 2px;
+    border-radius: 4px;
+}
+
+.banned-users-list::-webkit-scrollbar-track-piece{
+    background: #fff0 url(../images/scrollbar-track-piece.png?) no-repeat center center;
+}
+
+.banned-users-list::-webkit-scrollbar-corner {
+    background: #d0cecb;
+}
+
+.banned-users-list::-webkit-scrollbar-track-piece {
+    background-color: #d9d9d9;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.rs-bannedu-userbox:hover {
+    background: #b6d9ff;
+}
+
+p.manage-banned-user-txt {
+    float: left;
+    font-size: 13px;
+    padding: 35px 0px 9px 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.manage-bannedu-removeu {
+    width: 130px;
+    height: 156px;
+    margin-left: 10px;
+    float: left;
+}
+
+.mbu-remove-button {
+    width: 129px;
+    height: 29px;
+    background: linear-gradient(#f3f3f3 50%, #d9d9d9 50%);
+    box-shadow: rgb(217 217 217) 0px 0px 0px 2px inset;
+    border-radius: 4px;
+    border: solid 1px #000;
+    border-bottom: solid 2px #000;
+    float: left;
+    cursor: pointer;
+}
+
+p.mng-btn-text {
+    font-size: 13px;
+    padding: 3px 10px;
+    text-align: center;
+}
+
+.mbu-remove-button:hover {
+    background: #ffffff;
+    box-shadow: inset 0px -10px 0px 2px #eeeeee;
+}
+
+.mbu-remove-button:active {
+    background: linear-gradient(#e1e1e1 50%, #a3a3a3 50%);
+    box-shadow: #a3a3a3 0px 0px 0px 2px inset;
+}
+
+.t4 {
+    margin-top: 4px;
+}
+
+.rstbutton-active {
+    background: #ebe9df !important;
+    border-width: 2px 2px 1px !important;
+    border-style: solid !important;
+    border-color: black black #ebe9df !important;
+    border-image: initial !important;
+    padding: 3.5px 5px 0px !important;
+    box-shadow: inset -2px 0 0 0 #ffffff, inset 0 2px 0 0 #ffffff, inset 2px 0 0 0 #ffffff !important;
+    height: 22.5px;
+}
+
+input[type=radio] {
+    background-image: url(../images/roomsettings/rssc.png);
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    margin-right: 5px;
+    position: relative;
+    width: 14px;
+    -webkit-appearance: none;
+    outline: 0;
+    float: left;
+}
+
+input[type="radio"]:after {
+    height: 15px;
+    position: relative;
+    width: 15px;
+    content: '';
+    display: block;
+    margin-right: 5px;
+}
+
+input[type="radio"]:checked:after {
+    background-image: url(../images/roomsettings/rssc-act.png);
+}
+
+.rs-select_container-radio {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 13px;
+    padding-left: 20px;
+    margin-top: -4px;
+    float: left;
+    width: 90%;
+    margin-bottom: 3px;
+}
+
+.rs-select_container-radio2 {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 13px;
+    padding-left: 20px;
+    margin-top: -4px;
+    float: left;
+    width: 50%;
+    margin-bottom: 3px;
+}
+
+.rs-inputtxt {
+    width: 194px;
+    height: 16px;
+    margin-top: 0px;
+    outline: 0;
+    font-size: 17px;
+}
+
+p.rsithood {
+    font-size: 12.5px;
+    color: #000000;
+    font-family: system-ui;
+    margin-bottom: -6px;
+    float: left;
+    width: 100%;
+}
+
+.sabitbox {
+    position: absolute;
+    float: left;
+    bottom: 0px;
+}
+.custom-radios{
+    input[type=radio] {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        -webkit-appearance: none;
+        outline: 0;
+        top: -2px;
+        left: 0;
+        height: 14px;
+        width: 14px;
+        background-image: url(/assets/images/wired/sec11.png) !important;
+    }
+    
+    input[type="radio"]:after {
+        height: 14px;
+        position: relative;
+        width: 14px;
+        content: '';
+        display: block;
+        margin-right: 5px;
+    }
+    
+    input[type="radio"]:checked:after {
+        height: 14px;
+        width: 14px;
+        background-image: url(/assets/images/wired/sec22.png) !important;
+    }
+
+    .form-check-label {
+        font-size: 13px;
+        font-family: system-ui;
+    }
+    
+    
+}
+
+#kapizili-head {
+    width: 100%;
+    height: 33px;
+    background-color: #367897;
+    border-top: solid 2px #408caf;
+    border-left: solid 2px #408caf;
+    border-right: solid 2px #408caf;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-bottom: solid 1px #000;
+}
+
+#kapizilical {
+    width: 270px;
+    min-height: 182px;
+    height: auto;
+    left: 250px;
+    top: 100px;
+    position: absolute;
+    background: #e9e9e1;
+    border-bottom: solid 2px #000;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    border: solid 1px #000;
+    border-radius: 6px;
+    overflow: hidden;
+    font-family: system-ui;
+    box-sizing: content-box;
+}
+
+p.kapizili-roomname {
+    font-family: Arial, system-ui, 'Ubuntu';
+    padding-left: 20px;
+    padding-top: 5px;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.kapizili-roomdesc {
+    font-family: Arial, system-ui, 'Ubuntu';
+    padding-left: 20px;
+    color: #000000c4;
+    font-size: 13px;
+    height: 80px;
+    max-height: 80px;
+    overflow: hidden;
+}
+
+.kapizili-buttonbox {
+    width: 240px;
+    height: 35px;
+    background: #eaece8;
+    margin: 0px 14px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.kapizili-iptalet {
+    font-family: Arial, system-ui, 'Ubuntu';
+    color: #000000;
+    font-size: 13px;
+    float: left;
+    text-decoration: underline;
+    padding: 8px 0px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.kapizili-odayagir {
+    background: linear-gradient(#f3f3f3 50%, #d9d9d9 0);
+    box-shadow: inset 0 0 0 2px #d9d9d9;
+    height: 24px;
+    float: right;
+    position: relative;
+    width: auto;
+    border: solid #000;
+    border-width: 1px 1px 2px;
+    border-radius: 4px;
+    right: 7px;
+    cursor: pointer;
+    box-sizing: content-box;
+    font-family: system-ui;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 4px 0px;
+}
+
+p.kapizili-butontxt {
+    font-size: 13px;
+    color: black;
+    font-family: system-ui;
+    padding: 2px;
+}
+
+.kapizilihood {
+    margin: 0px;
+    width: 98%;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.kapizili-sifrebox {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: 50px;
+}
+
+p.parolagir-txt {
+    font-family: system-ui;
+    font-size: 13px;
+    color: black;
+    left: 20px;
+    position: relative;
+    float: left;
+}
+
+.sifreboxinput {
+    color: black;
+    position: relative;
+    border: solid 1px #000;
+    background: #fff0;
+    width: 100px;
+    height: 20px;
+    float: right;
+    right: 20px;
+    outline: 0;
+    font-size: 11px;
+}

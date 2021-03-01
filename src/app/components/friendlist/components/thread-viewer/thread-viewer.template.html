@@ -1,0 +1,96 @@
+<!--<div class="nitro-friendlist-thread-viewer-component">
+    <div class="d-flex flex-row thread-viewer-user mb-1 justify-content-between">
+        <div class="d-flex flex-row">
+            <div class="avatar-img" nitro-avatar-image [headOnly]="1" [figure]="thread.participant.figure" [direction]="2"></div>
+            <div class="thread-viewer-user-info">
+                <b class="d-flex flex-row">{{ participant.name }}
+                    <div class="ml-2 p-1 rounded-circle align-self-center" [ngClass]="[ participant.online ? 'bg-success' : 'bg-danger' ]"></div></b>
+                <span class="d-block text-muted small text-truncate">{{ participant.motto }}</span>
+            </div>
+        </div>
+        <div class="input-group-prepend align-self-center" ngbDropdown>
+            <div class="btn-group">
+                <div class="btn btn-sm btn-dgreen align-self-center" *ngIf="(participant.online)" (click)="followParticipant()"><i class="fas fa-arrow-right"></i></div>
+                <button type="button" class="btn btn-primary btn-sm" ngbDropdownToggle>{{ relations[thread.participant.relationshipStatus] }}</button>
+                <div class="dropdown-menu" ngbDropdownMenu>
+                    <button class="dropdown-item small" *ngFor="let relation of relations; let i = index;" (click)="changeRelation(i)" ngbDropdownItem>{{ relation }}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <perfect-scrollbar #threadScroller class="position-relative w-100 my-1" style="min-height:299px;max-height:299px;height:299px;">
+        <div class="thread-viewer-list">
+            <div *ngFor="let chat of chats" class="thread-viewer-list-item mb-1" [ngClass]="[ (chat.senderId === participant.id) ? 'thread-viewer-list-left' : 'thread-viewer-list-right' ]">
+                <div class="thread-viewer-list-item-message p-2">{{ chat.message }}</div>
+            </div>
+        </div>
+    </perfect-scrollbar>
+    <div class="thread-viewer-input">
+        <input class="thread-viewer-input form-control" type="text" maxLength="420" (keydown.enter)="onKeyDownEvent($event)" />
+    </div>
+</div>
+-->
+<div class="messenger-chat-box">
+    <div class="chatted-user">
+        <div class="message-user-info">
+            <div class="avatar-box">
+                <div class="drcmsg-uavatar-position" style="margin: -39px -31px;" nitro-avatar-image [headOnly]="1"
+                    [figure]="thread.participant.figure" [direction]="2"></div>
+            </div>
+            <div class="messenger-info_chated-username">
+                {{ participant.name }}
+                <div [ngClass]="[ participant.online ? 'chatonline' : 'chatoffline' ]"></div>
+            </div>
+            <div class="messenger-info_chated-user-status">{{ participant.motto }}</div>
+        </div>
+        <div class="message-action">
+            <!--<input class="search-message" placeholder="Search..">-->
+            <div class="goroom-user" *ngIf="(participant.online)" (click)="followParticipant()"></div>
+            <div class="user-ticket">
+                <p class="uticket_txt">Şikayet</p>
+            </div>
+            <div ngbDropdown class="user-ticket">
+                <div ngbDropdownToggle>
+                    <p class="uticket_txt">İlişki: {{ relations[thread.participant.relationshipStatus] }}</p>
+                </div>
+
+                <div class="user-friendship-status" ngbDropdownMenu>
+                    <div class="fs-box" *ngFor="let relation of relations; let i = index;" (click)="changeRelation(i)" ngbDropdownItem>
+                        <p class="activity-fs-txt">{{ relation }}</p>
+                    </div>
+                    <div class="fs-bottom"></div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <div class="messenger-chat">
+        <div class="all-message-list" #threadScroller>
+            <div *ngFor="let chat of chats"
+                [ngClass]="[ (chat.senderId === participant.id) ? 'chat-message-box' : 'gonderilen-chat-message-box' ]">
+                <div class="sendmsg-user-information"
+                    [ngClass]="[ (chat.senderId === participant.id) ? 'sendmsg-user-information' : 'gonderilen-sendmsg-user-information' ]">
+                    <div class="sendmsg-username"
+                        [ngClass]="[ (chat.senderId === participant.id) ? 'sendmsg-username' : 'gonderilen-sendmsg-username' ]">
+                        username
+                    </div>
+                    <div class="message-time"
+                        [ngClass]="[ (chat.senderId === participant.id) ? 'message-time' : 'gonderilen-message-time' ]">
+                        message-time</div>
+                </div>
+                <div [ngClass]="[ (chat.senderId === participant.id) ? 'leftok' : 'rightok' ]"></div>
+                <div class="sendmsg-chat-box"
+                    [ngClass]="[ (chat.senderId === participant.id) ? 'sendmsg-chat-box' : 'gonderilen-sendmsg-chat-box' ]">
+                    {{ chat.message }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="write-message">
+        <input class="send-message" placeholder="Aa.." (keydown.enter)="onKeyDownEvent($event)">
+        <div class="send-button">
+            <p class="send-txt">{{ ('connection.password.reminder') | translate }}</p>
+        </div>
+    </div>
+    
+</div>

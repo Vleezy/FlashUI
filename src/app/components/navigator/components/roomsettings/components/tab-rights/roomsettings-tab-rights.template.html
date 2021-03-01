@@ -1,0 +1,62 @@
+<!--<div class="row">
+    <div class="col-6">
+        <div class="font-weight-bold mb-2">{{ ('navigator.flatctrls.userswithrights') | translate:['displayed','total']:[roomSettings.usersWithRights.size.toString(), roomSettings.usersWithRights.size.toString()] }}</div>
+    </div>
+    <div class="col-6">
+        <div class="font-weight-bold mb-2">{{ ('navigator.flatctrls.friends') | translate:['displayed','total']:[roomSettings.friendsWithoutRights.size.toString(), roomSettings.friendsWithoutRights.size.toString()] }}</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <perfect-scrollbar class="grid-container position-relativ mb-1" style="min-height: 400px;max-height: 400px;">
+            <div class="btn-group mb-1 w-100">
+                <button class="btn btn-primary btn-sm w-100" (click)="openProfile(item.key)">{{ item.value }}</button>
+                <button class="btn btn-primary btn-sm" (click)="takeRights(item.key)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </perfect-scrollbar>
+    </div>
+    <div class="col-6">
+        <perfect-scrollbar class="grid-container position-relative mb-1" style="min-height: 400px;max-height: 400px;">
+            <div *ngFor="let item of roomSettings.friendsWithoutRights | keyvalue" class="btn-group mb-1 w-100">
+                <button class="btn btn-primary btn-sm" (click)="giveRights(item.key)"><i class="fas fa-chevron-left"></i></button>
+                <button class="btn btn-primary btn-sm w-100" (click)="openProfile(item.key)">{{ item.value }}</button>
+            </div>
+        </perfect-scrollbar>
+    </div>
+</div>-->
+
+<div id="rsrights-box">
+    <div class="rsrightsbg">
+        <div class="filter-box">
+            <p class="filtertxt">{{ ('navigator.flatctrls.filter') | translate }}</p>
+            <input class="filter_user">
+        </div>
+        <div class="rs-filter-left">
+            <p class="users-with-rights_txt">{{ ('navigator.flatctrls.userswithrights') | translate:['displayed','total']:[roomSettings.usersWithRights.size.toString(), roomSettings.usersWithRights.size.toString()] }}</p>
+            <div class="users-with-rights_box">
+                <div class="users-with-rights-list">
+                    <div *ngFor="let item of roomSettings.usersWithRights | keyvalue" class="rs-filter-userbox" (click)="takeRights(item.key)">
+                        <div class="rs-forumico"></div>
+                        <p class="rs-username" (click)="openProfile(item.key)">{{ item.value }}</p>
+                        <div class="rs-remove_user"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rs-clear-all">
+                <p class="rsclear_txt">{{ ('navigator.flatctrls.clear') | translate }}</p>
+            </div>
+        </div>
+        <div class="rs-filter-right">
+            <p class="friends-without-rights_txt">{{ ('navigator.flatctrls.friends') | translate:['displayed','total']:[roomSettings.friendsWithoutRights.size.toString(), roomSettings.friendsWithoutRights.size.toString()] }}</p>
+            <div class="friends-without-rights_box">
+                <div class="friends-without-rights-list">
+                    <div *ngFor="let item of roomSettings.friendsWithoutRights | keyvalue" class="rs-filter-userbox" (click)="giveRights(item.key)">
+                        <div class="rs-add_user"></div>
+                        <div class="rs-forumico"></div>
+                        <p class="rs-username" (click)="openProfile(item.key)">{{ item.value }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

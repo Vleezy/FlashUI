@@ -1,0 +1,40 @@
+<div class="nitro-purse-component float-right">
+    <ng-container *ngFor="let currency of currencies | keyvalue">
+        <!--<div class="col item-detail btn btn-primary rounded d-flex nohover" *ngIf="isVisible(currency.key)"
+         [ngClass]="{ 'bg-pink' : currency.key == 0, 'bg-warning': currency.key == -1, 'bg-skyBlue': currency.key == 5 }">
+            <div class="d-flex flex-grow-1 align-items-center justify-content-end detail-value">
+                {{ currency.value | shortNumber }}</div>
+            <div class="detail-icon bg-secondary" 
+            [ngClass]="{ 'bg-pink' : currency.key == 0, 'bg-warning': currency.key == -1, 'bg-skyBlue': currency.key == 5 }">
+                <div class="currency-icon"
+                    [ngStyle]="{ 'background-image': 'url(' + getCurrencyUrl(currency.key.toString()) + ')' }"></div>
+            </div>
+        </div>-->
+        <div class="corelo-pursebox" *ngIf="isVisible(currency.key)">
+            <div class="cpurse-name kredirenk" [ngClass]="{ 'ordekrenk' : currency.key == 0, 'kredirenk': currency.key == -1, 'elmasrenk': currency.key == 5 }">{{ getCurrencyName(currency.key) }}</div>
+            <div class="purseicon-detail" [ngClass]="{ 'pi-ordekrenk' : currency.key == 0, 'pi-kredirenk': currency.key == -1, 'pi-elmasrenk': currency.key == 5 }">
+                <div class="currency-icon" [ngStyle]="{ 'background-image': 'url(./assets/images/credibar/' + currency.key.toString() + '.png)' }"></div>
+            </div>
+            <div class="cpurse-miktar">{{ currency.value | shortNumber }}</div>
+        </div>
+    </ng-container>
+
+    <div class="corelo-pursebox">
+        <div class="cb-help-buton">
+            <p class="cb-buton-text">{{ ('toolbar.help') | translate }}</p>
+        </div>
+        <div class="cb-exit-buton">
+            <img class="cb-buton-ico" src="./assets/images/credibar/cb-exit.png">
+        </div>
+        <div class="cb-settings-buton">
+            <img class="cb-buton-ico" src="./assets/images/credibar/cb-settings.png">
+        </div>
+    </div>
+    <div class="corelo-pursebox">
+        <div class="cpurse-name hcrenk">Habbo Club</div>
+        <div class="purseicon-detail pi-hcrenk">
+            <div class="cp-hcico"></div>
+        </div>
+        <div class="cpurse-miktar">{{ hcDay }}</div>
+    </div>
+</div>

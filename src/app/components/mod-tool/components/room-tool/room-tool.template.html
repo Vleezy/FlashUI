@@ -1,0 +1,166 @@
+<!--<div [draggable] [center]="false" dragHandle=".card-header" class="card room-tool-card">
+	<div class="card-header">
+			<span>
+			<i class="icon modtool-room-icon" style="margin-right: 5px;"></i>
+			Room Tool
+			</span>
+		<button type="button" class="close" (click)="close()"><i class="fas fa-times"></i></button>
+	</div>
+	<div class="card-body pl-3 pr-3" *ngIf="inRoom">
+        <div class="row">
+            <div class="col pr-2">
+                <div class="row">
+                    <div class="col">
+                        <div class="badge badge-secondary mb-1">
+                            <div>
+                                <span class="font-weight-bold mr-2">Name:</span> {{room.name}}
+                            </div>
+                            <div>
+                                <span class="font-weight-bold mr-2">Description:</span> {{room.description}}
+                            </div>
+                            <div>
+                                <span class="font-weight-bold mr-2">Owner:</span> {{room.ownerName}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="badge badge-secondary mb-1">
+                            <div>
+                                <span class="font-weight-bold mr-2">Players in room:</span> {{room.playerAmount + 1}}
+                            </div>
+                            <div>
+                                <span class="font-weight-bold mr-2">Owner in room:</span> {{room.owner ? 'yes' : 'no'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col pl-2">
+                <div class="row">
+                    <div class="col">
+                        <div class="badge badge-secondary mb-1">
+                            <div class="btn-group btn-group-vertical w-100">
+                                    <a href="{{housekeepingUrl}}/housekeeping/rooms/1" target="_blank" class="btn btn-sm btn-primary btn-block">
+                                        <i class="icon modtool-wrench-icon" style="margin-right: 5px;"></i>
+                                        Open in housekeeping
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="badge badge-secondary mb-1">
+                            <div class="btn-group btn-group-vertical w-100">
+                                <div class="mb-1">
+                                    <input [(ngModel)]="changeTitle" class="form-check-input" id="change-title" type="checkbox">
+                                    <label for="change-title" class="form-check-label">Change title to inappropriate</label>
+                                </div>
+                                <div class="mb-1">
+                                    <input [(ngModel)]="kickUsers" class="form-check-input" id="kick-users" type="checkbox">
+                                    <label for="kick-users" class="form-check-label">Kick users(stops event)</label>
+                                </div>
+                                <div class="mb-1">
+                                    <input [(ngModel)]="lockDoor" class="form-check-input" id="lock-room" type="checkbox">
+                                    <label for="lock-room" class="form-check-label">Lock room</label>
+                                </div>
+                                <button (click)="saveRoom()" class="btn btn-sm btn-primary btn-block">
+                                    <i class="icon modtool-key-icon" style="margin-right: 5px;"></i>
+                                    Save room
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	<div class="card-body" *ngIf="!inRoom">
+		Not in a room
+	</div>
+</div>
+-->
+
+
+<div [draggable] [center]="false" dragHandle="#modt-roominfodrag" id="modt-roominfo">
+    <div id="modt-roominfodrag">
+        <p class="mtri-baslik">Room Information</p>
+        <div class="old-kapat" (click)="close()"></div>
+    </div>
+    <div class="modt-ribox" *ngIf="inRoom">
+        <div class="ri-roomnamebox">
+            <p class="rirntxt">{{room.name}}</p>
+            <p class="rirdtxt">{{room.description}}</p>
+        </div>
+        <div class="ri-roominfobox">
+            <div class="ribleft">
+                <div class="rib-infobox">
+                    <p class="rib-hood" style="width: 65px;">Owner:</p>
+                    <p class="rib-reply" style="text-decoration: underline;">{{room.ownerName}}</p>
+                </div>
+                <div class="rib-infobox">
+                    <p class="rib-hood">Users inside:</p>
+                    <p class="rib-reply">{{room.playerAmount + 1}}</p>
+                </div>
+                <div class="rib-infobox">
+                    <p class="rib-hood">Owner inside:</p>
+                    <p class="rib-reply">{{room.owner ? 'yes' : 'no'}}</p>
+                </div>
+                <div class="rib-infobox">
+                    <p class="rib-hood">Activity?</p>
+                    <p class="rib-reply">no</p>
+                </div>
+            </div>
+            <div class="ribright">
+                <div class="rib-button">
+                    <p class="ribbutton-txt">Enter
+                    </p>
+                </div>
+                <div class="rib-button">
+                    <p class="ribbutton-txt">View chat
+                    </p>
+                </div>
+                <div class="rib-button">
+                    <a href="{{housekeepingUrl}}/housekeeping/rooms/1" target="_blank">
+                        <p class="ribbutton-txt">Open HK</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="rib-apply_action_to_room">
+            <label class="mt-select_container">
+                <p for="kick-users" class="mt-sctxt" style="padding-top: 0px;">Get all users out of the room (paralyzes if there is an
+                    incident)</p>
+                <input [(ngModel)]="kickUsers" type="checkbox">
+                <span class="checkmarkmt"></span>
+            </label>
+            <label class="mt-select_container">
+                <p for="lock-room" class="mt-sctxt">Put a doorbell in the room</p>
+                <input [(ngModel)]="lockDoor" type="checkbox">
+                <span class="checkmarkmt"></span>
+            </label>
+            <label class="mt-select_container" style="margin-top: 11px;">
+                <p for="change-title" class="mt-sctxt" style="padding-top: 0px;">Change the room name to (Inappropriate for Managers Management).</p>
+                <input [(ngModel)]="changeTitle" type="checkbox">
+                <span class="checkmarkmt"></span>
+            </label>
+        </div>
+        <select id="modt-select">
+            <option value="alert type 1" selected>alert message 1</option>
+            <option value="alert type 2">alert message 2</option>
+        </select>
+        <textarea class="mt-room_warning_message"></textarea>
+        <select id="modt-select" style="margin-top: -1px;float: left;">
+            <option value="alert text 1" selected>alert message 1</option>
+            <option value="alert text 2">alert message 2</option>
+        </select>
+        <div class="rib-button2">
+            <p class="ribbutton-txt">Warn</p>
+        </div>
+        <div (click)="saveRoom()" class="rib-button2" style="float: right;">
+            <p class="ribbutton-txt">Save</p>
+        </div>
+    </div>
+</div>

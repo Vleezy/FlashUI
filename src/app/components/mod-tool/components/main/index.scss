@@ -1,0 +1,263 @@
+.nitro-mod-tool-component {
+    span.username{
+        margin-left:5px;
+    }
+    .badge{
+        overflow-y: hidden;
+    }
+	.btn-group-vertical{
+		.btn {
+			margin-bottom:3px;
+		}
+	}
+	.mod-tool-card{
+		position: fixed;
+		top: 20px;
+		left:20px;
+		width:200px;
+	}
+	.room-tool-card{
+		position:fixed;
+		top:20px;
+		left: 230px;
+		width: 500px;
+		.badge{
+			display:block;
+			text-align:left;
+		}
+	}
+	.chatlog-tool-card{
+		position:fixed;
+		top:20px;
+		left: 230px;
+		width:320px;
+        .card-header{
+            .btn{
+                display: inline;
+                font-size:11px;
+            }
+        }
+        .log-list{
+            max-height:250px;
+            overflow-y:scroll;
+            overflow-x:hidden;
+        }
+	}
+	.user-tool-card{
+		position:fixed;
+		top:20px;
+		left: 230px;
+		min-width: 250px;
+	}
+    .reports-tool-card{
+        position:fixed;
+        top: 20px;
+        left:230px;
+        width:450px;
+        .table{
+            tr{
+                th{
+                    font-size:15px;
+                }
+                td{
+                    font-size:12px;
+                }
+            }
+        }
+    }
+	.card-header{
+		display:flex;
+		justify-content: start;
+		align-items: center;
+		span{
+			flex:1;
+		}
+	}
+	.btn{
+		white-space: nowrap;
+		display:flex;
+		justify-content: start;
+		align-items: center;
+		overflow-x:hidden;
+		text-overflow: ellipsis;
+	}
+    /* Base for label styling */
+    [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+        position: absolute;
+        left: 0;
+        opacity: 0.01;
+    }
+    [type="checkbox"]:not(:checked) + label,
+    [type="checkbox"]:checked + label {
+        position: relative;
+        padding-left: 2.3em;
+        font-size: 1.05em;
+        line-height: 1.7;
+        cursor: pointer;
+    }
+
+    /* checkbox aspect */
+    [type="checkbox"]:not(:checked) + label:before,
+    [type="checkbox"]:checked + label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1.4em;
+        height: 1.4em;
+        border: 1px solid #000000;
+        background: #2B2B2B;
+        border-radius: .2em;
+        //box-shadow: inset 0 1px 3px rgba(0,0,0, .1), 0 0 0 rgba(203, 34, 237, .2);
+        box-shadow: 0px 2px 0px rgb(0 0 0 / 45%), inset 0px 0px 0px 2px rgb(255 255 255 / 10%);
+        -webkit-transition: all .275s;
+        transition: all .275s;
+    }
+
+    /* checked mark aspect */
+    [type="checkbox"]:not(:checked) + label:after,
+    [type="checkbox"]:checked + label:after {
+        content: '✓';
+        font-family: $btn-font-family;
+        position: absolute;
+        top: .525em;
+        left: .18em;
+        font-size: 1.375em;
+        color: white;
+        line-height: 0;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+    }
+
+    /* checked mark aspect changes */
+    [type="checkbox"]:not(:checked) + label:after {
+        opacity: 0;
+        //-webkit-transform: scale(0) rotate(45deg);
+        //transform: scale(0) rotate(45deg);
+    }
+
+    [type="checkbox"]:checked + label:after {
+        opacity: 1;
+        //-webkit-transform: scale(1) rotate(0);
+        //transform: scale(1) rotate(0);
+    }
+
+    /* Disabled checkbox */
+    [type="checkbox"]:disabled:not(:checked) + label:before,
+    [type="checkbox"]:disabled:checked + label:before {
+        box-shadow: none;
+        border-color: #bbb;
+        background-color: #e9e9e9;
+    }
+
+    [type="checkbox"]:disabled:checked + label:after {
+        color: #777;
+    }
+
+    [type="checkbox"]:disabled + label {
+        color: #aaa;
+    }
+
+    /* Accessibility */
+    [type="checkbox"]:checked:focus + label:before,
+    [type="checkbox"]:not(:checked):focus + label:before {
+        box-shadow: 0px 2px 0px rgb(0 0 0 / 45%), inset 0px 0px 0px 2px rgb(255 255 255 / 10%);
+    }
+
+}
+
+
+
+/**/
+
+#modtools {
+    width: 170px;
+    height: 170px;
+    left: 250px;
+    top: 100px;
+    position: absolute;
+    overflow: hidden;
+    background: #e9e9e1;
+    border-bottom: solid 2px #000;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    border: solid 1px #000;
+    border-radius: 6px;
+    overflow: hidden;
+    font-family: system-ui;
+    box-sizing: content-box;
+}
+
+#modtoolsdrag {
+    width: 100%;
+    height: 33px;
+    background-color: #367897;
+    border-top: solid 2px #408caf;
+    border-left: solid 2px #408caf;
+    border-right: solid 2px #408caf;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-bottom: solid 1px #000;
+}
+
+.modtools-title {
+    float: left;
+    padding: 11px 10px;
+    color: #000;
+    font-size: 10.5px;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px #0000001a;
+    filter: drop-shadow(1px 2px 0px #fff);
+}
+
+.mt-baslik {
+    margin: 0px;
+    width: 165px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.modtools-body {
+    margin: 5px;
+}
+
+.mt-menu {
+    width: 160px;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: solid 1px #ffffff00;
+}
+
+.mtico {
+    width: 28px;
+    height: 28px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.mt-menutxt {
+    float: left;
+    color: #000;
+    font-size: 10.5px;
+    font-weight: bold;
+    padding: 7px 0px;
+    filter: drop-shadow(1px 1px 0px #fff);
+    margin-left: -2px;
+}
+
+.mt-menu:hover {
+    background: #e2e2e2;
+    box-sizing: border-box;
+    border: solid 1px #bebebe;
+    border-radius: 5px;
+    box-shadow: inset 5px 5px 5px 0px #d3d3d3;
+}

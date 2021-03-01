@@ -1,0 +1,38 @@
+<!--<div [bringToTop] [draggable] dragHandle=".card-header" class="card nitro-catalog-confirm-purchase-component">
+    <div class="card-header">
+        {{ ('catalog.alert.notenough.title') | translate }}
+        <button type="button" class="close" (click)="hide()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="d-flex card-body">
+        <div class="d-flex flex-grow-1 flex-column justify-content-center p-2">
+            <p>{{ ('catalog.alert.notenough.credits.description') | translate }}</p>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="d-flex justify-space-between button-container btn-group">
+            <button type="button" class="btn btn-primary" (click)="hide()">{{ ('catalog.purchase_confirmation.cancel') | translate }}</button>
+        </div>
+    </div>
+</div>
+-->
+
+
+<div [bringToTop] [draggable] dragHandle="#mobibuy-hatadrag" id="mobibuy-hata">
+    <div id="mobibuy-hatadrag">
+        <p class="mbh-baslik">{{ ('catalog.alert.notenough.title') | translate }}</p>
+        <div class="old-kapat" (click)="hide()"></div>
+    </div>
+    <div class="mobibuy-hata-box">
+        <div class="mbuy-hata-text-box">
+            <p class="mbuyh-text">{{ ('catalog.alert.notenough.credits.description') | translate }}</p>
+        </div>
+        <div class="mobi-buy-iptal-et" (click)="hide()">
+            <u>{{ ('catalog.purchase_confirmation.cancel') | translate }}</u>
+        </div>
+        <div class="mobi-buy-onayla">
+            <div class="mb-islem-onayla-box">
+                <p class="mb-tamam-text">{{ ('generic.ok') | translate }}</p>
+            </div>
+        </div>
+    </div>
+</div>

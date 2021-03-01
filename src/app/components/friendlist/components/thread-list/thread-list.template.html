@@ -1,0 +1,10 @@
+<!--<button *ngFor="let thread of threads" type="button" class="btn btn-secondary w-100 mb-1" [ngClass]="{ 'active': (currentThread === thread) }" (click)="selectThread(thread)">{{ thread.participant.name }}</button>
+-->
+<div *ngFor="let thread of threads" class="active-chat-menu-box" [ngClass]="{ 'active-chat-menu-box-active': (currentThread === thread) }" (click)="selectThread(thread)">
+    <div class="drcmsg-activechat_user-avatar">
+        <img src="https://www.habbo.com/habbo-imaging/avatarimage?figure=hd-180-1.ch-255-66.lg-280-110.sh-305-62.ha-1012-110.hr-828-61&amp;action=std&amp;gesture=std&amp;direction=2&amp;head_direction=2&amp;size=s&amp;headonly=1&amp;img_format=png" class="drcmsg-uavatar-position">
+        <div class="user-onof-status online"></div>
+    </div>
+    <div class="drcmsg-username">{{ thread.participant.name }}</div>
+    <div class="user-status">user_status</div>
+</div>

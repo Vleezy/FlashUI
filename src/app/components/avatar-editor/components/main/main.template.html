@@ -1,0 +1,138 @@
+<!--<div *ngIf="visible" [bringToTop] [draggable] class="nitro-avatar-editor card">
+    <div class="drag-handler d-flex justify-content-between align-items-center px-3 pt-3">
+        <h6 class="m-0">{{ ('avatareditor.title') | translate }}</h6>
+        <button type="button" class="close" (click)="hide()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="row p-3">
+        <div class="col d-flex flex-column">
+            <div class="btn-group">
+                <button type="button" *ngFor="let category of categories.getValues()" class="btn btn-secondary" [ngClass]="{ 'active': (activeCategory === category) }" (click)="selectCategory(category.name)">{{ ('avatareditor.category.' + category.name) | translate }}</button>
+            </div>
+            <div *ngIf="activeCategory" class="d-flex flex-column" nitro-avatar-model-viewer-component [model]="activeCategory" [gender]="gender"></div>
+        </div>
+        <div *ngIf="figureData" class="col-4 d-flex flex-column">
+            <div class="d-flex position-relative flex-grow-1 justify-content-center">
+                <div class="avatar-spotlight position-absolute"></div>
+                <div class="avatar-shadow position-absolute"></div>
+                <div class="d-flex justify-content-center position-absolute w-100 h-100 avatar-container" nitro-avatar-image [figure]="figureData.view.figureString" [direction]="figureData.direction" [scale]="2"></div>
+                <div class="arrow-container">
+                    <i class="icon arrow-left-icon" (click)="rotateAvatar(figureData.direction + 1)"></i>
+                    <i class="icon arrow-right-icon" (click)="rotateAvatar(figureData.direction - 1)"></i>
+                </div>
+            </div>
+            <div class="btn-group mb-1">
+                <button type="button" class="btn btn-sm btn-secondary" (click)="resetFigure()"><i class="fas fa-undo"></i></button>
+                <button type="button" class="btn btn-sm btn-secondary" (click)="clearFigure()"><i class="fas fa-trash"></i></button>
+            </div>
+            <button type="button" class="btn btn-sm btn-success" (click)="saveFigure()">{{ ('avatareditor.save') | translate }}</button>
+        </div>
+    </div>
+</div>-->
+
+<div *ngIf="visible" [bringToTop] [draggable] dragHandle="#avatareditordrag" id="avatareditor">
+    <div id="avatareditordrag">
+        <p class="ae-baslik">{{ ('avatareditor.title') | translate }}</p>
+        <div class="old-kapat" (click)="hide()"></div>
+    </div>
+    <div class="avatareditor-head-box">
+        <div class="avatareditor-username">Corelo</div>
+        <div class="avatareditor-menu" style="margin-left: 10px;">
+            <div class="avatareditor_menu-button" *ngFor="let category of categories.getValues()" [ngClass]="{ 'ae-mactv': (activeCategory === category) }" (click)="selectCategory(category.name)">
+                <div class="ae-menu-ico" [ngClass]="'icon-' + category.name"></div>
+            </div>
+            <div id="ae-bestavatar-box" class="avatareditor_menu-button" [ngClass]="{ 'ae-mactv': (activeCategory === category) }">
+                <div class="ae-menu-ico" style="background-image: url(/assets/images/avatareditor/saved-looks.png);"></div>
+            </div>
+        </div> 
+    </div>
+    <div class="avatar-builder-viewport">
+        <div *ngIf="figureData" class="myavatar-view">
+            <div class="avatar-shadow"></div>
+            <div id="ae-myavatar" nitro-avatar-image [figure]="figureData.view.figureString" [direction]="figureData.direction" [scale]="2"></div>
+            <div class="turn-avatar" (click)="rotateAvatar(figureData.direction + 1)"></div>
+            <div class="bort">
+                <div class="ae_save-changes" (click)="saveFigure()">
+                    <p class="sc-text">{{ ('avatareditor.save') | translate }}</p>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="activeCategory" class="d-flex flex-column" nitro-avatar-model-viewer-component [model]="activeCategory" [gender]="gender"></div>
+    </div>
+
+
+    <div class="avatareditor-wardrobe">
+        <p class="wardrobe-desc">Gardırobum</p>
+        <div class="wardrobe-bg">
+            <div class="wardrobe-processing-center">
+                <div class="put-in-wardrobe"></div>
+                <div class="use-the-outfit"></div>
+                <div class="wardrobe-user-clothing-box">
+                    <img class="wardrobe-avatar" src="https://www.habbo.com.tr/habbo-imaging/avatarimage?figure=hd-180-1.hr-828-33.ch-255-66.lg-280-110.sh-305-62&amp;action=&amp;gesture=sml&amp;direction=2&amp;head_direction=2&amp;size=s&amp;frame=wlk=3&amp;img_format=png">
+                </div>
+            </div>
+            <div class="wardrobe-processing-center">
+                <div class="put-in-wardrobe"></div>
+                <div class="use-the-outfit"></div>
+                <div class="wardrobe-user-clothing-box">
+                    <img class="wardrobe-avatar" src="https://www.habbo.com.tr/habbo-imaging/avatarimage?figure=hd-180-1.hr-828-33.ch-255-66.lg-280-110.sh-305-62&amp;action=&amp;gesture=sml&amp;direction=2&amp;head_direction=2&amp;size=s&amp;frame=wlk=3&amp;img_format=png">
+                </div>
+            </div>
+            <div class="wardrobe-processing-center">
+                <div class="put-in-wardrobe"></div>
+                <div class="use-the-outfit"></div>
+                <div class="wardrobe-user-clothing-box">
+                    <img class="wardrobe-avatar" src="https://www.habbo.com.tr/habbo-imaging/avatarimage?figure=hd-180-1.hr-828-33.ch-255-66.lg-280-110.sh-305-62&amp;action=&amp;gesture=sml&amp;direction=2&amp;head_direction=2&amp;size=s&amp;frame=wlk=3&amp;img_format=png">
+                </div>
+            </div>
+            <div class="wardrobe-processing-center">
+                <div class="put-in-wardrobe"></div>
+                <div class="use-the-outfit"></div>
+                <div class="wardrobe-user-clothing-box">
+                    <img class="wardrobe-avatar" src="https://www.habbo.com.tr/habbo-imaging/avatarimage?figure=hd-180-1.hr-828-33.ch-255-66.lg-280-110.sh-305-62&amp;action=&amp;gesture=sml&amp;direction=2&amp;head_direction=2&amp;size=s&amp;frame=wlk=3&amp;img_format=png">
+                </div>
+            </div>
+            <div class="wardrobe-processing-center">
+                <div class="put-in-wardrobe"></div>
+                <div class="use-the-outfit"></div>
+                <div class="wardrobe-user-clothing-box">
+                    <img class="wardrobe-avatar" src="https://www.habbo.com.tr/habbo-imaging/avatarimage?figure=hd-180-1.hr-828-33.ch-255-66.lg-280-110.sh-305-62&amp;action=&amp;gesture=sml&amp;direction=2&amp;head_direction=2&amp;size=s&amp;frame=wlk=3&amp;img_format=png">
+                </div>
+            </div>
+            <div class="wardrobe-processing-center">
+                <div class="put-in-wardrobe"></div>
+                <div class="use-the-outfit"></div>
+                <div class="wardrobe-user-clothing-box">
+                    <img class="wardrobe-avatar" src="https://www.habbo.com.tr/habbo-imaging/avatarimage?figure=hd-180-1.hr-828-33.ch-255-66.lg-280-110.sh-305-62&amp;action=&amp;gesture=sml&amp;direction=2&amp;head_direction=2&amp;size=s&amp;frame=wlk=3&amp;img_format=png">
+                </div>
+            </div>
+            <div class="wardrobe-processing-center">
+                <div class="put-in-wardrobe"></div>
+                <div class="use-the-outfit"></div>
+                <div class="wardrobe-user-clothing-box">
+                    <img class="wardrobe-avatar" src="https://www.habbo.com.tr/habbo-imaging/avatarimage?figure=hd-180-1.hr-828-33.ch-255-66.lg-280-110.sh-305-62&amp;action=&amp;gesture=sml&amp;direction=2&amp;head_direction=2&amp;size=s&amp;frame=wlk=3&amp;img_format=png">
+                </div>
+            </div>
+            <div class="wardrobe-processing-center">
+                <div class="put-in-wardrobe"></div>
+                <div class="use-the-outfit"></div>
+                <div class="wardrobe-user-clothing-box">
+                    <img class="wardrobe-avatar" src="https://www.habbo.com.tr/habbo-imaging/avatarimage?figure=hd-180-1.hr-828-33.ch-255-66.lg-280-110.sh-305-62&amp;action=&amp;gesture=sml&amp;direction=2&amp;head_direction=2&amp;size=s&amp;frame=wlk=3&amp;img_format=png">
+                </div>
+            </div>
+            <div class="wardrobe-processing-center">
+                <div class="put-in-wardrobe"></div>
+                <div class="use-the-outfit"></div>
+                <div class="wardrobe-user-clothing-box">
+                    <img class="wardrobe-avatar" src="https://www.habbo.com.tr/habbo-imaging/avatarimage?figure=hd-180-1.hr-828-33.ch-255-66.lg-280-110.sh-305-62&amp;action=&amp;gesture=sml&amp;direction=2&amp;head_direction=2&amp;size=s&amp;frame=wlk=3&amp;img_format=png">
+                </div>
+            </div>
+            <div class="wardrobe-processing-center">
+                <div class="put-in-wardrobe"></div>
+                <div class="use-the-outfit"></div>
+                <div class="wardrobe-user-clothing-box">
+                    <img class="wardrobe-avatar" src="https://www.habbo.com.tr/habbo-imaging/avatarimage?figure=hd-180-1.hr-828-33.ch-255-66.lg-280-110.sh-305-62&amp;action=&amp;gesture=sml&amp;direction=2&amp;head_direction=2&amp;size=s&amp;frame=wlk=3&amp;img_format=png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

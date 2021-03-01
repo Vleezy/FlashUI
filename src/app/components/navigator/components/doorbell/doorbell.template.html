@@ -1,0 +1,41 @@
+<!--<div class="modal-header">
+    {{ ('navigator.doorbell.title') | translate }}
+    <button type="button" class="close" (click)="close()"><i class="fas fa-times"></i></button>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-12">
+            <span *ngIf="!isWaiting && !noAnswer">{{ ('navigator.doorbell.info') | translate }}</span>
+            <span *ngIf="isWaiting && !noAnswer">{{ ('navigator.doorbell.waiting') | translate }}</span>
+            <span *ngIf="noAnswer">{{ ('navigator.doorbell.no.answer') | translate }}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-secondary" (click)="close()">{{ ('generic.cancel') | translate }}</button>
+                <button *ngIf="!isWaiting && !noAnswer" type="button" class="btn btn-primary" (click)="ring()">{{ ('navigator.doorbell.button.ring') | translate }}</button>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<div id="kapizilical" [bringToTop] [draggable] dragHandle="#kapizili-head">
+    <div id="kapizili-head">
+        <p class="kapizilihood">{{ ('navigator.doorbell.title') | translate }}</p>
+        <div class="old-kapat" (click)="close()"></div>
+    </div>
+    <div class="kapizilibox">
+        <p class="kapizili-roomname" *ngIf="room">{{ room.roomName }}</p>
+        <p class="kapizili-roomdesc" *ngIf="!isWaiting && !noAnswer">{{ ('navigator.doorbell.info') | translate }}</p>
+        <p class="kapizili-roomdesc" *ngIf="isWaiting && !noAnswer">{{ ('navigator.doorbell.waiting') | translate }}</p>
+        <p class="kapizili-roomdesc" *ngIf="noAnswer">{{ ('navigator.doorbell.no.answer') | translate }}</p>
+        <div class="kapizili-buttonbox">
+            <div class="kapizili-iptalet" (click)="close()">{{ ('generic.cancel') | translate }}</div>
+            <div *ngIf="!isWaiting && !noAnswer" class="kapizili-odayagir" (click)="ring()">
+                <p class="kapizili-butontxt">{{ ('navigator.doorbell.button.ring') | translate }}</p>
+            </div>
+        </div>
+    </div>
+</div>
